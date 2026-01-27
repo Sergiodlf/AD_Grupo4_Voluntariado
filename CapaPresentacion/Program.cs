@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace CapaPresentacion
 {
     internal static class Program
     {
+
+        public static Gestion gestion = new Gestion();
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
