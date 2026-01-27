@@ -1,0 +1,6 @@
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\bin\Debug\BuscarServidor.dll
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\bin\Debug\BuscarServidor.pdb
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\obj\Debug\BuscarServidor.csproj.AssemblyReference.cache
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\obj\Debug\BuscarServidor.csproj.CoreCompileInputs.cache
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\obj\Debug\BuscarServidor.dll
+C:\Users\maria\Desktop\Trabajando\Modulos\Acceso Datos\03Alojamientos\03AlojamientosConLinQ\BuscarServidor\obj\Debug\BuscarServidor.pdb

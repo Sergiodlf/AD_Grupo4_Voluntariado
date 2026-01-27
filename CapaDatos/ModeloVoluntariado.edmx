@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PROYECTOINTERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACTIVIDADES">
+          <Key>
+            <PropertyRef Name="CODACTIVIDAD" />
+          </Key>
+          <Property Name="CODACTIVIDAD" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ESTADO_APROBACION" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ESTADO_NEW" Type="nvarchar" MaxLength="255" />
+          <Property Name="DIRECCION" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="FECHA_INICIO" Type="datetime2" Precision="6" Nullable="false" />
+          <Property Name="FECHA_FIN" Type="datetime2" Precision="6" Nullable="false" />
+          <Property Name="MAX_PARTICIPANTES" Type="smallint" Nullable="false" />
+          <Property Name="CIF_EMPRESA" Type="nchar" MaxLength="9" />
+        </EntityType>
+        <EntityType Name="ACTIVIDADES_HABILIDADES">
+          <Key>
+            <PropertyRef Name="CODACTIVIDAD" />
+            <PropertyRef Name="HABILIDAD_ID" />
+          </Key>
+          <Property Name="CODACTIVIDAD" Type="smallint" Nullable="false" />
+          <Property Name="HABILIDAD_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ACTIVIDADES_NECESIDADES">
+          <Key>
+            <PropertyRef Name="CODACTIVIDAD" />
+            <PropertyRef Name="NECESIDAD_ID" />
+          </Key>
+          <Property Name="CODACTIVIDAD" Type="smallint" Nullable="false" />
+          <Property Name="NECESIDAD_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ACTIVIDADES_ODS">
+          <Key>
+            <PropertyRef Name="CODACTIVIDAD" />
+            <PropertyRef Name="ODS_ID" />
+          </Key>
+          <Property Name="CODACTIVIDAD" Type="smallint" Nullable="false" />
+          <Property Name="ODS_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CICLOS">
+          <Key>
+            <PropertyRef Name="CURSO" />
+            <PropertyRef Name="NOMBRE" />
+          </Key>
+          <Property Name="CURSO" Type="smallint" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doctrine_migration_versions">
+          <Key>
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="version" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="executed_at" Type="datetime2" Precision="6" />
+          <Property Name="execution_time" Type="int" />
+        </EntityType>
+        <EntityType Name="HABILIDADES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INSCRIPCIONES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DNI_VOLUNTARIO" Type="nchar" MaxLength="9" />
+          <Property Name="CODACTIVIDAD" Type="smallint" />
+        </EntityType>
+        <EntityType Name="INTERESES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NECESIDADES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ODS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar" MaxLength="255" />
+          <Property Name="color" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="ORGANIZACIONES">
+          <Key>
+            <PropertyRef Name="CIF" />
+          </Key>
+          <Property Name="CIF" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SECTOR" Type="nvarchar" MaxLength="100" />
+          <Property Name="DIRECCION" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="LOCALIDAD" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="CP" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="CONTACTO" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VOLUNTARIOS">
+          <Key>
+            <PropertyRef Name="DNI" />
+          </Key>
+          <Property Name="DNI" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="APELLIDO1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="APELLIDO2" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CORREO" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ZONA" Type="nvarchar" MaxLength="100" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime2" Precision="6" Nullable="false" />
+          <Property Name="EXPERIENCIA" Type="nvarchar" MaxLength="200" />
+          <Property Name="COCHE" Type="bit" Nullable="false" />
+          <Property Name="DISPONIBILIDAD" Type="varchar(max)" />
+          <Property Name="IDIOMAS" Type="varchar(max)" />
+          <Property Name="ESTADO_VOLUNTARIO" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CURSO_CICLOS" Type="smallint" />
+          <Property Name="NOMBRE_CICLOS" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="VOLUNTARIOS_HABILIDADES">
+          <Key>
+            <PropertyRef Name="DNI" />
+            <PropertyRef Name="HABILIDAD_ID" />
+          </Key>
+          <Property Name="DNI" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="HABILIDAD_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VOLUNTARIOS_INTERESES">
+          <Key>
+            <PropertyRef Name="DNI" />
+            <PropertyRef Name="INTERES_ID" />
+          </Key>
+          <Property Name="DNI" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="INTERES_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_2B7CF67D413E7C02">
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIOS" Multiplicity="0..1" />
+          <End Role="INSCRIPCIONES" Type="Self.INSCRIPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOLUNTARIOS">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="INSCRIPCIONES">
+              <PropertyRef Name="DNI_VOLUNTARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_2B7CF67DC1F05EDB">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADES" Multiplicity="0..1" />
+          <End Role="INSCRIPCIONES" Type="Self.INSCRIPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACTIVIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Principal>
+            <Dependent Role="INSCRIPCIONES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_77A22A43C1F05EDB">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADES" Multiplicity="1" />
+          <End Role="ACTIVIDADES_ODS" Type="Self.ACTIVIDADES_ODS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACTIVIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_ODS">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_77A22A43CED5F97">
+          <End Role="ODS" Type="Self.ODS" Multiplicity="1" />
+          <End Role="ACTIVIDADES_ODS" Type="Self.ACTIVIDADES_ODS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ODS">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_ODS">
+              <PropertyRef Name="ODS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C12BB10A6F2DFDAA">
+          <End Role="INTERESES" Type="Self.INTERESES" Multiplicity="1" />
+          <End Role="VOLUNTARIOS_INTERESES" Type="Self.VOLUNTARIOS_INTERESES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTERESES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS_INTERESES">
+              <PropertyRef Name="INTERES_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C12BB10AE92867B1">
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIOS" Multiplicity="1" />
+          <End Role="VOLUNTARIOS_INTERESES" Type="Self.VOLUNTARIOS_INTERESES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOLUNTARIOS">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS_INTERESES">
+              <PropertyRef Name="DNI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C424E76BCF65AA26">
+          <End Role="HABILIDADES" Type="Self.HABILIDADES" Multiplicity="1" />
+          <End Role="VOLUNTARIOS_HABILIDADES" Type="Self.VOLUNTARIOS_HABILIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HABILIDADES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS_HABILIDADES">
+              <PropertyRef Name="HABILIDAD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C424E76BE92867B1">
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIOS" Multiplicity="1" />
+          <End Role="VOLUNTARIOS_HABILIDADES" Type="Self.VOLUNTARIOS_HABILIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOLUNTARIOS">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS_HABILIDADES">
+              <PropertyRef Name="DNI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CC29E0C94F5222D9CCB2DE43">
+          <End Role="CICLOS" Type="Self.CICLOS" Multiplicity="0..1" />
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CICLOS">
+              <PropertyRef Name="CURSO" />
+              <PropertyRef Name="NOMBRE" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS">
+              <PropertyRef Name="CURSO_CICLOS" />
+              <PropertyRef Name="NOMBRE_CICLOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_D978BAD6C1F05EDB">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADES" Multiplicity="1" />
+          <End Role="ACTIVIDADES_HABILIDADES" Type="Self.ACTIVIDADES_HABILIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACTIVIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_HABILIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_D978BAD6CF65AA26">
+          <End Role="HABILIDADES" Type="Self.HABILIDADES" Multiplicity="1" />
+          <End Role="ACTIVIDADES_HABILIDADES" Type="Self.ACTIVIDADES_HABILIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HABILIDADES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_HABILIDADES">
+              <PropertyRef Name="HABILIDAD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_E9643DC43CECC7E9">
+          <End Role="NECESIDADES" Type="Self.NECESIDADES" Multiplicity="1" />
+          <End Role="ACTIVIDADES_NECESIDADES" Type="Self.ACTIVIDADES_NECESIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NECESIDADES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_NECESIDADES">
+              <PropertyRef Name="NECESIDAD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_E9643DC4C1F05EDB">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADES" Multiplicity="1" />
+          <End Role="ACTIVIDADES_NECESIDADES" Type="Self.ACTIVIDADES_NECESIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACTIVIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES_NECESIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FED6DA367DF202BB">
+          <End Role="ORGANIZACIONES" Type="Self.ORGANIZACIONES" Multiplicity="0..1" />
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORGANIZACIONES">
+              <PropertyRef Name="CIF" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES">
+              <PropertyRef Name="CIF_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PROYECTOINTERModelStoreContainer">
+          <EntitySet Name="ACTIVIDADES" EntityType="Self.ACTIVIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACTIVIDADES_HABILIDADES" EntityType="Self.ACTIVIDADES_HABILIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACTIVIDADES_NECESIDADES" EntityType="Self.ACTIVIDADES_NECESIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACTIVIDADES_ODS" EntityType="Self.ACTIVIDADES_ODS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CICLOS" EntityType="Self.CICLOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="doctrine_migration_versions" EntityType="Self.doctrine_migration_versions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HABILIDADES" EntityType="Self.HABILIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSCRIPCIONES" EntityType="Self.INSCRIPCIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INTERESES" EntityType="Self.INTERESES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NECESIDADES" EntityType="Self.NECESIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ODS" EntityType="Self.ODS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORGANIZACIONES" EntityType="Self.ORGANIZACIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VOLUNTARIOS" EntityType="Self.VOLUNTARIOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VOLUNTARIOS_HABILIDADES" EntityType="Self.VOLUNTARIOS_HABILIDADES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VOLUNTARIOS_INTERESES" EntityType="Self.VOLUNTARIOS_INTERESES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_2B7CF67D413E7C02" Association="Self.FK_2B7CF67D413E7C02">
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+            <End Role="INSCRIPCIONES" EntitySet="INSCRIPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_2B7CF67DC1F05EDB" Association="Self.FK_2B7CF67DC1F05EDB">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="INSCRIPCIONES" EntitySet="INSCRIPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_77A22A43C1F05EDB" Association="Self.FK_77A22A43C1F05EDB">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="ACTIVIDADES_ODS" EntitySet="ACTIVIDADES_ODS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_77A22A43CED5F97" Association="Self.FK_77A22A43CED5F97">
+            <End Role="ODS" EntitySet="ODS" />
+            <End Role="ACTIVIDADES_ODS" EntitySet="ACTIVIDADES_ODS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C12BB10A6F2DFDAA" Association="Self.FK_C12BB10A6F2DFDAA">
+            <End Role="INTERESES" EntitySet="INTERESES" />
+            <End Role="VOLUNTARIOS_INTERESES" EntitySet="VOLUNTARIOS_INTERESES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C12BB10AE92867B1" Association="Self.FK_C12BB10AE92867B1">
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+            <End Role="VOLUNTARIOS_INTERESES" EntitySet="VOLUNTARIOS_INTERESES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C424E76BCF65AA26" Association="Self.FK_C424E76BCF65AA26">
+            <End Role="HABILIDADES" EntitySet="HABILIDADES" />
+            <End Role="VOLUNTARIOS_HABILIDADES" EntitySet="VOLUNTARIOS_HABILIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C424E76BE92867B1" Association="Self.FK_C424E76BE92867B1">
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+            <End Role="VOLUNTARIOS_HABILIDADES" EntitySet="VOLUNTARIOS_HABILIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CC29E0C94F5222D9CCB2DE43" Association="Self.FK_CC29E0C94F5222D9CCB2DE43">
+            <End Role="CICLOS" EntitySet="CICLOS" />
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_D978BAD6C1F05EDB" Association="Self.FK_D978BAD6C1F05EDB">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="ACTIVIDADES_HABILIDADES" EntitySet="ACTIVIDADES_HABILIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_D978BAD6CF65AA26" Association="Self.FK_D978BAD6CF65AA26">
+            <End Role="HABILIDADES" EntitySet="HABILIDADES" />
+            <End Role="ACTIVIDADES_HABILIDADES" EntitySet="ACTIVIDADES_HABILIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_E9643DC43CECC7E9" Association="Self.FK_E9643DC43CECC7E9">
+            <End Role="NECESIDADES" EntitySet="NECESIDADES" />
+            <End Role="ACTIVIDADES_NECESIDADES" EntitySet="ACTIVIDADES_NECESIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_E9643DC4C1F05EDB" Association="Self.FK_E9643DC4C1F05EDB">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="ACTIVIDADES_NECESIDADES" EntitySet="ACTIVIDADES_NECESIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FED6DA367DF202BB" Association="Self.FK_FED6DA367DF202BB">
+            <End Role="ORGANIZACIONES" EntitySet="ORGANIZACIONES" />
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PROYECTOINTERModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACTIVIDADE">
+          <Key>
+            <PropertyRef Name="CODACTIVIDAD" />
+          </Key>
+          <Property Name="CODACTIVIDAD" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESTADO_APROBACION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESTADO_NEW" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECCION" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" Precision="6" />
+          <Property Name="FECHA_FIN" Type="DateTime" Nullable="false" Precision="6" />
+          <Property Name="MAX_PARTICIPANTES" Type="Int16" Nullable="false" />
+          <Property Name="CIF_EMPRESA" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="INSCRIPCIONES" Relationship="Self.FK_2B7CF67DC1F05EDB" FromRole="ACTIVIDADES" ToRole="INSCRIPCIONES" />
+          <NavigationProperty Name="ORGANIZACIONE" Relationship="Self.FK_FED6DA367DF202BB" FromRole="ACTIVIDADES" ToRole="ORGANIZACIONES" />
+          <NavigationProperty Name="HABILIDADES" Relationship="Self.ACTIVIDADES_HABILIDADES" FromRole="ACTIVIDADES" ToRole="HABILIDADES" />
+          <NavigationProperty Name="NECESIDADES" Relationship="Self.ACTIVIDADES_NECESIDADES" FromRole="ACTIVIDADES" ToRole="NECESIDADES" />
+          <NavigationProperty Name="ODS" Relationship="Self.ACTIVIDADES_ODS" FromRole="ACTIVIDADES" ToRole="ODS" />
+        </EntityType>
+        <EntityType Name="CICLO">
+          <Key>
+            <PropertyRef Name="CURSO" />
+            <PropertyRef Name="NOMBRE" />
+          </Key>
+          <Property Name="CURSO" Type="Int16" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="VOLUNTARIOS" Relationship="Self.FK_CC29E0C94F5222D9CCB2DE43" FromRole="CICLOS" ToRole="VOLUNTARIOS" />
+        </EntityType>
+        <EntityType Name="doctrine_migration_versions">
+          <Key>
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="version" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="executed_at" Type="DateTime" Precision="6" />
+          <Property Name="execution_time" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HABILIDADE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ACTIVIDADES" Relationship="Self.ACTIVIDADES_HABILIDADES" FromRole="HABILIDADES" ToRole="ACTIVIDADES" />
+          <NavigationProperty Name="VOLUNTARIOS" Relationship="Self.VOLUNTARIOS_HABILIDADES" FromRole="HABILIDADES" ToRole="VOLUNTARIOS" />
+        </EntityType>
+        <EntityType Name="INSCRIPCIONE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ESTADO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DNI_VOLUNTARIO" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <Property Name="CODACTIVIDAD" Type="Int16" />
+          <NavigationProperty Name="ACTIVIDADE" Relationship="Self.FK_2B7CF67DC1F05EDB" FromRole="INSCRIPCIONES" ToRole="ACTIVIDADES" />
+          <NavigationProperty Name="VOLUNTARIO" Relationship="Self.FK_2B7CF67D413E7C02" FromRole="INSCRIPCIONES" ToRole="VOLUNTARIOS" />
+        </EntityType>
+        <EntityType Name="INTERES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="VOLUNTARIOS" Relationship="Self.VOLUNTARIOS_INTERESES" FromRole="INTERESES" ToRole="VOLUNTARIOS" />
+        </EntityType>
+        <EntityType Name="NECESIDADE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ACTIVIDADES" Relationship="Self.ACTIVIDADES_NECESIDADES" FromRole="NECESIDADES" ToRole="ACTIVIDADES" />
+        </EntityType>
+        <EntityType Name="OD">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ACTIVIDADES" Relationship="Self.ACTIVIDADES_ODS" FromRole="ODS" ToRole="ACTIVIDADES" />
+        </EntityType>
+        <EntityType Name="ORGANIZACIONE">
+          <Key>
+            <PropertyRef Name="CIF" />
+          </Key>
+          <Property Name="CIF" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SECTOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECCION" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LOCALIDAD" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CONTACTO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ACTIVIDADES" Relationship="Self.FK_FED6DA367DF202BB" FromRole="ORGANIZACIONES" ToRole="ACTIVIDADES" />
+        </EntityType>
+        <EntityType Name="VOLUNTARIO">
+          <Key>
+            <PropertyRef Name="DNI" />
+          </Key>
+          <Property Name="DNI" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APELLIDO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APELLIDO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CORREO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ZONA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="6" />
+          <Property Name="EXPERIENCIA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="COCHE" Type="Boolean" Nullable="false" />
+          <Property Name="DISPONIBILIDAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IDIOMAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO_VOLUNTARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CURSO_CICLOS" Type="Int16" />
+          <Property Name="NOMBRE_CICLOS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CICLO" Relationship="Self.FK_CC29E0C94F5222D9CCB2DE43" FromRole="VOLUNTARIOS" ToRole="CICLOS" />
+          <NavigationProperty Name="INSCRIPCIONES" Relationship="Self.FK_2B7CF67D413E7C02" FromRole="VOLUNTARIOS" ToRole="INSCRIPCIONES" />
+          <NavigationProperty Name="HABILIDADES" Relationship="Self.VOLUNTARIOS_HABILIDADES" FromRole="VOLUNTARIOS" ToRole="HABILIDADES" />
+          <NavigationProperty Name="INTERESES" Relationship="Self.VOLUNTARIOS_INTERESES" FromRole="VOLUNTARIOS" ToRole="INTERESES" />
+        </EntityType>
+        <Association Name="FK_2B7CF67DC1F05EDB">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADE" Multiplicity="0..1" />
+          <End Role="INSCRIPCIONES" Type="Self.INSCRIPCIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACTIVIDADES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Principal>
+            <Dependent Role="INSCRIPCIONES">
+              <PropertyRef Name="CODACTIVIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FED6DA367DF202BB">
+          <End Role="ORGANIZACIONES" Type="Self.ORGANIZACIONE" Multiplicity="0..1" />
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORGANIZACIONES">
+              <PropertyRef Name="CIF" />
+            </Principal>
+            <Dependent Role="ACTIVIDADES">
+              <PropertyRef Name="CIF_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CC29E0C94F5222D9CCB2DE43">
+          <End Role="CICLOS" Type="Self.CICLO" Multiplicity="0..1" />
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CICLOS">
+              <PropertyRef Name="CURSO" />
+              <PropertyRef Name="NOMBRE" />
+            </Principal>
+            <Dependent Role="VOLUNTARIOS">
+              <PropertyRef Name="CURSO_CICLOS" />
+              <PropertyRef Name="NOMBRE_CICLOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_2B7CF67D413E7C02">
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIO" Multiplicity="0..1" />
+          <End Role="INSCRIPCIONES" Type="Self.INSCRIPCIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOLUNTARIOS">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="INSCRIPCIONES">
+              <PropertyRef Name="DNI_VOLUNTARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ACTIVIDADES_HABILIDADES">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADE" Multiplicity="*" />
+          <End Role="HABILIDADES" Type="Self.HABILIDADE" Multiplicity="*" />
+        </Association>
+        <Association Name="ACTIVIDADES_NECESIDADES">
+          <End Role="NECESIDADES" Type="Self.NECESIDADE" Multiplicity="*" />
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADE" Multiplicity="*" />
+        </Association>
+        <Association Name="ACTIVIDADES_ODS">
+          <End Role="ACTIVIDADES" Type="Self.ACTIVIDADE" Multiplicity="*" />
+          <End Role="ODS" Type="Self.OD" Multiplicity="*" />
+        </Association>
+        <Association Name="VOLUNTARIOS_HABILIDADES">
+          <End Role="HABILIDADES" Type="Self.HABILIDADE" Multiplicity="*" />
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIO" Multiplicity="*" />
+        </Association>
+        <Association Name="VOLUNTARIOS_INTERESES">
+          <End Role="INTERESES" Type="Self.INTERES" Multiplicity="*" />
+          <End Role="VOLUNTARIOS" Type="Self.VOLUNTARIO" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="PROYECTOINTEREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACTIVIDADES" EntityType="Self.ACTIVIDADE" />
+          <EntitySet Name="CICLOS" EntityType="Self.CICLO" />
+          <EntitySet Name="doctrine_migration_versions" EntityType="Self.doctrine_migration_versions" />
+          <EntitySet Name="HABILIDADES" EntityType="Self.HABILIDADE" />
+          <EntitySet Name="INSCRIPCIONES" EntityType="Self.INSCRIPCIONE" />
+          <EntitySet Name="INTERESES" EntityType="Self.INTERES" />
+          <EntitySet Name="NECESIDADES" EntityType="Self.NECESIDADE" />
+          <EntitySet Name="ODS" EntityType="Self.OD" />
+          <EntitySet Name="ORGANIZACIONES" EntityType="Self.ORGANIZACIONE" />
+          <EntitySet Name="VOLUNTARIOS" EntityType="Self.VOLUNTARIO" />
+          <AssociationSet Name="FK_2B7CF67DC1F05EDB" Association="Self.FK_2B7CF67DC1F05EDB">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="INSCRIPCIONES" EntitySet="INSCRIPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FED6DA367DF202BB" Association="Self.FK_FED6DA367DF202BB">
+            <End Role="ORGANIZACIONES" EntitySet="ORGANIZACIONES" />
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CC29E0C94F5222D9CCB2DE43" Association="Self.FK_CC29E0C94F5222D9CCB2DE43">
+            <End Role="CICLOS" EntitySet="CICLOS" />
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_2B7CF67D413E7C02" Association="Self.FK_2B7CF67D413E7C02">
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+            <End Role="INSCRIPCIONES" EntitySet="INSCRIPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="ACTIVIDADES_HABILIDADES" Association="Self.ACTIVIDADES_HABILIDADES">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="HABILIDADES" EntitySet="HABILIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="ACTIVIDADES_NECESIDADES" Association="Self.ACTIVIDADES_NECESIDADES">
+            <End Role="NECESIDADES" EntitySet="NECESIDADES" />
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="ACTIVIDADES_ODS" Association="Self.ACTIVIDADES_ODS">
+            <End Role="ACTIVIDADES" EntitySet="ACTIVIDADES" />
+            <End Role="ODS" EntitySet="ODS" />
+          </AssociationSet>
+          <AssociationSet Name="VOLUNTARIOS_HABILIDADES" Association="Self.VOLUNTARIOS_HABILIDADES">
+            <End Role="HABILIDADES" EntitySet="HABILIDADES" />
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="VOLUNTARIOS_INTERESES" Association="Self.VOLUNTARIOS_INTERESES">
+            <End Role="INTERESES" EntitySet="INTERESES" />
+            <End Role="VOLUNTARIOS" EntitySet="VOLUNTARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PROYECTOINTERModelStoreContainer" CdmEntityContainer="PROYECTOINTEREntities">
+          <EntitySetMapping Name="ACTIVIDADES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.ACTIVIDADE">
+              <MappingFragment StoreEntitySet="ACTIVIDADES">
+                <ScalarProperty Name="CODACTIVIDAD" ColumnName="CODACTIVIDAD" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ESTADO_APROBACION" ColumnName="ESTADO_APROBACION" />
+                <ScalarProperty Name="ESTADO_NEW" ColumnName="ESTADO_NEW" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+                <ScalarProperty Name="MAX_PARTICIPANTES" ColumnName="MAX_PARTICIPANTES" />
+                <ScalarProperty Name="CIF_EMPRESA" ColumnName="CIF_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CICLOS">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.CICLO">
+              <MappingFragment StoreEntitySet="CICLOS">
+                <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="doctrine_migration_versions">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.doctrine_migration_versions">
+              <MappingFragment StoreEntitySet="doctrine_migration_versions">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="executed_at" ColumnName="executed_at" />
+                <ScalarProperty Name="execution_time" ColumnName="execution_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HABILIDADES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.HABILIDADE">
+              <MappingFragment StoreEntitySet="HABILIDADES">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSCRIPCIONES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.INSCRIPCIONE">
+              <MappingFragment StoreEntitySet="INSCRIPCIONES">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="DNI_VOLUNTARIO" ColumnName="DNI_VOLUNTARIO" />
+                <ScalarProperty Name="CODACTIVIDAD" ColumnName="CODACTIVIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERESES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.INTERES">
+              <MappingFragment StoreEntitySet="INTERESES">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NECESIDADES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.NECESIDADE">
+              <MappingFragment StoreEntitySet="NECESIDADES">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ODS">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.OD">
+              <MappingFragment StoreEntitySet="ODS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="color" ColumnName="color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORGANIZACIONES">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.ORGANIZACIONE">
+              <MappingFragment StoreEntitySet="ORGANIZACIONES">
+                <ScalarProperty Name="CIF" ColumnName="CIF" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="LOCALIDAD" ColumnName="LOCALIDAD" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="CONTACTO" ColumnName="CONTACTO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VOLUNTARIOS">
+            <EntityTypeMapping TypeName="PROYECTOINTERModel.VOLUNTARIO">
+              <MappingFragment StoreEntitySet="VOLUNTARIOS">
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+                <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="ZONA" ColumnName="ZONA" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="EXPERIENCIA" ColumnName="EXPERIENCIA" />
+                <ScalarProperty Name="COCHE" ColumnName="COCHE" />
+                <ScalarProperty Name="DISPONIBILIDAD" ColumnName="DISPONIBILIDAD" />
+                <ScalarProperty Name="IDIOMAS" ColumnName="IDIOMAS" />
+                <ScalarProperty Name="ESTADO_VOLUNTARIO" ColumnName="ESTADO_VOLUNTARIO" />
+                <ScalarProperty Name="CURSO_CICLOS" ColumnName="CURSO_CICLOS" />
+                <ScalarProperty Name="NOMBRE_CICLOS" ColumnName="NOMBRE_CICLOS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ACTIVIDADES_HABILIDADES" TypeName="PROYECTOINTERModel.ACTIVIDADES_HABILIDADES" StoreEntitySet="ACTIVIDADES_HABILIDADES">
+            <EndProperty Name="ACTIVIDADES">
+              <ScalarProperty Name="CODACTIVIDAD" ColumnName="CODACTIVIDAD" />
+            </EndProperty>
+            <EndProperty Name="HABILIDADES">
+              <ScalarProperty Name="id" ColumnName="HABILIDAD_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ACTIVIDADES_NECESIDADES" TypeName="PROYECTOINTERModel.ACTIVIDADES_NECESIDADES" StoreEntitySet="ACTIVIDADES_NECESIDADES">
+            <EndProperty Name="NECESIDADES">
+              <ScalarProperty Name="id" ColumnName="NECESIDAD_ID" />
+            </EndProperty>
+            <EndProperty Name="ACTIVIDADES">
+              <ScalarProperty Name="CODACTIVIDAD" ColumnName="CODACTIVIDAD" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ACTIVIDADES_ODS" TypeName="PROYECTOINTERModel.ACTIVIDADES_ODS" StoreEntitySet="ACTIVIDADES_ODS">
+            <EndProperty Name="ACTIVIDADES">
+              <ScalarProperty Name="CODACTIVIDAD" ColumnName="CODACTIVIDAD" />
+            </EndProperty>
+            <EndProperty Name="ODS">
+              <ScalarProperty Name="id" ColumnName="ODS_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="VOLUNTARIOS_HABILIDADES" TypeName="PROYECTOINTERModel.VOLUNTARIOS_HABILIDADES" StoreEntitySet="VOLUNTARIOS_HABILIDADES">
+            <EndProperty Name="HABILIDADES">
+              <ScalarProperty Name="id" ColumnName="HABILIDAD_ID" />
+            </EndProperty>
+            <EndProperty Name="VOLUNTARIOS">
+              <ScalarProperty Name="DNI" ColumnName="DNI" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="VOLUNTARIOS_INTERESES" TypeName="PROYECTOINTERModel.VOLUNTARIOS_INTERESES" StoreEntitySet="VOLUNTARIOS_INTERESES">
+            <EndProperty Name="INTERESES">
+              <ScalarProperty Name="id" ColumnName="INTERES_ID" />
+            </EndProperty>
+            <EndProperty Name="VOLUNTARIOS">
+              <ScalarProperty Name="DNI" ColumnName="DNI" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
