@@ -24,5 +24,12 @@ namespace CapaPresentacion
         {
             gestion = Program.gestion;
         }
+
+        private void btnVoluntarios_Click(object sender, EventArgs e)
+        {
+            lblInformacion.Text = "Todos los voluntarios";
+            dgv.DataSource = null;
+            dgv.DataSource = gestion.Voluntarios();
+        }
     }
 }

@@ -67,6 +67,7 @@
             this.btnVoluntarios.TabIndex = 17;
             this.btnVoluntarios.Text = "Mostrar voluntarios";
             this.btnVoluntarios.UseVisualStyleBackColor = true;
+            this.btnVoluntarios.Click += new System.EventHandler(this.btnVoluntarios_Click);
             // 
             // btnActividades
             // 

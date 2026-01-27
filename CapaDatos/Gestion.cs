@@ -28,5 +28,10 @@ namespace CapaDatos
             // 3. 'this.modelo' se refiere a la variable de la clase (Estado2Entities)
             this.contexto = new PROYECTOINTEREntities(cadenaConexion);
         }
+
+        public List<VOLUNTARIO> Voluntarios()
+        {
+            return contexto.VOLUNTARIOS.ToList();
+        }
     }
 }
