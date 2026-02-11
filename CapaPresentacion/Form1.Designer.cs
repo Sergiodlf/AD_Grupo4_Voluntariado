@@ -95,6 +95,7 @@
             this.btnOrganizaciones.TabIndex = 14;
             this.btnOrganizaciones.Text = "Mostrar Organizaciones";
             this.btnOrganizaciones.UseVisualStyleBackColor = true;
+            this.btnOrganizaciones.Click += new System.EventHandler(this.btnOrganizaciones_Click);
             // 
             // label1
             // 

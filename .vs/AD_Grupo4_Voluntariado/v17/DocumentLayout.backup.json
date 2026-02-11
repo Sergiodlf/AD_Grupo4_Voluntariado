@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Sergio\\Desktop\\2 DAM\\Proyecto Intermodular\\AD_Grupo4_Voluntariado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\2 dam\\proyecto intermodular\\ad_grupo4_voluntariado\\capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\2 dam\\proyecto intermodular\\ad_grupo4_voluntariado\\capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B2A273B-B7E4-4197-B453-0776F641F61A}|CapaDatos\\CapaDatos.csproj|c:\\users\\sergio\\desktop\\2 dam\\proyecto intermodular\\ad_grupo4_voluntariado\\capadatos\\gestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B2A273B-B7E4-4197-B453-0776F641F61A}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Sergio\\Desktop\\2 DAM\\Proyecto Intermodular\\AD_Grupo4_Voluntariado\\capadatos\\gestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B2A273B-B7E4-4197-B453-0776F641F61A}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\gestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\2 dam\\proyecto intermodular\\ad_grupo4_voluntariado\\capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Sergio\\Desktop\\2 DAM\\Proyecto Intermodular\\AD_Grupo4_Voluntariado\\capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +30,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\2 DAM\\Proyecto Intermodular\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Form1.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Form1.cs",
@@ -51,12 +51,11 @@
               "RelativeToolTip": "CapaDatos\\Gestion.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T09:34:38.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T09:34:38.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\2 DAM\\Proyecto Intermodular\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Form1.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Form1.cs",

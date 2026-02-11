@@ -31,5 +31,12 @@ namespace CapaPresentacion
             dgv.DataSource = null;
             dgv.DataSource = gestion.Voluntarios();
         }
+
+        private void btnOrganizaciones_Click(object sender, EventArgs e)
+        {
+            lblInformacion.Text = "Todos los voluntarios";
+            dgv.DataSource = null;
+            dgv.DataSource = gestion.Organizaciones();
+        }
     }
 }

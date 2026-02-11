@@ -33,5 +33,10 @@ namespace CapaDatos
         {
             return contexto.VOLUNTARIOS.ToList();
         }
+
+        public List<ORGANIZACIONE> Organizaciones()
+        {
+            return contexto.ORGANIZACIONES.ToList();
+        }
     }
 }
