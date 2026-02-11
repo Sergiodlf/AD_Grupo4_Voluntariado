@@ -43,5 +43,10 @@ namespace CapaDatos
         {
             return contexto.ACTIVIDADES.ToList();
         }
+
+        public List<OD> Ods()
+        {
+            return contexto.ODS.OrderBy(ods => ods.id).ToList();
+        }
     }
 }

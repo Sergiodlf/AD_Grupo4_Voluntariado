@@ -23,6 +23,7 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             gestion = Program.gestion;
+            lsbODS.Items.AddRange(gestion.Ods().Select(ods => new { ods.id, ods.nombre }).ToArray());
         }
 
         private void btnVoluntarios_Click(object sender, EventArgs e)
