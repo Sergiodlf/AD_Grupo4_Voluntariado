@@ -77,6 +77,7 @@
             this.btnActividades.TabIndex = 16;
             this.btnActividades.Text = "Mostrar actividades";
             this.btnActividades.UseVisualStyleBackColor = true;
+            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
             // 
             // btnActividadesODS
             // 

@@ -38,5 +38,12 @@ namespace CapaPresentacion
             dgv.DataSource = null;
             dgv.DataSource = gestion.Organizaciones();
         }
+
+        private void btnActividades_Click(object sender, EventArgs e)
+        {
+            lblInformacion.Text = "Todas las actividades";
+            dgv.DataSource = null;
+            dgv.DataSource= gestion.Actividades();
+        }
     }
 }
