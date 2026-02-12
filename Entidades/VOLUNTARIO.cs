@@ -18,6 +18,7 @@ namespace Entidades
         public VOLUNTARIO()
         {
             this.INSCRIPCIONES = new HashSet<INSCRIPCIONE>();
+            this.notificacions = new HashSet<notificacion>();
             this.HABILIDADES = new HashSet<HABILIDADE>();
             this.INTERESES = new HashSet<INTERES>();
         }
@@ -27,7 +28,6 @@ namespace Entidades
         public string APELLIDO1 { get; set; }
         public string APELLIDO2 { get; set; }
         public string CORREO { get; set; }
-        public string PASSWORD { get; set; }
         public string ZONA { get; set; }
         public System.DateTime FECHA_NACIMIENTO { get; set; }
         public string EXPERIENCIA { get; set; }
@@ -35,12 +35,15 @@ namespace Entidades
         public string DISPONIBILIDAD { get; set; }
         public string IDIOMAS { get; set; }
         public string ESTADO_VOLUNTARIO { get; set; }
+        public string FCM_TOKEN { get; set; }
         public Nullable<short> CURSO_CICLOS { get; set; }
         public string NOMBRE_CICLOS { get; set; }
     
         public virtual CICLO CICLO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INSCRIPCIONE> INSCRIPCIONES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<notificacion> notificacions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HABILIDADE> HABILIDADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

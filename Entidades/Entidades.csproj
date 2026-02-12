@@ -54,6 +54,9 @@
     <Compile Include="ACTIVIDADE.cs">
       <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
     </Compile>
+    <Compile Include="administrador.cs">
+      <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
+    </Compile>
     <Compile Include="CICLO.cs">
       <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
       <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
     </Compile>
     <Compile Include="NECESIDADE.cs">
+      <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notificacion.cs">
       <DependentUpon>ModeloVoluntariado.tt</DependentUpon>
     </Compile>
     <Compile Include="OD.cs">
