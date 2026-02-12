@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Form1
+    partial class FrmAnaliticasVoluntariado
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -49,6 +49,7 @@
             this.btnOrganizacionesODS.TabIndex = 19;
             this.btnOrganizacionesODS.Text = "Organizaciones que han realizado actividades con ODS seleccionadas";
             this.btnOrganizacionesODS.UseVisualStyleBackColor = true;
+            this.btnOrganizacionesODS.Click += new System.EventHandler(this.btnOrganizacionesODS_Click);
             // 
             // btnVoluntariosODS
             // 
@@ -58,6 +59,7 @@
             this.btnVoluntariosODS.TabIndex = 18;
             this.btnVoluntariosODS.Text = "Voluntarios que han participado en actividades con ODS seleccionadas";
             this.btnVoluntariosODS.UseVisualStyleBackColor = true;
+            this.btnVoluntariosODS.Click += new System.EventHandler(this.btnVoluntariosODS_Click);
             // 
             // btnVoluntarios
             // 

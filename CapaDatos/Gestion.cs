@@ -56,5 +56,25 @@ namespace CapaDatos
                 .Where(a => a.ODS.Any(o => idsOds.Contains(o.id)))
                 .ToList();
         }
+
+        public List<VOLUNTARIO> VoluntariosPorOds(List<int> idsOds)
+        {
+            return contexto.VOLUNTARIOS
+                .Where(v => v.INSCRIPCIONES
+                    .Any(i => i.ACTIVIDADE.ODS
+                        .Any(o => idsOds.Contains(o.id))))
+                .Distinct()
+                .ToList();
+        }
+
+        public List<ORGANIZACIONE> OrganizacionesPorOds(List<int> idsOds)
+        {
+            return contexto.ORGANIZACIONES
+                .Where(o => o.ACTIVIDADES
+                    .Any(a => a.ODS
+                        .Any(ods => idsOds.Contains(ods.id))))
+                .Distinct()
+                .ToList();
+        }
     }
 }
