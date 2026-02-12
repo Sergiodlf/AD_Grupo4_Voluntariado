@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\leyre\\desktop\\ad_proyecto_voluntariado\\ad_grupo4_voluntariado\\capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\leyre\\desktop\\ad_proyecto_voluntariado\\ad_grupo4_voluntariado\\capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmanaliticasvoluntariado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,6 +113,19 @@
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmAnaliticasVoluntariado.cs",
+              "DocumentMoniker": "C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
+              "ToolTip": "C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
+              "RelativeToolTip": "CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T09:35:24.159Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
@@ -127,19 +140,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T08:31:10.108Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmAnaliticasVoluntariado.cs",
-              "DocumentMoniker": "C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
-              "ToolTip": "C:\\Users\\leyre\\Desktop\\AD_Proyecto_Voluntariado\\AD_Grupo4_Voluntariado\\CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
-              "RelativeToolTip": "CapaPresentacion\\FrmAnaliticasVoluntariado.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T09:35:24.159Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
