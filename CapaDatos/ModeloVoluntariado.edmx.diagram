@@ -13,18 +13,22 @@
         <EntityTypeShape EntityType="PROYECTOINTERModel.INTERES" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PROYECTOINTERModel.NECESIDADE" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PROYECTOINTERModel.OD" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PROYECTOINTERModel.ORGANIZACIONE" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PROYECTOINTERModel.VOLUNTARIO" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
         <AssociationConnector Association="PROYECTOINTERModel.FK_2B7CF67DC1F05EDB" ManuallyRouted="false" />
-        <AssociationConnector Association="PROYECTOINTERModel.FK_FED6DA367DF202BB" ManuallyRouted="false" />
-        <AssociationConnector Association="PROYECTOINTERModel.FK_CC29E0C94F5222D9CCB2DE43" ManuallyRouted="false" />
-        <AssociationConnector Association="PROYECTOINTERModel.FK_2B7CF67D413E7C02" ManuallyRouted="false" />
         <AssociationConnector Association="PROYECTOINTERModel.ACTIVIDADES_HABILIDADES" ManuallyRouted="false" />
         <AssociationConnector Association="PROYECTOINTERModel.ACTIVIDADES_NECESIDADES" ManuallyRouted="false" />
         <AssociationConnector Association="PROYECTOINTERModel.ACTIVIDADES_ODS" ManuallyRouted="false" />
-        <AssociationConnector Association="PROYECTOINTERModel.VOLUNTARIOS_HABILIDADES" ManuallyRouted="false" />
-        <AssociationConnector Association="PROYECTOINTERModel.VOLUNTARIOS_INTERESES" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="PROYECTOINTERModel.administrador" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PROYECTOINTERModel.notificacion" Width="1.5" PointX="15.75" PointY="4.125" />
+        <EntityTypeShape EntityType="PROYECTOINTERModel.ORGANIZACIONE" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="PROYECTOINTERModel.VOLUNTARIO" Width="1.5" PointX="10.5" PointY="2.625" />
+        <AssociationConnector Association="PROYECTOINTERModel.FK_FED6DA367DF202BB" />
+        <AssociationConnector Association="PROYECTOINTERModel.FK_CC29E0C94F5222D9CCB2DE43" />
+        <AssociationConnector Association="PROYECTOINTERModel.FK_2B7CF67D413E7C02" />
+        <AssociationConnector Association="PROYECTOINTERModel.FK_729A19EC6A56CB89" />
+        <AssociationConnector Association="PROYECTOINTERModel.FK_729A19ECD9CDDF39" />
+        <AssociationConnector Association="PROYECTOINTERModel.VOLUNTARIOS_HABILIDADES" />
+        <AssociationConnector Association="PROYECTOINTERModel.VOLUNTARIOS_INTERESES" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

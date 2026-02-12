@@ -16,3 +16,15 @@ C:\Users\Sergio\Desktop\2 DAM\Proyecto Intermodular\AD_Grupo4_Voluntariado\Busca
 C:\Users\Sergio\Desktop\2 DAM\Proyecto Intermodular\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarSe.37B74EBB.Up2Date
 C:\Users\Sergio\Desktop\2 DAM\Proyecto Intermodular\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.dll
 C:\Users\Sergio\Desktop\2 DAM\Proyecto Intermodular\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.pdb
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\BuscarServidor.dll.config
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\BuscarServidor.dll
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\BuscarServidor.pdb
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\EntityFramework.dll
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\EntityFramework.xml
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarSe.37B74EBB.Up2Date
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.dll
+C:\Users\Sergio\Desktop\AD_Grupo4_Voluntariado\BuscarServidor\obj\Debug\BuscarServidor.pdb

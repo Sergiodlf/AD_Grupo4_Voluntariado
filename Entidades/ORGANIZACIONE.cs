@@ -18,12 +18,12 @@ namespace Entidades
         public ORGANIZACIONE()
         {
             this.ACTIVIDADES = new HashSet<ACTIVIDADE>();
+            this.notificacions = new HashSet<notificacion>();
         }
     
         public string CIF { get; set; }
         public string NOMBRE { get; set; }
         public string EMAIL { get; set; }
-        public string PASSWORD { get; set; }
         public string SECTOR { get; set; }
         public string DIRECCION { get; set; }
         public string LOCALIDAD { get; set; }
@@ -31,8 +31,11 @@ namespace Entidades
         public string DESCRIPCION { get; set; }
         public string CONTACTO { get; set; }
         public string ESTADO { get; set; }
+        public string FCM_TOKEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ACTIVIDADE> ACTIVIDADES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<notificacion> notificacions { get; set; }
     }
 }
