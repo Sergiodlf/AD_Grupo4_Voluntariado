@@ -25,7 +25,7 @@ namespace CapaDatos
             // 2. CAMBIO AQUÍ: Usamos 'metadata' dentro de la cadena
             string cadenaConexion = $@"metadata={metadata};provider=System.Data.SqlClient;provider connection string=""data source={servidor};initial catalog={baseDatos};integrated security=True;encrypt=True;trustservercertificate=True;MultipleActiveResultSets=True;App=EntityFramework""";
 
-            // 3. 'this.modelo' se refiere a la variable de la clase (Estado2Entities)
+            // 3. 'this.contexto' se refiere a la variable de la clase (Estado2Entities)
             this.contexto = new PROYECTOINTEREntities(cadenaConexion);
         }
 
@@ -47,6 +47,11 @@ namespace CapaDatos
         public List<OD> Ods()
         {
             return contexto.ODS.OrderBy(ods => ods.id).ToList();
+        }
+
+        public List<string> NombreOdsPorId(List<int> idsOds)
+        {
+            return contexto.ODS.Where(o => idsOds.Contains(o.id)).Select(o => o.nombre).ToList();
         }
 
         public List<ACTIVIDADE> ActividadesPorOds(List<int> idsOds)

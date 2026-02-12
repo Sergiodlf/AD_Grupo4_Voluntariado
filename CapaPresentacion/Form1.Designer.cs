@@ -116,6 +116,7 @@
             this.lsbODS.ItemHeight = 16;
             this.lsbODS.Location = new System.Drawing.Point(21, 186);
             this.lsbODS.Name = "lsbODS";
+            this.lsbODS.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbODS.Size = new System.Drawing.Size(282, 180);
             this.lsbODS.TabIndex = 12;
             // 
@@ -154,7 +155,7 @@
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.dgv);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Informes del voluntariado cuatrovientos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

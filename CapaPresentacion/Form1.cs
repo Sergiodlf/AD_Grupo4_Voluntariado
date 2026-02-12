@@ -23,7 +23,7 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             gestion = Program.gestion;
-            lsbODS.DataSource = gestion.Ods().Select(ods => new { ods.id, ods.nombre }).ToList();
+            lsbODS.DataSource = gestion.Ods().ToList();
             lsbODS.DisplayMember = "nombre";
             lsbODS.ValueMember = "id";
         }
@@ -110,6 +110,10 @@ namespace CapaPresentacion
 
                 dgv.DataSource = null;
                 dgv.DataSource = listaLimpia;
+
+                var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
+
+                lblInformacion.Text = "Voluntarios con actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
@@ -141,11 +145,15 @@ namespace CapaPresentacion
 
                 dgv.DataSource = null;
                 dgv.DataSource = listaLimpia;
+
+                var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
+
+                lblInformacion.Text = "Actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona al menos un ODS.");
-            }
+            }            
         }
 
         private void btnOrganizacionesODS_Click(object sender, EventArgs e)
@@ -161,16 +169,21 @@ namespace CapaPresentacion
 
                 var listaLimpia = organizaciones.Select(o => new
                 {
+                    CIF = o.CIF,
                     Nombre = o.NOMBRE,
+                    Email = o.EMAIL,
                     Sector = o.SECTOR,
                     Dirección = o.DIRECCION,
                     Localidad = o.LOCALIDAD,
-                    Contacto = o.CONTACTO,
-                    Estado = o.ESTADO
+                    Contacto = o.CONTACTO
                 }).ToList();
 
                 dgv.DataSource = null;
                 dgv.DataSource = listaLimpia;
+
+                var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
+
+                lblInformacion.Text = "Organizaciones con actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
