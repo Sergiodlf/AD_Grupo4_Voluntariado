@@ -39,6 +39,8 @@ namespace Entidades
         public virtual DbSet<NECESIDADE> NECESIDADES { get; set; }
         public virtual DbSet<OD> ODS { get; set; }
         public virtual DbSet<ORGANIZACIONE> ORGANIZACIONES { get; set; }
+        public virtual DbSet<administrador> administradors { get; set; }
+        public virtual DbSet<notificacion> notificacions { get; set; }
         public virtual DbSet<VOLUNTARIO> VOLUNTARIOS { get; set; }
         public virtual DbSet<administrador> administradors { get; set; }
         public virtual DbSet<notificacion> notificacions { get; set; }
