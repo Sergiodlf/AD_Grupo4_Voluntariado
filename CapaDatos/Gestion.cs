@@ -48,5 +48,13 @@ namespace CapaDatos
         {
             return contexto.ODS.OrderBy(ods => ods.id).ToList();
         }
+
+        public List<ACTIVIDADE> ActividadesPorOds(List<int> idsOds)
+        {
+
+            return contexto.ACTIVIDADES
+                .Where(a => a.ODS.Any(o => idsOds.Contains(o.id)))
+                .ToList();
+        }
     }
 }

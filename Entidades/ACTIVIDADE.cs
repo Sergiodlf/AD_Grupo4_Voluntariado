@@ -33,6 +33,8 @@ namespace Entidades
         public System.DateTime FECHA_FIN { get; set; }
         public short MAX_PARTICIPANTES { get; set; }
         public string CIF_EMPRESA { get; set; }
+        public string SECTOR { get; set; }
+        public string DESCRIPCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INSCRIPCIONE> INSCRIPCIONES { get; set; }

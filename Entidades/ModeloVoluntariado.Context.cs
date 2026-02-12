@@ -19,6 +19,7 @@ namespace Entidades
             : base("name=PROYECTOINTEREntities")
         {
         }
+
         public PROYECTOINTEREntities(string cadenaConexion)
             : base(cadenaConexion)
         {
@@ -39,5 +40,8 @@ namespace Entidades
         public virtual DbSet<OD> ODS { get; set; }
         public virtual DbSet<ORGANIZACIONE> ORGANIZACIONES { get; set; }
         public virtual DbSet<VOLUNTARIO> VOLUNTARIOS { get; set; }
+        public virtual DbSet<administrador> administradors { get; set; }
+        public virtual DbSet<notificacion> notificacions { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

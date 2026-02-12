@@ -87,6 +87,7 @@
             this.btnActividadesODS.TabIndex = 15;
             this.btnActividadesODS.Text = "Actividades por ODS seleccionadas";
             this.btnActividadesODS.UseVisualStyleBackColor = true;
+            this.btnActividadesODS.Click += new System.EventHandler(this.btnActividadesODS_Click);
             // 
             // btnOrganizaciones
             // 

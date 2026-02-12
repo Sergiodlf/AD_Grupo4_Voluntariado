@@ -20,6 +20,7 @@ namespace Entidades
             this.INSCRIPCIONES = new HashSet<INSCRIPCIONE>();
             this.HABILIDADES = new HashSet<HABILIDADE>();
             this.INTERESES = new HashSet<INTERES>();
+            this.notificacions = new HashSet<notificacion>();
         }
     
         public string DNI { get; set; }
@@ -37,6 +38,7 @@ namespace Entidades
         public string ESTADO_VOLUNTARIO { get; set; }
         public Nullable<short> CURSO_CICLOS { get; set; }
         public string NOMBRE_CICLOS { get; set; }
+        public string FCM_TOKEN { get; set; }
     
         public virtual CICLO CICLO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -45,5 +47,7 @@ namespace Entidades
         public virtual ICollection<HABILIDADE> HABILIDADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INTERES> INTERESES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<notificacion> notificacions { get; set; }
     }
 }
