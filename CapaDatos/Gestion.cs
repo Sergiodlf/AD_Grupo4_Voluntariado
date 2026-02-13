@@ -81,5 +81,15 @@ namespace CapaDatos
                 .Distinct()
                 .ToList();
         }
+
+        public List<VOLUNTARIO> VoluntariosPorTrozoDeNombre(string trozoNombre)
+        {
+            return contexto.VOLUNTARIOS.Where(v => v.NOMBRE.StartsWith(trozoNombre)).ToList();
+        }
+
+        public List<ACTIVIDADE> ActividadesDeVoluntario(VOLUNTARIO v)
+        {
+            return v.INSCRIPCIONES.Select(i => i.ACTIVIDADE).ToList();
+        }
     }
 }
