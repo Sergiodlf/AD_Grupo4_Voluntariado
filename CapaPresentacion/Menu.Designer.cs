@@ -46,7 +46,7 @@
             this.funcionalidadesDeAnálisisToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1208, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1208, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,24 +66,28 @@
             this.filtrarPorODSToolStripMenuItem.Name = "filtrarPorODSToolStripMenuItem";
             this.filtrarPorODSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.filtrarPorODSToolStripMenuItem.Text = "Filtrar por ODS";
+            this.filtrarPorODSToolStripMenuItem.Click += new System.EventHandler(this.filtrarPorODSToolStripMenuItem_Click);
             // 
             // filtrarPorVoluntariosToolStripMenuItem
             // 
             this.filtrarPorVoluntariosToolStripMenuItem.Name = "filtrarPorVoluntariosToolStripMenuItem";
             this.filtrarPorVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.filtrarPorVoluntariosToolStripMenuItem.Text = "Voluntarios";
+            this.filtrarPorVoluntariosToolStripMenuItem.Click += new System.EventHandler(this.filtrarPorVoluntariosToolStripMenuItem_Click);
             // 
             // organizacionesToolStripMenuItem
             // 
             this.organizacionesToolStripMenuItem.Name = "organizacionesToolStripMenuItem";
             this.organizacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.organizacionesToolStripMenuItem.Text = "Organizaciones";
+            this.organizacionesToolStripMenuItem.Click += new System.EventHandler(this.organizacionesToolStripMenuItem_Click);
             // 
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.actividadesToolStripMenuItem.Text = "Actividades";
+            this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
             // label1
             // 

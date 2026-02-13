@@ -21,5 +21,29 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void filtrarPorODSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form odsForm = new ODS();
+            odsForm.ShowDialog();
+        }
+
+        private void filtrarPorVoluntariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form voluntariosForm = new Voluntarios();
+            voluntariosForm.ShowDialog();
+        }
+
+        private void organizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form organizacionesForm = new Organizaciones();
+            organizacionesForm.ShowDialog();
+        }
+
+        private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form voluntariadosForm = new Voluntariados();
+            voluntariadosForm.ShowDialog();
+        }
     }
 }

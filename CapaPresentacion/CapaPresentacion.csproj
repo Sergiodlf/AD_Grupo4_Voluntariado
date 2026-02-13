@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ODS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ODS.Designer.cs">
+      <DependentUpon>ODS.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -76,8 +76,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Voluntariados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voluntariados.Designer.cs">
+      <DependentUpon>Voluntariados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voluntarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voluntarios.Designer.cs">
+      <DependentUpon>Voluntarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ODS.resx">
+      <DependentUpon>ODS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -94,6 +106,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Voluntariados.resx">
+      <DependentUpon>Voluntariados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voluntarios.resx">
+      <DependentUpon>Voluntarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

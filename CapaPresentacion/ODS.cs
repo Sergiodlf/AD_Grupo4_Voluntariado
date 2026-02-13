@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Form1 : Form
+    public partial class ODS : Form
     {
 
         public Gestion gestion;
-        public Form1()
+        public ODS()
         {
             InitializeComponent();
         }
