@@ -31,23 +31,28 @@
             this.dgvOrganizacion = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreOrg = new System.Windows.Forms.TextBox();
+            this.lblInformacion = new System.Windows.Forms.Label();
+            this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.lblOrganizacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrganizacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrganizacion
             // 
             this.dgvOrganizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrganizacion.Location = new System.Drawing.Point(120, 245);
+            this.dgvOrganizacion.Location = new System.Drawing.Point(120, 96);
             this.dgvOrganizacion.Name = "dgvOrganizacion";
             this.dgvOrganizacion.RowHeadersWidth = 51;
             this.dgvOrganizacion.RowTemplate.Height = 24;
-            this.dgvOrganizacion.Size = new System.Drawing.Size(975, 362);
+            this.dgvOrganizacion.Size = new System.Drawing.Size(975, 239);
             this.dgvOrganizacion.TabIndex = 0;
+            this.dgvOrganizacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrganizacion_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 148);
+            this.label1.Location = new System.Drawing.Point(341, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 16);
             this.label1.TabIndex = 1;
@@ -55,22 +60,55 @@
             // 
             // txtNombreOrg
             // 
-            this.txtNombreOrg.Location = new System.Drawing.Point(500, 145);
+            this.txtNombreOrg.Location = new System.Drawing.Point(500, 22);
             this.txtNombreOrg.Name = "txtNombreOrg";
             this.txtNombreOrg.Size = new System.Drawing.Size(382, 22);
             this.txtNombreOrg.TabIndex = 2;
+            this.txtNombreOrg.TextChanged += new System.EventHandler(this.txtNombreOrg_TextChanged);
+            // 
+            // lblInformacion
+            // 
+            this.lblInformacion.BackColor = System.Drawing.Color.PaleGreen;
+            this.lblInformacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblInformacion.Location = new System.Drawing.Point(120, 63);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(975, 23);
+            this.lblInformacion.TabIndex = 13;
+            // 
+            // dgvActividades
+            // 
+            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActividades.Location = new System.Drawing.Point(120, 402);
+            this.dgvActividades.Name = "dgvActividades";
+            this.dgvActividades.RowHeadersWidth = 51;
+            this.dgvActividades.RowTemplate.Height = 24;
+            this.dgvActividades.Size = new System.Drawing.Size(975, 231);
+            this.dgvActividades.TabIndex = 16;
+            // 
+            // lblOrganizacion
+            // 
+            this.lblOrganizacion.BackColor = System.Drawing.Color.PaleGreen;
+            this.lblOrganizacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblOrganizacion.Location = new System.Drawing.Point(120, 365);
+            this.lblOrganizacion.Name = "lblOrganizacion";
+            this.lblOrganizacion.Size = new System.Drawing.Size(975, 23);
+            this.lblOrganizacion.TabIndex = 15;
             // 
             // Organizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 688);
+            this.Controls.Add(this.dgvActividades);
+            this.Controls.Add(this.lblOrganizacion);
+            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.txtNombreOrg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrganizacion);
             this.Name = "Organizaciones";
             this.Text = "Organizaciones";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrganizacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +119,8 @@
         private System.Windows.Forms.DataGridView dgvOrganizacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombreOrg;
+        private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.DataGridView dgvActividades;
+        private System.Windows.Forms.Label lblOrganizacion;
     }
 }

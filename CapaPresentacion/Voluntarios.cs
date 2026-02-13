@@ -40,7 +40,7 @@ namespace CapaPresentacion
             else
                 lblInformacion.Text = "Voluntarios que su nombre comienza por: "+ txtNombreVoluntario.Text;
             voluntarios = gestion.VoluntariosPorTrozoDeNombre(txtNombreVoluntario.Text);
-            dgvVoluntarios.DataSource = voluntarios.Select(v => new
+            dgvVoluntarios.DataSource = voluntarios.Select(v => new 
             {
                 DNI = v.DNI,
                 Nombre = v.NOMBRE,
@@ -53,9 +53,19 @@ namespace CapaPresentacion
 
         private void dgvVoluntarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             VOLUNTARIO voluntario = voluntarios[e.RowIndex];
-            lblVoluntario.Text = "Actividades del voluntario: " + voluntario.NOMBRE;
-            dgvActividades.DataSource = gestion.ActividadesDeVoluntario(voluntario);
+            lblVoluntario.Text = "Actividades en las que se ha inscrito: " + voluntario.NOMBRE + " "+ voluntario.APELLIDO1 + " "+ voluntario.APELLIDO2;
+            dgvActividades.DataSource = voluntario.INSCRIPCIONES.Select(i => i.ACTIVIDADE).Select(a => new
+            {
+                Nombre = a.NOMBRE,
+                Estado = a.ESTADO,
+                Sector = a.SECTOR,
+                Dirección = a.DIRECCION,
+                Inicio = a.FECHA_INICIO,
+                Fin = a.FECHA_FIN,
+                Descripción = a.DESCRIPCION
+            }).ToList();
         }
     }
 }

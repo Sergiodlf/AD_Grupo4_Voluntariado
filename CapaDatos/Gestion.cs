@@ -87,9 +87,9 @@ namespace CapaDatos
             return contexto.VOLUNTARIOS.Where(v => v.NOMBRE.StartsWith(trozoNombre)).ToList();
         }
 
-        public List<ACTIVIDADE> ActividadesDeVoluntario(VOLUNTARIO v)
+        public List<ORGANIZACIONE> OrganizacionesPorTrozoDeNombre(string trozoNombre)
         {
-            return v.INSCRIPCIONES.Select(i => i.ACTIVIDADE).ToList();
+            return contexto.ORGANIZACIONES.Where(o => o.NOMBRE.StartsWith(trozoNombre)).ToList();
         }
     }
 }
