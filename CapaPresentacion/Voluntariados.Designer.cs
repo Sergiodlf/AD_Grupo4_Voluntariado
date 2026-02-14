@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtIinicio = new System.Windows.Forms.DateTimePicker();
-            this.dtFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,30 +37,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblInformacionOrganizacion = new System.Windows.Forms.Label();
             this.lblCIF = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblNombreOrg = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblEmailOrg = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblVoluntarios = new System.Windows.Forms.Label();
             this.dgvVoluntarios = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoluntarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtIinicio
+            // dtpInicio
             // 
-            this.dtIinicio.Location = new System.Drawing.Point(344, 25);
-            this.dtIinicio.Name = "dtIinicio";
-            this.dtIinicio.Size = new System.Drawing.Size(255, 22);
-            this.dtIinicio.TabIndex = 0;
-            this.dtIinicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpInicio.Location = new System.Drawing.Point(344, 25);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(255, 22);
+            this.dtpInicio.TabIndex = 0;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // dtFin
+            // dtpFin
             // 
-            this.dtFin.Location = new System.Drawing.Point(704, 25);
-            this.dtFin.Name = "dtFin";
-            this.dtFin.Size = new System.Drawing.Size(249, 22);
-            this.dtFin.TabIndex = 1;
+            this.dtpFin.Location = new System.Drawing.Point(704, 25);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(249, 22);
+            this.dtpFin.TabIndex = 1;
             // 
             // dgvActividades
             // 
@@ -71,6 +72,7 @@
             this.dgvActividades.RowTemplate.Height = 24;
             this.dgvActividades.Size = new System.Drawing.Size(975, 208);
             this.dgvActividades.TabIndex = 4;
+            this.dgvActividades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActividades_CellClick);
             // 
             // label1
             // 
@@ -126,14 +128,14 @@
             this.lblCIF.Size = new System.Drawing.Size(96, 23);
             this.lblCIF.TabIndex = 17;
             // 
-            // lblNombre
+            // lblNombreOrg
             // 
-            this.lblNombre.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre.Location = new System.Drawing.Point(381, 349);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(289, 23);
-            this.lblNombre.TabIndex = 19;
+            this.lblNombreOrg.BackColor = System.Drawing.Color.PaleGreen;
+            this.lblNombreOrg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreOrg.Location = new System.Drawing.Point(381, 349);
+            this.lblNombreOrg.Name = "lblNombreOrg";
+            this.lblNombreOrg.Size = new System.Drawing.Size(289, 23);
+            this.lblNombreOrg.TabIndex = 19;
             // 
             // label5
             // 
@@ -144,14 +146,14 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Nombre:";
             // 
-            // lblEmail
+            // lblEmailOrg
             // 
-            this.lblEmail.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEmail.Location = new System.Drawing.Point(756, 349);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(347, 23);
-            this.lblEmail.TabIndex = 21;
+            this.lblEmailOrg.BackColor = System.Drawing.Color.PaleGreen;
+            this.lblEmailOrg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEmailOrg.Location = new System.Drawing.Point(756, 349);
+            this.lblEmailOrg.Name = "lblEmailOrg";
+            this.lblEmailOrg.Size = new System.Drawing.Size(347, 23);
+            this.lblEmailOrg.TabIndex = 21;
             // 
             // label6
             // 
@@ -181,16 +183,27 @@
             this.dgvVoluntarios.Size = new System.Drawing.Size(975, 208);
             this.dgvVoluntarios.TabIndex = 23;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(1002, 23);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 24;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Voluntariados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 675);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvVoluntarios);
             this.Controls.Add(this.lblVoluntarios);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblEmailOrg);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblNombreOrg);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblCIF);
             this.Controls.Add(this.lblInformacionOrganizacion);
@@ -199,8 +212,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvActividades);
-            this.Controls.Add(this.dtFin);
-            this.Controls.Add(this.dtIinicio);
+            this.Controls.Add(this.dtpFin);
+            this.Controls.Add(this.dtpInicio);
             this.Name = "Voluntariados";
             this.Text = "Voluntariados";
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
@@ -212,8 +225,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dtIinicio;
-        private System.Windows.Forms.DateTimePicker dtFin;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.DataGridView dgvActividades;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -221,11 +234,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblInformacionOrganizacion;
         private System.Windows.Forms.Label lblCIF;
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblNombreOrg;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblEmailOrg;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblVoluntarios;
         private System.Windows.Forms.DataGridView dgvVoluntarios;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

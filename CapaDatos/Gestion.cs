@@ -91,5 +91,12 @@ namespace CapaDatos
         {
             return contexto.ORGANIZACIONES.Where(o => o.NOMBRE.StartsWith(trozoNombre)).ToList();
         }
+
+        public List<ACTIVIDADE> ActividadesPorRango(DateTime inicio, DateTime fin)
+        {
+            return contexto.ACTIVIDADES
+             .Where(a => a.FECHA_INICIO >= inicio && a.FECHA_FIN <= fin)
+             .ToList();
+        }
     }
 }
