@@ -28,65 +28,7 @@ namespace CapaPresentacion
             lsbODS.ValueMember = "id";
         }
 
-        private void btnVoluntarios_Click(object sender, EventArgs e)
-        {
-            var lista = gestion.Voluntarios();
-
-            var listaLimpia = lista.Select(v => new
-            {
-                DNI = v.DNI,
-                Nombre = v.NOMBRE,
-                Apellidos = $"{v.APELLIDO1} {v.APELLIDO2}",
-                Correo = v.CORREO,
-                Zona = v.ZONA,
-                Experiencia = v.EXPERIENCIA
-            }).ToList();
-
-            dgv.DataSource = null;
-            dgv.DataSource = listaLimpia;
-            lblInformacion.Text = "Todos los voluntarios";
-        }
-
-        private void btnOrganizaciones_Click(object sender, EventArgs e)
-        {
-            var lista = gestion.Organizaciones();
-
-            var listaLimpia = lista.Select(o => new
-            {
-                CIF = o.CIF,
-                Nombre = o.NOMBRE,
-                Email = o.EMAIL,
-                Sector = o.SECTOR,
-                Dirección = o.DIRECCION,
-                Localidad = o.LOCALIDAD,
-                Contacto = o.CONTACTO
-            }).ToList();
-
-            dgv.DataSource = null;
-            dgv.DataSource = listaLimpia;
-            lblInformacion.Text = "Todas las organizaciones";
-        }
-
-        private void btnActividades_Click(object sender, EventArgs e)
-        {
-            dgv.DataSource = null;
-            var lista = gestion.Actividades();
-            var listaLimpia = lista.Select(a => new
-            {
-                Nombre = a.NOMBRE,
-                Estado = a.ESTADO,
-                Sector = a.SECTOR,
-                Dirección = a.DIRECCION,
-                Inicio = a.FECHA_INICIO,
-                Fin = a.FECHA_FIN,
-                Descripción = a.DESCRIPCION
-            }).ToList();
-
-            dgv.DataSource = null;
-            dgv.DataSource = listaLimpia;
-            lblInformacion.Text = "Todas las actividades";
-        }
-
+       
         private void btnVoluntariosODS_Click(object sender, EventArgs e)
         {
             var idsSeleccionados = lsbODS.SelectedItems

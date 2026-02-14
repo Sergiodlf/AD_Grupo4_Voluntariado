@@ -30,10 +30,7 @@
         {
             this.btnOrganizacionesODS = new System.Windows.Forms.Button();
             this.btnVoluntariosODS = new System.Windows.Forms.Button();
-            this.btnVoluntarios = new System.Windows.Forms.Button();
-            this.btnActividades = new System.Windows.Forms.Button();
             this.btnActividadesODS = new System.Windows.Forms.Button();
-            this.btnOrganizaciones = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbODS = new System.Windows.Forms.ListBox();
             this.lblInformacion = new System.Windows.Forms.Label();
@@ -43,7 +40,7 @@
             // 
             // btnOrganizacionesODS
             // 
-            this.btnOrganizacionesODS.Location = new System.Drawing.Point(481, 103);
+            this.btnOrganizacionesODS.Location = new System.Drawing.Point(412, 103);
             this.btnOrganizacionesODS.Name = "btnOrganizacionesODS";
             this.btnOrganizacionesODS.Size = new System.Drawing.Size(250, 69);
             this.btnOrganizacionesODS.TabIndex = 19;
@@ -53,7 +50,7 @@
             // 
             // btnVoluntariosODS
             // 
-            this.btnVoluntariosODS.Location = new System.Drawing.Point(481, 28);
+            this.btnVoluntariosODS.Location = new System.Drawing.Point(722, 103);
             this.btnVoluntariosODS.Name = "btnVoluntariosODS";
             this.btnVoluntariosODS.Size = new System.Drawing.Size(250, 69);
             this.btnVoluntariosODS.TabIndex = 18;
@@ -61,45 +58,15 @@
             this.btnVoluntariosODS.UseVisualStyleBackColor = true;
             this.btnVoluntariosODS.Click += new System.EventHandler(this.btnVoluntariosODS_Click);
             // 
-            // btnVoluntarios
-            // 
-            this.btnVoluntarios.Location = new System.Drawing.Point(1022, 28);
-            this.btnVoluntarios.Name = "btnVoluntarios";
-            this.btnVoluntarios.Size = new System.Drawing.Size(217, 69);
-            this.btnVoluntarios.TabIndex = 17;
-            this.btnVoluntarios.Text = "Mostrar voluntarios";
-            this.btnVoluntarios.UseVisualStyleBackColor = true;
-            this.btnVoluntarios.Click += new System.EventHandler(this.btnVoluntarios_Click);
-            // 
-            // btnActividades
-            // 
-            this.btnActividades.Location = new System.Drawing.Point(751, 103);
-            this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(250, 69);
-            this.btnActividades.TabIndex = 16;
-            this.btnActividades.Text = "Mostrar actividades";
-            this.btnActividades.UseVisualStyleBackColor = true;
-            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
-            // 
             // btnActividadesODS
             // 
-            this.btnActividadesODS.Location = new System.Drawing.Point(751, 28);
+            this.btnActividadesODS.Location = new System.Drawing.Point(1023, 103);
             this.btnActividadesODS.Name = "btnActividadesODS";
             this.btnActividadesODS.Size = new System.Drawing.Size(250, 69);
             this.btnActividadesODS.TabIndex = 15;
             this.btnActividadesODS.Text = "Actividades por ODS seleccionadas";
             this.btnActividadesODS.UseVisualStyleBackColor = true;
             this.btnActividadesODS.Click += new System.EventHandler(this.btnActividadesODS_Click);
-            // 
-            // btnOrganizaciones
-            // 
-            this.btnOrganizaciones.Location = new System.Drawing.Point(1022, 103);
-            this.btnOrganizaciones.Name = "btnOrganizaciones";
-            this.btnOrganizaciones.Size = new System.Drawing.Size(217, 69);
-            this.btnOrganizaciones.TabIndex = 14;
-            this.btnOrganizaciones.Text = "Mostrar Organizaciones";
-            this.btnOrganizaciones.UseVisualStyleBackColor = true;
-            this.btnOrganizaciones.Click += new System.EventHandler(this.btnOrganizaciones_Click);
             // 
             // label1
             // 
@@ -139,22 +106,19 @@
             this.dgv.Size = new System.Drawing.Size(1045, 354);
             this.dgv.TabIndex = 10;
             // 
-            // Form1
+            // ODS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 626);
             this.Controls.Add(this.btnOrganizacionesODS);
             this.Controls.Add(this.btnVoluntariosODS);
-            this.Controls.Add(this.btnVoluntarios);
-            this.Controls.Add(this.btnActividades);
             this.Controls.Add(this.btnActividadesODS);
-            this.Controls.Add(this.btnOrganizaciones);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lsbODS);
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.dgv);
-            this.Name = "Form1";
+            this.Name = "ODS";
             this.Text = "Informes del voluntariado cuatrovientos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
@@ -167,10 +131,7 @@
 
         private System.Windows.Forms.Button btnOrganizacionesODS;
         private System.Windows.Forms.Button btnVoluntariosODS;
-        private System.Windows.Forms.Button btnVoluntarios;
-        private System.Windows.Forms.Button btnActividades;
         private System.Windows.Forms.Button btnActividadesODS;
-        private System.Windows.Forms.Button btnOrganizaciones;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lsbODS;
         private System.Windows.Forms.Label lblInformacion;

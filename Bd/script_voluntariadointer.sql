@@ -161,26 +161,56 @@ CREATE TABLE [VOLUNTARIOS_INTERESES] (
 GO
 
 -- ==========================================================
--- INSERCIÓN DE DATOS
+-- INSERCIÓN DE DATOS (TODOS LOS CAMPOS)
 -- ==========================================================
 
+-- 1. CICLOS
 INSERT INTO [CICLOS] ([CURSO], [NOMBRE]) VALUES 
-(2, N'Administración'), (2, N'ASIR'), (2, N'DAM'), (2, N'DAW'), (2, N'Marketing');
+(2, N'Administración'), 
+(2, N'ASIR'), 
+(2, N'DAM'), 
+(2, N'DAW'), 
+(2, N'Marketing');
 
-INSERT INTO [ORGANIZACIONES] ([CIF], [NOMBRE], [EMAIL], [SECTOR], [DIRECCION], [LOCALIDAD], [CP], [DESCRIPCION], [CONTACTO], [ESTADO]) VALUES
-(N'B00000000', N'EcoVida', N'ecovida0@test.com', N'Medio Ambiente', N'Calle 0', N'Pamplona', N'31000', N'Social', N'600', N'aprobado'),
-(N'B00000001', N'AyudaDirecta', N'ayuda@test.com', N'Social', N'Calle 1', N'Pamplona', N'31000', N'Social', N'601', N'aprobado');
+-- 2. ORGANIZACIONES
+-- Campos: CIF, NOMBRE, EMAIL, SECTOR, DIRECCION, LOCALIDAD, CP, DESCRIPCION, CONTACTO, ESTADO, FCM_TOKEN
+INSERT INTO [ORGANIZACIONES] ([CIF], [NOMBRE], [EMAIL], [SECTOR], [DIRECCION], [LOCALIDAD], [CP], [DESCRIPCION], [CONTACTO], [ESTADO], [FCM_TOKEN]) VALUES
+(N'B00000000', N'EcoVida', N'ecovida0@test.com', N'Medio Ambiente', N'Calle Solidaria 0', N'Pamplona', N'31000', N'Labor social enfocada en Medio Ambiente', N'600000000', N'aprobado', NULL),
+(N'B00000001', N'AyudaDirecta', N'ayudadirecta1@test.com', N'Social', N'Calle Solidaria 1', N'Pamplona', N'31000', N'Labor social enfocada en Social', N'600000001', N'aprobado', NULL),
+(N'B00000002', N'Huellas Felices', N'huellasfelices2@test.com', N'Animales', N'Calle Solidaria 2', N'Pamplona', N'31000', N'Labor social enfocada en Animales', N'600000002', N'aprobado', NULL);
 
-INSERT INTO [ACTIVIDADES] ([CODACTIVIDAD], [NOMBRE], [ESTADO], [ESTADO_APROBACION], [DIRECCION], [SECTOR], [FECHA_INICIO], [FECHA_FIN], [MAX_PARTICIPANTES], [CIF_EMPRESA]) VALUES
-(1, N'Actividad Social 0', N'ABIERTA', N'ACEPTADO', N'Centro 0', N'Animales', '2026-03-10 14:00', '2026-03-10 18:00', 10, N'B00000000'),
-(2, N'Actividad Social 1', N'ABIERTA', N'ACEPTADO', N'Centro 1', N'Social', '2026-03-10 14:00', '2026-03-10 18:00', 10, N'B00000001');
+-- 3. HABILIDADES
+INSERT INTO [HABILIDADES] ([id], [nombre]) VALUES 
+(1, N'Programación'), (2, N'Diseño Gráfico'), (3, N'Redes Sociales'), (6, N'Primeros Auxilios'), (7, N'Cocina');
 
-INSERT INTO [VOLUNTARIOS] ([DNI], [NOMBRE], [APELLIDO1], [CORREO], [COCHE], [ESTADO_VOLUNTARIO], [CURSO_CICLOS], [NOMBRE_CICLOS]) VALUES
-(N'00000000V', N'Carlos', N'Lopez', N'carlos@test.com', 1, N'ACEPTADO', 2, N'DAM'),
-(N'12345678T', N'Voluntario', N'Test', N'test@test.com', 1, N'LIBRE', 2, N'DAM');
+-- 4. ACTIVIDADES
+-- Campos: CODACTIVIDAD, NOMBRE, ESTADO, ESTADO_APROBACION, ESTADO_NEW, DIRECCION, SECTOR, DESCRIPCION, FECHA_INICIO, FECHA_FIN, MAX_PARTICIPANTES, CIF_EMPRESA
+INSERT INTO [ACTIVIDADES] ([CODACTIVIDAD], [NOMBRE], [ESTADO], [ESTADO_APROBACION], [ESTADO_NEW], [DIRECCION], [SECTOR], [DESCRIPCION], [FECHA_INICIO], [FECHA_FIN], [MAX_PARTICIPANTES], [CIF_EMPRESA]) VALUES
+(1, N'Actividad Social 0', N'ABIERTA', N'ACEPTADO', NULL, N'Centro Comunitario 0', N'Animales', N'Únete a nuestra causa.', '2026-03-10 14:00:00', '2026-03-10 18:00:00', 10, N'B00000000'),
+(2, N'Actividad Social 1', N'ABIERTA', N'ACEPTADO', NULL, N'Centro Comunitario 1', N'Comunitario', N'Mejorar el entorno.', '2026-03-11 10:00:00', '2026-03-11 14:00:00', 15, N'B00000001');
 
-INSERT INTO [ODS] ([id], [nombre], [color]) VALUES 
-(1, N'Pobreza', N'#E5243B'), (3, N'Salud', N'#4C9F38'), (4, N'Educación', N'#C5192D');
+-- 5. VOLUNTARIOS
+-- Campos: DNI, NOMBRE, APELLIDO1, APELLIDO2, CORREO, ZONA, FECHA_NACIMIENTO, EXPERIENCIA, COCHE, DISPONIBILIDAD, IDIOMAS, ESTADO_VOLUNTARIO, FCM_TOKEN, CURSO_CICLOS, NOMBRE_CICLOS
+INSERT INTO [VOLUNTARIOS] ([DNI], [NOMBRE], [APELLIDO1], [APELLIDO2], [CORREO], [ZONA], [FECHA_NACIMIENTO], [EXPERIENCIA], [COCHE], [DISPONIBILIDAD], [IDIOMAS], [ESTADO_VOLUNTARIO], [FCM_TOKEN], [CURSO_CICLOS], [NOMBRE_CICLOS]) VALUES
+(N'00000000V', N'Carlos', N'Lopez', N'Martinez', N'carlos.lopez0@test.com', N'Valencia', '2000-01-01', N'Experiencia en eventos', 1, N'Mañanas', N'Inglés', N'ACEPTADO', NULL, 2, N'DAM'),
+(N'12345678T', N'Voluntario', N'Test', N'Usuario', N'voluntario_test@curso.com', N'Pamplona', '1995-05-15', N'Ninguna', 0, N'Tardes', N'Euskera', N'LIBRE', NULL, 2, N'DAM');
 
+-- 6. INSCRIPCIONES
+-- Campos: id, ESTADO, DNI_VOLUNTARIO, CODACTIVIDAD
+INSERT INTO [INSCRIPCIONES] ([id], [ESTADO], [DNI_VOLUNTARIO], [CODACTIVIDAD]) VALUES
+(1, N'PENDIENTE', N'00000000V', 1),
+(2, N'ACEPTADA', N'12345678T', 1);
+
+-- 7. ODS
+-- Campos: id, nombre, descripcion, color
+INSERT INTO [ODS] ([id], [nombre], [descripcion], [color]) VALUES 
+(1, N'Fin de la pobreza', N'Descripción corta ODS 1', N'#E5243B'),
+(3, N'Salud y bienestar', N'Descripción corta ODS 3', N'#4C9F38'),
+(4, N'Educación de calidad', N'Descripción corta ODS 4', N'#C5192D');
+
+-- 8. TABLAS INTERMEDIAS (N:M)
 INSERT INTO [ACTIVIDADES_ODS] ([CODACTIVIDAD], [ODS_ID]) VALUES (1, 4), (2, 3);
+INSERT INTO [VOLUNTARIOS_HABILIDADES] ([DNI], [HABILIDAD_ID]) VALUES (N'00000000V', 7), (N'12345678T', 1);
+INSERT INTO [ACTIVIDADES_HABILIDADES] ([CODACTIVIDAD], [HABILIDAD_ID]) VALUES (1, 6);
+
 GO
