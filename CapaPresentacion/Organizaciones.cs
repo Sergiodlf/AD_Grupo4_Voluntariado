@@ -20,7 +20,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gestion = Program.gestion;
-            lblInformacion.Text = "Todas las organizaciones";
+            label2.Text = "Todas las organizaciones: ";
             organizaciones = gestion.Organizaciones();
             dgvOrganizacion.DataSource = organizaciones.Select(o => new
             {
@@ -37,9 +37,9 @@ namespace CapaPresentacion
         private void txtNombreOrg_TextChanged(object sender, EventArgs e)
         {
             if (txtNombreOrg.Text == "")
-                lblInformacion.Text = "Todas las organizaciones";
+            label2.Text = "Todas las organizaciones: ";
             else
-                lblInformacion.Text = "Organizaciones que su nombre comienza por: " + txtNombreOrg.Text;
+                label2.Text = "Organizaciones que su nombre comienza por: " + txtNombreOrg.Text;
             organizaciones = gestion.OrganizacionesPorTrozoDeNombre(txtNombreOrg.Text);
             dgvOrganizacion.DataSource = organizaciones.Select(o => new
             {
@@ -57,7 +57,7 @@ namespace CapaPresentacion
         {            
             if (e.RowIndex < 0 ) return;
             ORGANIZACIONE organizacion = organizaciones[e.RowIndex];
-            lblOrganizacion.Text = "Actividades organizadas por: " + organizacion.NOMBRE;
+            label3.Text = "Número de actividades organizadas por " + organizacion.NOMBRE + ": " + organizacion.ACTIVIDADES.Count;
             dgvActividades.DataSource = organizacion.ACTIVIDADES.Select(a => new
             {
                 Nombre = a.NOMBRE,

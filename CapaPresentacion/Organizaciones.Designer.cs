@@ -31,9 +31,9 @@
             this.dgvOrganizacion = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreOrg = new System.Windows.Forms.TextBox();
-            this.lblInformacion = new System.Windows.Forms.Label();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
-            this.lblOrganizacion = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrganizacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             this.SuspendLayout();
@@ -66,15 +66,6 @@
             this.txtNombreOrg.TabIndex = 2;
             this.txtNombreOrg.TextChanged += new System.EventHandler(this.txtNombreOrg_TextChanged);
             // 
-            // lblInformacion
-            // 
-            this.lblInformacion.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblInformacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInformacion.Location = new System.Drawing.Point(120, 63);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(975, 23);
-            this.lblInformacion.TabIndex = 13;
-            // 
             // dgvActividades
             // 
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -85,23 +76,35 @@
             this.dgvActividades.Size = new System.Drawing.Size(975, 231);
             this.dgvActividades.TabIndex = 16;
             // 
-            // lblOrganizacion
+            // label2
             // 
-            this.lblOrganizacion.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblOrganizacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblOrganizacion.Location = new System.Drawing.Point(120, 365);
-            this.lblOrganizacion.Name = "lblOrganizacion";
-            this.lblOrganizacion.Size = new System.Drawing.Size(975, 23);
-            this.lblOrganizacion.TabIndex = 15;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(140, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 22);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Organizaciones";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(140, 366);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 22);
+            this.label3.TabIndex = 18;
             // 
             // Organizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 688);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvActividades);
-            this.Controls.Add(this.lblOrganizacion);
-            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.txtNombreOrg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrganizacion);
@@ -119,8 +122,8 @@
         private System.Windows.Forms.DataGridView dgvOrganizacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombreOrg;
-        private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.DataGridView dgvActividades;
-        private System.Windows.Forms.Label lblOrganizacion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

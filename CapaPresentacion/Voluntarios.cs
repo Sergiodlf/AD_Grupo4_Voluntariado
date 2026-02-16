@@ -20,7 +20,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gestion = Program.gestion;
-            lblInformacion.Text = "Todos los voluntarios";
+            label2.Text = "Todos los voluntarios";
             voluntarios = gestion.Voluntarios();
             dgvVoluntarios.DataSource = voluntarios.Select(v => new
             {
@@ -36,9 +36,9 @@ namespace CapaPresentacion
         private void txtNombreOrg_TextChanged(object sender, EventArgs e)
         {
             if (txtNombreVoluntario.Text == "")
-                lblInformacion.Text = "Todos los voluntarios";
+                label2.Text = "Todos los voluntarios";
             else
-                lblInformacion.Text = "Voluntarios que su nombre comienza por: "+ txtNombreVoluntario.Text;
+                label2.Text = "Voluntarios que su nombre comienza por: "+ txtNombreVoluntario.Text;
             voluntarios = gestion.VoluntariosPorTrozoDeNombre(txtNombreVoluntario.Text);
             dgvVoluntarios.DataSource = voluntarios.Select(v => new 
             {
@@ -55,7 +55,7 @@ namespace CapaPresentacion
         {
             if (e.RowIndex < 0) return;
             VOLUNTARIO voluntario = voluntarios[e.RowIndex];
-            lblVoluntario.Text = "Actividades en las que se ha inscrito: " + voluntario.NOMBRE + " "+ voluntario.APELLIDO1 + " "+ voluntario.APELLIDO2;
+            label3.Text = "Actividades en las que se ha inscrito: " + voluntario.NOMBRE + " "+ voluntario.APELLIDO1 + " "+ voluntario.APELLIDO2;
             dgvActividades.DataSource = voluntario.INSCRIPCIONES.Select(i => i.ACTIVIDADE).Select(a => new
             {
                 Nombre = a.NOMBRE,
@@ -66,6 +66,11 @@ namespace CapaPresentacion
                 Fin = a.FECHA_FIN,
                 Descripción = a.DESCRIPCION
             }).ToList();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

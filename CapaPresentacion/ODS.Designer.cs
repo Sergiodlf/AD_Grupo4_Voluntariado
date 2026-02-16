@@ -33,16 +33,16 @@
             this.btnActividadesODS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbODS = new System.Windows.Forms.ListBox();
-            this.lblInformacion = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOrganizacionesODS
             // 
-            this.btnOrganizacionesODS.Location = new System.Drawing.Point(412, 103);
+            this.btnOrganizacionesODS.Location = new System.Drawing.Point(22, 282);
             this.btnOrganizacionesODS.Name = "btnOrganizacionesODS";
-            this.btnOrganizacionesODS.Size = new System.Drawing.Size(250, 69);
+            this.btnOrganizacionesODS.Size = new System.Drawing.Size(282, 69);
             this.btnOrganizacionesODS.TabIndex = 19;
             this.btnOrganizacionesODS.Text = "Organizaciones que han realizado actividades con ODS seleccionadas";
             this.btnOrganizacionesODS.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@
             // 
             // btnVoluntariosODS
             // 
-            this.btnVoluntariosODS.Location = new System.Drawing.Point(722, 103);
+            this.btnVoluntariosODS.Location = new System.Drawing.Point(22, 372);
             this.btnVoluntariosODS.Name = "btnVoluntariosODS";
-            this.btnVoluntariosODS.Size = new System.Drawing.Size(250, 69);
+            this.btnVoluntariosODS.Size = new System.Drawing.Size(282, 69);
             this.btnVoluntariosODS.TabIndex = 18;
             this.btnVoluntariosODS.Text = "Voluntarios que han participado en actividades con ODS seleccionadas";
             this.btnVoluntariosODS.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // btnActividadesODS
             // 
-            this.btnActividadesODS.Location = new System.Drawing.Point(1023, 103);
+            this.btnActividadesODS.Location = new System.Drawing.Point(22, 468);
             this.btnActividadesODS.Name = "btnActividadesODS";
-            this.btnActividadesODS.Size = new System.Drawing.Size(250, 69);
+            this.btnActividadesODS.Size = new System.Drawing.Size(282, 69);
             this.btnActividadesODS.TabIndex = 15;
             this.btnActividadesODS.Text = "Actividades por ODS seleccionadas";
             this.btnActividadesODS.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 156);
+            this.label1.Location = new System.Drawing.Point(96, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 13;
@@ -81,42 +81,44 @@
             // 
             this.lsbODS.FormattingEnabled = true;
             this.lsbODS.ItemHeight = 16;
-            this.lsbODS.Location = new System.Drawing.Point(21, 186);
+            this.lsbODS.Location = new System.Drawing.Point(22, 60);
             this.lsbODS.Name = "lsbODS";
             this.lsbODS.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbODS.Size = new System.Drawing.Size(282, 180);
             this.lsbODS.TabIndex = 12;
             // 
-            // lblInformacion
-            // 
-            this.lblInformacion.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblInformacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInformacion.Location = new System.Drawing.Point(325, 186);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(1045, 23);
-            this.lblInformacion.TabIndex = 11;
-            // 
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(325, 221);
+            this.dgv.Location = new System.Drawing.Point(339, 138);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(1045, 354);
+            this.dgv.Size = new System.Drawing.Size(1016, 399);
             this.dgv.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(335, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 22);
+            this.label2.TabIndex = 20;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ODS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 626);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOrganizacionesODS);
             this.Controls.Add(this.btnVoluntariosODS);
             this.Controls.Add(this.btnActividadesODS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lsbODS);
-            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.dgv);
             this.Name = "ODS";
             this.Text = "Informes del voluntariado cuatrovientos";
@@ -134,8 +136,8 @@
         private System.Windows.Forms.Button btnActividadesODS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lsbODS;
-        private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Label label2;
     }
 }
 

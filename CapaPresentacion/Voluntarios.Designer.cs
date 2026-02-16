@@ -31,9 +31,9 @@
             this.txtNombreVoluntario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVoluntarios = new System.Windows.Forms.DataGridView();
-            this.lblInformacion = new System.Windows.Forms.Label();
-            this.lblVoluntario = new System.Windows.Forms.Label();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoluntarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             this.SuspendLayout();
@@ -66,24 +66,6 @@
             this.dgvVoluntarios.TabIndex = 3;
             this.dgvVoluntarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVoluntarios_CellClick);
             // 
-            // lblInformacion
-            // 
-            this.lblInformacion.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblInformacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInformacion.Location = new System.Drawing.Point(100, 55);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(975, 23);
-            this.lblInformacion.TabIndex = 12;
-            // 
-            // lblVoluntario
-            // 
-            this.lblVoluntario.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblVoluntario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblVoluntario.Location = new System.Drawing.Point(100, 336);
-            this.lblVoluntario.Name = "lblVoluntario";
-            this.lblVoluntario.Size = new System.Drawing.Size(975, 23);
-            this.lblVoluntario.TabIndex = 13;
-            // 
             // dgvActividades
             // 
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -94,14 +76,36 @@
             this.dgvActividades.Size = new System.Drawing.Size(975, 231);
             this.dgvActividades.TabIndex = 14;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(127, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 22);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Voluntarios";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(127, 337);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 22);
+            this.label3.TabIndex = 19;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Voluntarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 641);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvActividades);
-            this.Controls.Add(this.lblVoluntario);
-            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.txtNombreVoluntario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvVoluntarios);
@@ -119,8 +123,8 @@
         private System.Windows.Forms.TextBox txtNombreVoluntario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvVoluntarios;
-        private System.Windows.Forms.Label lblInformacion;
-        private System.Windows.Forms.Label lblVoluntario;
         private System.Windows.Forms.DataGridView dgvActividades;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
