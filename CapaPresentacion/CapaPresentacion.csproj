@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta Organizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta Organizacion.Designer.cs">
+      <DependentUpon>Alta Organizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ODS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="Voluntarios.Designer.cs">
       <DependentUpon>Voluntarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alta Organizacion.resx">
+      <DependentUpon>Alta Organizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ODS.resx">
       <DependentUpon>ODS.cs</DependentUpon>
     </EmbeddedResource>

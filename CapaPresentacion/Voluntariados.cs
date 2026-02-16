@@ -93,5 +93,10 @@ namespace CapaPresentacion
                 MaxParticipantes = a.MAX_PARTICIPANTES
             }).ToList();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
