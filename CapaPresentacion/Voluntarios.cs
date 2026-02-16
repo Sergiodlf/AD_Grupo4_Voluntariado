@@ -20,7 +20,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gestion = Program.gestion;
-            label2.Text = "Todos los voluntarios";
+            lblVoluntarios.Text = "Todos los voluntarios";
             voluntarios = gestion.Voluntarios();
             dgvVoluntarios.DataSource = voluntarios.Select(v => new
             {
@@ -29,25 +29,31 @@ namespace CapaPresentacion
                 Apellidos = $"{v.APELLIDO1} {v.APELLIDO2}",
                 Correo = v.CORREO,
                 Zona = v.ZONA,
-                Experiencia = v.EXPERIENCIA
+                FechaNacimiento = v.FECHA_NACIMIENTO,
+                Experiencia = v.EXPERIENCIA,
+                Coche = v.COCHE == true ? "Sí" : "No",
+                Ciclo = $"{v.CURSO_CICLOS} {v.NOMBRE_CICLOS}"
             }).ToList();
         }
 
         private void txtNombreOrg_TextChanged(object sender, EventArgs e)
         {
             if (txtNombreVoluntario.Text == "")
-                label2.Text = "Todos los voluntarios";
+                lblVoluntarios.Text = "Todos los voluntarios";
             else
-                label2.Text = "Voluntarios que su nombre comienza por: "+ txtNombreVoluntario.Text;
+                lblVoluntarios.Text = "Voluntarios que su nombre comienza por: "+ txtNombreVoluntario.Text;
             voluntarios = gestion.VoluntariosPorTrozoDeNombre(txtNombreVoluntario.Text);
-            dgvVoluntarios.DataSource = voluntarios.Select(v => new 
+            dgvVoluntarios.DataSource = voluntarios.Select(v => new
             {
                 DNI = v.DNI,
                 Nombre = v.NOMBRE,
                 Apellidos = $"{v.APELLIDO1} {v.APELLIDO2}",
                 Correo = v.CORREO,
                 Zona = v.ZONA,
-                Experiencia = v.EXPERIENCIA
+                FechaNacimiento = v.FECHA_NACIMIENTO,
+                Experiencia = v.EXPERIENCIA,
+                Coche = v.COCHE == true ? "Sí" : "No",
+                Ciclo = $"{v.CURSO_CICLOS} {v.NOMBRE_CICLOS}"
             }).ToList();
         }
 
@@ -55,22 +61,19 @@ namespace CapaPresentacion
         {
             if (e.RowIndex < 0) return;
             VOLUNTARIO voluntario = voluntarios[e.RowIndex];
-            label3.Text = "Actividades en las que se ha inscrito: " + voluntario.NOMBRE + " "+ voluntario.APELLIDO1 + " "+ voluntario.APELLIDO2;
+            lblActividades.Text = "Actividades en las que se ha inscrito: " + voluntario.NOMBRE + " "+ voluntario.APELLIDO1 + " "+ voluntario.APELLIDO2;
             dgvActividades.DataSource = voluntario.INSCRIPCIONES.Select(i => i.ACTIVIDADE).Select(a => new
             {
                 Nombre = a.NOMBRE,
+                Organización = a.ORGANIZACIONE.NOMBRE,
                 Estado = a.ESTADO,
                 Sector = a.SECTOR,
                 Dirección = a.DIRECCION,
                 Inicio = a.FECHA_INICIO,
                 Fin = a.FECHA_FIN,
-                Descripción = a.DESCRIPCION
+                Descripción = a.DESCRIPCION,
+                MaxParticipantes = a.MAX_PARTICIPANTES
             }).ToList();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

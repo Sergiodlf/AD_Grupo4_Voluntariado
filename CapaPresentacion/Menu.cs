@@ -17,11 +17,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void filtrarPorODSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form odsForm = new ODS();

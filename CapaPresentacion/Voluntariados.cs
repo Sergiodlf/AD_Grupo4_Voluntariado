@@ -24,65 +24,6 @@ namespace CapaPresentacion
 
             lblActividades.Text = "Todas las actividades";
             CargarTodasLasActividades();
-
-        }
-
-        private void CargarTodasLasActividades()
-        {
-            actividades = gestion.Actividades();
-            ActualizarGridActividades(actividades);
-        }
-
-        private void ActualizarGridActividades(List<ACTIVIDADE> lista)
-        {
-            dgvActividades.DataSource = lista.Select(a => new
-            {
-                ID = a.CODACTIVIDAD,
-                Nombre = a.NOMBRE,
-                Estado = a.ESTADO,
-                Sector = a.SECTOR,
-                Dirección = a.DIRECCION,
-                Inicio = a.FECHA_INICIO,
-                Fin = a.FECHA_FIN,
-                Descripción = a.DESCRIPCION
-            }).ToList();
-
-            // Ocultar el ID si no quieres que el usuario lo vea
-            if (dgvActividades.Columns["ID"] != null) dgvActividades.Columns["ID"].Visible = false;
-        }
-
-        // Evento cuando se hace click en una fila de actividades
-        private void dgvActividades_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvActividades.SelectedRows.Count > 0)
-            {
-                // Obtenemos el ID de la actividad seleccionada
-                int idSeleccionado = (int)dgvActividades.SelectedRows[0].Cells["ID"].Value;
-
-                // Buscamos la actividad completa en nuestra lista local
-                var act = actividades.FirstOrDefault(a => a.CODACTIVIDAD == idSeleccionado);
-
-                if (act != null)
-                {
-                    // Llenar labels de la organización
-                    lblCIF.Text = act.ORGANIZACIONE?.CIF ?? "N/A";
-                    lblNombreOrg.Text = act.ORGANIZACIONE?.NOMBRE ?? "N/A";
-                    lblEmailOrg.Text = act.ORGANIZACIONE?.EMAIL ?? "N/A";
-
-                    // Llenar el DGV de voluntarios inscritos
-                    dgvVoluntarios.DataSource = act.INSCRIPCIONES.Select(i => new
-                    {
-                        DNI = i.VOLUNTARIO.DNI,
-                        Nombre = i.VOLUNTARIO.NOMBRE,
-                        Apellidos = i.VOLUNTARIO.APELLIDO1 + " " + i.VOLUNTARIO.APELLIDO2,
-                        Email = i.VOLUNTARIO.CORREO
-                    }).ToList();
-                }
-            }
-        }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -114,29 +55,43 @@ namespace CapaPresentacion
             lblCIF.Text = actividad.ORGANIZACIONE?.CIF ?? "N/A";
             lblNombreOrg.Text = actividad.ORGANIZACIONE?.NOMBRE ?? "N/A";
             lblEmailOrg.Text = actividad.ORGANIZACIONE?.EMAIL ?? "N/A";
-            lblInformacionOrganizacion.Text = $"Organización responsable de: {actividad.NOMBRE}";
+            lblOrganizacion.Text = $"Organización responsable de: {actividad.NOMBRE}";
             lblVoluntarios.Text = $"Voluntarios inscritos en: {actividad.NOMBRE}";
 
-            dgvVoluntarios.DataSource = actividad.INSCRIPCIONES.Select(i => new
+            dgvVoluntarios.DataSource = actividad.INSCRIPCIONES.Select(i => i.VOLUNTARIO).Select(v => new
             {
-                DNI = i.VOLUNTARIO.DNI,
-                Nombre = i.VOLUNTARIO.NOMBRE,
-                Apellidos = i.VOLUNTARIO.APELLIDO1 + " " + i.VOLUNTARIO.APELLIDO2,
-                Email = i.VOLUNTARIO.CORREO,
-                Zona = i.VOLUNTARIO.ZONA,
-                Experiencia = i.VOLUNTARIO.EXPERIENCIA
+                DNI = v.DNI,
+                Nombre = v.NOMBRE,
+                Apellidos = $"{v.APELLIDO1} {v.APELLIDO2}",
+                Correo = v.CORREO,
+                Zona = v.ZONA,
+                FechaNacimiento = v.FECHA_NACIMIENTO,
+                Experiencia = v.EXPERIENCIA,
+                Coche = v.COCHE == true ? "Sí" : "No",
+                Ciclo = $"{v.CURSO_CICLOS} {v.NOMBRE_CICLOS}"
             }).ToList();
-
         }
 
-        private void lblInformacionOrganizacion_Click(object sender, EventArgs e)
+        private void CargarTodasLasActividades()
         {
-
+            actividades = gestion.Actividades();
+            ActualizarGridActividades(actividades);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ActualizarGridActividades(List<ACTIVIDADE> lista)
         {
-
+            dgvActividades.DataSource = lista.Select(a => new
+            {
+                Nombre = a.NOMBRE,
+                Organización = a.ORGANIZACIONE.NOMBRE,
+                Estado = a.ESTADO,
+                Sector = a.SECTOR,
+                Dirección = a.DIRECCION,
+                Inicio = a.FECHA_INICIO,
+                Fin = a.FECHA_FIN,
+                Descripción = a.DESCRIPCION,
+                MaxParticipantes = a.MAX_PARTICIPANTES
+            }).ToList();
         }
     }
 }

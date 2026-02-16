@@ -43,7 +43,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblActividades = new System.Windows.Forms.Label();
-            this.lblInformacionOrganizacion = new System.Windows.Forms.Label();
+            this.lblOrganizacion = new System.Windows.Forms.Label();
             this.lblVoluntarios = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoluntarios)).BeginInit();
@@ -55,7 +55,6 @@
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(267, 22);
             this.dtpInicio.TabIndex = 0;
-            this.dtpInicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dtpFin
             // 
@@ -83,7 +82,6 @@
             this.label1.Size = new System.Drawing.Size(82, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Fecha Inicio:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -191,16 +189,15 @@
             this.lblActividades.TabIndex = 26;
             this.lblActividades.Text = "Actividades";
             // 
-            // lblInformacionOrganizacion
+            // lblOrganizacion
             // 
-            this.lblInformacionOrganizacion.AutoSize = true;
-            this.lblInformacionOrganizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacionOrganizacion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblInformacionOrganizacion.Location = new System.Drawing.Point(134, 309);
-            this.lblInformacionOrganizacion.Name = "lblInformacionOrganizacion";
-            this.lblInformacionOrganizacion.Size = new System.Drawing.Size(0, 22);
-            this.lblInformacionOrganizacion.TabIndex = 27;
-            this.lblInformacionOrganizacion.Click += new System.EventHandler(this.lblInformacionOrganizacion_Click);
+            this.lblOrganizacion.AutoSize = true;
+            this.lblOrganizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrganizacion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblOrganizacion.Location = new System.Drawing.Point(134, 309);
+            this.lblOrganizacion.Name = "lblOrganizacion";
+            this.lblOrganizacion.Size = new System.Drawing.Size(0, 22);
+            this.lblOrganizacion.TabIndex = 27;
             // 
             // lblVoluntarios
             // 
@@ -218,7 +215,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 675);
             this.Controls.Add(this.lblVoluntarios);
-            this.Controls.Add(this.lblInformacionOrganizacion);
+            this.Controls.Add(this.lblOrganizacion);
             this.Controls.Add(this.lblActividades);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBuscar);
@@ -260,7 +257,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblActividades;
-        private System.Windows.Forms.Label lblInformacionOrganizacion;
+        private System.Windows.Forms.Label lblOrganizacion;
         private System.Windows.Forms.Label lblVoluntarios;
     }
 }

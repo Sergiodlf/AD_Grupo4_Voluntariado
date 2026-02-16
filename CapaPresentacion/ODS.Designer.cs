@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lsbODS = new System.Windows.Forms.ListBox();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblInformacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,23 +97,22 @@
             this.dgv.Size = new System.Drawing.Size(1016, 399);
             this.dgv.TabIndex = 10;
             // 
-            // label2
+            // lblInformacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(335, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 22);
-            this.label2.TabIndex = 20;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblInformacion.Location = new System.Drawing.Point(335, 103);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(0, 22);
+            this.lblInformacion.TabIndex = 20;
             // 
             // ODS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 626);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.btnOrganizacionesODS);
             this.Controls.Add(this.btnVoluntariosODS);
             this.Controls.Add(this.btnActividadesODS);
@@ -137,7 +136,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lsbODS;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblInformacion;
     }
 }
 

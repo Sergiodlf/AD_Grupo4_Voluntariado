@@ -42,12 +42,15 @@ namespace CapaPresentacion
 
                 var listaLimpia = voluntarios.Select(v => new
                 {
+                    DNI = v.DNI,
                     Nombre = v.NOMBRE,
-                    Apellido = v.APELLIDO1,
-                    SegundoApellido = v.APELLIDO2,
+                    Apellidos = $"{v.APELLIDO1} {v.APELLIDO2}",
                     Correo = v.CORREO,
                     Zona = v.ZONA,
-                    Experiencia = v.EXPERIENCIA
+                    FechaNacimiento = v.FECHA_NACIMIENTO,
+                    Experiencia = v.EXPERIENCIA,
+                    Coche = v.COCHE == true ? "Sí" : "No",
+                    Ciclo = $"{v.CURSO_CICLOS} {v.NOMBRE_CICLOS}"
                 }).ToList();
 
                 dgv.DataSource = null;
@@ -55,7 +58,7 @@ namespace CapaPresentacion
 
                 var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
 
-                label2.Text = "Voluntarios con actividades con las ODS: " + string.Join(", ", nombreOds);
+                lblInformacion.Text = "Voluntarios con actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
@@ -77,12 +80,14 @@ namespace CapaPresentacion
                 var listaLimpia = todasLasActividades.Select(a => new
                 {
                     Nombre = a.NOMBRE,
+                    Organización = a.ORGANIZACIONE.NOMBRE,
                     Estado = a.ESTADO,
+                    Sector = a.SECTOR,
                     Dirección = a.DIRECCION,
                     Inicio = a.FECHA_INICIO,
                     Fin = a.FECHA_FIN,
-                    Sector = a.SECTOR,
-                    Descripción = a.DESCRIPCION
+                    Descripción = a.DESCRIPCION,
+                    MaxParticipantes = a.MAX_PARTICIPANTES
                 }).ToList();
 
                 dgv.DataSource = null;
@@ -90,7 +95,7 @@ namespace CapaPresentacion
 
                 var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
 
-                label2.Text = "Actividades con las ODS: " + string.Join(", ", nombreOds);
+                lblInformacion.Text = "Actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
@@ -125,17 +130,12 @@ namespace CapaPresentacion
 
                 var nombreOds = gestion.NombreOdsPorId(idsSeleccionados);
 
-                label2.Text = "Organizaciones con actividades con las ODS: " + string.Join(", ", nombreOds);
+                lblInformacion.Text = "Organizaciones con actividades con las ODS: " + string.Join(", ", nombreOds);
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona al menos un ODS.");
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

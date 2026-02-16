@@ -20,7 +20,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gestion = Program.gestion;
-            label2.Text = "Todas las organizaciones: ";
+            lblOrganizaciones.Text = "Todas las organizaciones: ";
             organizaciones = gestion.Organizaciones();
             dgvOrganizacion.DataSource = organizaciones.Select(o => new
             {
@@ -37,9 +37,9 @@ namespace CapaPresentacion
         private void txtNombreOrg_TextChanged(object sender, EventArgs e)
         {
             if (txtNombreOrg.Text == "")
-            label2.Text = "Todas las organizaciones: ";
+            lblOrganizaciones.Text = "Todas las organizaciones: ";
             else
-                label2.Text = "Organizaciones que su nombre comienza por: " + txtNombreOrg.Text;
+                lblOrganizaciones.Text = "Organizaciones que su nombre comienza por: " + txtNombreOrg.Text;
             organizaciones = gestion.OrganizacionesPorTrozoDeNombre(txtNombreOrg.Text);
             dgvOrganizacion.DataSource = organizaciones.Select(o => new
             {
@@ -57,16 +57,18 @@ namespace CapaPresentacion
         {            
             if (e.RowIndex < 0 ) return;
             ORGANIZACIONE organizacion = organizaciones[e.RowIndex];
-            label3.Text = "Número de actividades organizadas por " + organizacion.NOMBRE + ": " + organizacion.ACTIVIDADES.Count;
+            lblActividades.Text = "Número de actividades organizadas por " + organizacion.NOMBRE + ": " + organizacion.ACTIVIDADES.Count;
             dgvActividades.DataSource = organizacion.ACTIVIDADES.Select(a => new
             {
                 Nombre = a.NOMBRE,
+                Organización = a.ORGANIZACIONE.NOMBRE,
                 Estado = a.ESTADO,
                 Sector = a.SECTOR,
                 Dirección = a.DIRECCION,
                 Inicio = a.FECHA_INICIO,
                 Fin = a.FECHA_FIN,
-                Descripción = a.DESCRIPCION
+                Descripción = a.DESCRIPCION,
+                MaxParticipantes = a.MAX_PARTICIPANTES
             }).ToList();
         }
     }

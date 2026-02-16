@@ -100,7 +100,6 @@
             this.label1.Size = new System.Drawing.Size(845, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenid@ al panel de análisis del voluntariado4V";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
