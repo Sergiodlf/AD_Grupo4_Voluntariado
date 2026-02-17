@@ -30,7 +30,7 @@ namespace Entidades
         public string CORREO { get; set; }
         public string ZONA { get; set; }
         public System.DateTime FECHA_NACIMIENTO { get; set; }
-        public Nullable<bool> EXPERIENCIA { get; set; }
+        public string EXPERIENCIA { get; set; }
         public bool COCHE { get; set; }
         public string DISPONIBILIDAD { get; set; }
         public string IDIOMAS { get; set; }

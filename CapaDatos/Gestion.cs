@@ -102,5 +102,40 @@ namespace CapaDatos
              .Where(a => a.FECHA_INICIO >= inicio && a.FECHA_FIN <= fin)
              .ToList();
         }
+
+        public bool ExisteInscripcion(string dni, short codActividad)
+        {
+            return contexto.INSCRIPCIONES.Any(i => i.DNI_VOLUNTARIO == dni && i.CODACTIVIDAD == codActividad);
+        }
+
+        public int ContarInscritos(short codActividad, out string mensaje)
+        {
+            mensaje = "";
+            try { return contexto.INSCRIPCIONES.Count(i => i.CODACTIVIDAD == codActividad); }
+            catch (Exception ex) { mensaje = ex.Message; return -1; }
+        }
+        public bool CrearMatch(string dniVoluntario, short codActividad, out string mensaje)
+        {
+            try
+            {
+                var nuevaInscripcion = new INSCRIPCIONE
+                {
+                    DNI_VOLUNTARIO = dniVoluntario,
+                    CODACTIVIDAD = codActividad
+                };
+
+                contexto.INSCRIPCIONES.Add(nuevaInscripcion);
+
+                contexto.SaveChanges();
+
+                mensaje = "Inscripción realizada con éxito.";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                mensaje = "No se pudo realizar la inscripción: " + ex.Message;
+                return false;
+            }
+        }
     }
 }
