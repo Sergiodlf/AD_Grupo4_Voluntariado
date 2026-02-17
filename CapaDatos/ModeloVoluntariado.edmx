@@ -661,7 +661,6 @@
           <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CONTACTO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="FCM_TOKEN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ACTIVIDADES" Relationship="PROYECTOINTERModel.FK_FED6DA367DF202BB" FromRole="ORGANIZACIONE" ToRole="ACTIVIDADE" />
           <NavigationProperty Name="notificacions" Relationship="PROYECTOINTERModel.FK_729A19ECD9CDDF39" FromRole="ORGANIZACIONE" ToRole="notificacion" />
         </EntityType>
@@ -676,12 +675,11 @@
           <Property Name="CORREO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="ZONA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="6" />
-          <Property Name="EXPERIENCIA" Type="Boolean" />
+          <Property Name="EXPERIENCIA" Type="String" />
           <Property Name="COCHE" Type="Boolean" Nullable="false" />
           <Property Name="DISPONIBILIDAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="IDIOMAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ESTADO_VOLUNTARIO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="FCM_TOKEN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CURSO_CICLOS" Type="Int16" />
           <Property Name="NOMBRE_CICLOS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CICLO" Relationship="PROYECTOINTERModel.FK_CC29E0C94F5222D9CCB2DE43" FromRole="VOLUNTARIO" ToRole="CICLO" />
@@ -896,7 +894,6 @@
           <EntitySetMapping Name="ORGANIZACIONES">
             <EntityTypeMapping TypeName="PROYECTOINTERModel.ORGANIZACIONE">
               <MappingFragment StoreEntitySet="ORGANIZACIONES">
-                <ScalarProperty Name="FCM_TOKEN" ColumnName="FCM_TOKEN" />
                 <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
                 <ScalarProperty Name="CONTACTO" ColumnName="CONTACTO" />
                 <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
@@ -915,7 +912,6 @@
               <MappingFragment StoreEntitySet="VOLUNTARIOS">
                 <ScalarProperty Name="NOMBRE_CICLOS" ColumnName="NOMBRE_CICLOS" />
                 <ScalarProperty Name="CURSO_CICLOS" ColumnName="CURSO_CICLOS" />
-                <ScalarProperty Name="FCM_TOKEN" ColumnName="FCM_TOKEN" />
                 <ScalarProperty Name="ESTADO_VOLUNTARIO" ColumnName="ESTADO_VOLUNTARIO" />
                 <ScalarProperty Name="IDIOMAS" ColumnName="IDIOMAS" />
                 <ScalarProperty Name="DISPONIBILIDAD" ColumnName="DISPONIBILIDAD" />

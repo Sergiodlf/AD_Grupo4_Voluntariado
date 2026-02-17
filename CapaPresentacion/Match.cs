@@ -48,10 +48,59 @@ namespace CapaPresentacion
         {
 
         }
-
+           
         private void btnCrearMatch_Click(object sender, EventArgs e)
         {
+            // 1. Obtener los objetos seleccionados de los ComboBox
+            VOLUNTARIO vol = cboVoluntario.SelectedItem as VOLUNTARIO;
+            ACTIVIDADE act = cboActividad.SelectedItem as ACTIVIDADE;
 
+            // 2. Validación: ¿Se ha seleccionado un voluntario y una actividad?
+            if (vol == null || act == null)
+            {
+                MessageBox.Show("Por favor, selecciona tanto un voluntario como una actividad.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 3. Validación: ¿Ya existe esta inscripción en la base de datos?
+            if (gestion.ExisteInscripcion(vol.DNI, act.CODACTIVIDAD))
+            {
+                MessageBox.Show($"El voluntario {vol.NOMBRE} ya está inscrito en la actividad '{act.NOMBRE}'.", "Registro Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // 4. Validación: ¿Hay plazas disponibles (Aforo)?
+            int inscritosActuales = gestion.ContarInscritos(act.CODACTIVIDAD, out string mensajeError);
+
+            if (inscritosActuales == -1)
+            {
+                MessageBox.Show(mensajeError, "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (inscritosActuales >= act.MAX_PARTICIPANTES)
+            {
+                MessageBox.Show($"Lo sentimos, la actividad '{act.NOMBRE}' ya está llena ({inscritosActuales}/{act.MAX_PARTICIPANTES} plazas).", "Aforo Completo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            // 5. Confirmación final del usuario
+            DialogResult respuesta = MessageBox.Show($"¿Deseas inscribir a {vol.NOMBRE} en la actividad {act.NOMBRE}?", "Confirmar Match", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                // 6. Intentar crear el Match
+                if (gestion.CrearMatch(vol.DNI, act.CODACTIVIDAD, out string mensajeResultado))
+                {
+                    MessageBox.Show(mensajeResultado, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LimpiarControles();
+                }
+                else
+                {
+                    MessageBox.Show(mensajeResultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void label23_Click(object sender, EventArgs e)
@@ -76,6 +125,7 @@ namespace CapaPresentacion
             lblFechaFin.Text = actividadSeleccionada.FECHA_FIN.ToShortDateString();
             lblSector.Text = actividadSeleccionada.SECTOR;
             txtDescripcion.Text = actividadSeleccionada.DESCRIPCION;
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -85,16 +135,59 @@ namespace CapaPresentacion
 
         private void cboVoluntario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblDNI.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.DNI ?? "N/A";
-            lblNombreVol.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.NOMBRE ?? "N/A";
-            lblApellido1.Text = $"{(cboVoluntario.SelectedItem as VOLUNTARIO)?.APELLIDO1} {(cboVoluntario.SelectedItem as VOLUNTARIO)?.APELLIDO2}".Trim();
-            lblCorreo.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.CORREO ?? "N/A";
-            lblFechaNacVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.FECHA_NACIMIENTO.ToShortDateString() ?? "N/A";
-            lblZonaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.ZONA ?? "N/A";
-            lblExperienciaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.EXPERIENCIA == true ? "Sí" : "No";
-            lblDisponibilidad.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.DISPONIBILIDAD ?? "N/A";
-            lblCocheVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.COCHE == true ? "Sí" : "No";
-            lblCiclo.Text = $"{(cboVoluntario.SelectedItem as VOLUNTARIO)?.CURSO_CICLOS} {(cboVoluntario.SelectedItem as VOLUNTARIO)?.NOMBRE_CICLOS}".Trim();
+            VOLUNTARIO vol = cboVoluntario.SelectedItem as VOLUNTARIO;
+            if (vol != null)
+            {
+                lblDNI.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.DNI ?? "N/A";
+                lblNombreVol.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.NOMBRE ?? "N/A";
+                lblApellido1.Text = $"{(cboVoluntario.SelectedItem as VOLUNTARIO)?.APELLIDO1} {(cboVoluntario.SelectedItem as VOLUNTARIO)?.APELLIDO2}".Trim();
+                lblCorreo.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.CORREO ?? "N/A";
+                lblFechaNacVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.FECHA_NACIMIENTO.ToShortDateString() ?? "N/A";
+                lblZonaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.ZONA ?? "N/A";
+                lblExperienciaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.EXPERIENCIA  ?? "N/A";
+                lblDisponibilidad.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.DISPONIBILIDAD ?? "N/A";
+                lblCocheVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.COCHE == true ? "Sí" : "No";
+                lblCiclo.Text = $"{(cboVoluntario.SelectedItem as VOLUNTARIO)?.CURSO_CICLOS} {(cboVoluntario.SelectedItem as VOLUNTARIO)?.NOMBRE_CICLOS}".Trim();
+
+                lstIdiomas.Items.Clear();
+                if (!string.IsNullOrEmpty(vol.IDIOMAS)) lstIdiomas.Items.Add(vol.IDIOMAS);
+            }
+
+
         }
+
+        private void LimpiarControles()
+        {
+            // Reseteamos los ComboBox a la posición inicial (sin selección)
+            cboActividad.SelectedIndex = -1;
+            cboVoluntario.SelectedIndex = -1;
+
+            // Reseteamos los Labels de la Actividad
+            lblNombreOrg.Text = "";
+            lblNombreActividad.Text = "";
+            lblDireccionActividad.Text = "";
+            lblMaxParticipantes.Text = "";
+            lblFechaInicio.Text = "";
+            lblFechaFin.Text = "";
+            lblSector.Text = "";
+            txtDescripcion.Clear();
+
+            // Reseteamos los Labels del Voluntario
+            lblDNI.Text = "";
+            lblNombreVol.Text = "";
+            lblApellido1.Text = "";
+            lblCorreo.Text = "";
+            lblFechaNacVoluntario.Text = "";
+            lblZonaVoluntario.Text = "";
+            lblExperienciaVoluntario.Text = "";
+            lblDisponibilidad.Text = "";
+            lblCocheVoluntario.Text = "";
+            lblCiclo.Text = "";
+
+            // Limpiamos los ListBox
+            lstIdiomas.Items.Clear();
+
+        }
+
     }
 }
