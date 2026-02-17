@@ -32,14 +32,18 @@
             this.funcionalidadesDeAnálisisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrarPorODSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrarPorVoluntariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaVoluntariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVoluntariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.organizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.altaVoluntariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarVoluntariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadísticasGeneralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +64,9 @@
             this.filtrarPorODSToolStripMenuItem,
             this.filtrarPorVoluntariosToolStripMenuItem,
             this.organizacionesToolStripMenuItem,
-            this.actividadesToolStripMenuItem});
+            this.actividadesToolStripMenuItem,
+            this.crearMatchToolStripMenuItem,
+            this.estadísticasGeneralesToolStripMenuItem});
             this.funcionalidadesDeAnálisisToolStripMenuItem.Name = "funcionalidadesDeAnálisisToolStripMenuItem";
             this.funcionalidadesDeAnálisisToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.funcionalidadesDeAnálisisToolStripMenuItem.Text = "Funcionalidades De Análisis";
@@ -68,7 +74,7 @@
             // filtrarPorODSToolStripMenuItem
             // 
             this.filtrarPorODSToolStripMenuItem.Name = "filtrarPorODSToolStripMenuItem";
-            this.filtrarPorODSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.filtrarPorODSToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.filtrarPorODSToolStripMenuItem.Text = "Filtrar por ODS";
             this.filtrarPorODSToolStripMenuItem.Click += new System.EventHandler(this.filtrarPorODSToolStripMenuItem_Click);
             // 
@@ -78,9 +84,23 @@
             this.altaVoluntariosToolStripMenuItem1,
             this.consultarVoluntariosToolStripMenuItem});
             this.filtrarPorVoluntariosToolStripMenuItem.Name = "filtrarPorVoluntariosToolStripMenuItem";
-            this.filtrarPorVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.filtrarPorVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.filtrarPorVoluntariosToolStripMenuItem.Text = "Voluntarios";
             this.filtrarPorVoluntariosToolStripMenuItem.Click += new System.EventHandler(this.filtrarPorVoluntariosToolStripMenuItem_Click);
+            // 
+            // altaVoluntariosToolStripMenuItem1
+            // 
+            this.altaVoluntariosToolStripMenuItem1.Name = "altaVoluntariosToolStripMenuItem1";
+            this.altaVoluntariosToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
+            this.altaVoluntariosToolStripMenuItem1.Text = "Alta Voluntarios";
+            this.altaVoluntariosToolStripMenuItem1.Click += new System.EventHandler(this.altaVoluntariosToolStripMenuItem1_Click);
+            // 
+            // consultarVoluntariosToolStripMenuItem
+            // 
+            this.consultarVoluntariosToolStripMenuItem.Name = "consultarVoluntariosToolStripMenuItem";
+            this.consultarVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.consultarVoluntariosToolStripMenuItem.Text = "Consultar Voluntarios";
+            this.consultarVoluntariosToolStripMenuItem.Click += new System.EventHandler(this.consultarVoluntariosToolStripMenuItem_Click);
             // 
             // organizacionesToolStripMenuItem
             // 
@@ -88,14 +108,31 @@
             this.altaOrganizacionesToolStripMenuItem,
             this.consultarOrganizacionesToolStripMenuItem});
             this.organizacionesToolStripMenuItem.Name = "organizacionesToolStripMenuItem";
-            this.organizacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.organizacionesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.organizacionesToolStripMenuItem.Text = "Organizaciones";
             this.organizacionesToolStripMenuItem.Click += new System.EventHandler(this.organizacionesToolStripMenuItem_Click);
             // 
+            // altaOrganizacionesToolStripMenuItem
+            // 
+            this.altaOrganizacionesToolStripMenuItem.Name = "altaOrganizacionesToolStripMenuItem";
+            this.altaOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.altaOrganizacionesToolStripMenuItem.Text = "Alta Organizaciones";
+            this.altaOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.altaOrganizacionesToolStripMenuItem_Click);
+            // 
+            // consultarOrganizacionesToolStripMenuItem
+            // 
+            this.consultarOrganizacionesToolStripMenuItem.Name = "consultarOrganizacionesToolStripMenuItem";
+            this.consultarOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.consultarOrganizacionesToolStripMenuItem.Text = "Consultar Organizaciones";
+            this.consultarOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.consultarOrganizacionesToolStripMenuItem_Click);
+            // 
             // actividadesToolStripMenuItem
             // 
+            this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearActividadToolStripMenuItem,
+            this.consultarActividadesToolStripMenuItem});
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.actividadesToolStripMenuItem.Text = "Actividades";
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
@@ -123,33 +160,30 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Empiece seleccionando una opción del menú de funcionalidades";
             // 
-            // altaVoluntariosToolStripMenuItem1
+            // crearActividadToolStripMenuItem
             // 
-            this.altaVoluntariosToolStripMenuItem1.Name = "altaVoluntariosToolStripMenuItem1";
-            this.altaVoluntariosToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
-            this.altaVoluntariosToolStripMenuItem1.Text = "Alta Voluntarios";
-            this.altaVoluntariosToolStripMenuItem1.Click += new System.EventHandler(this.altaVoluntariosToolStripMenuItem1_Click);
+            this.crearActividadToolStripMenuItem.Name = "crearActividadToolStripMenuItem";
+            this.crearActividadToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.crearActividadToolStripMenuItem.Text = "Crear Actividad";
+            this.crearActividadToolStripMenuItem.Click += new System.EventHandler(this.crearActividadToolStripMenuItem_Click);
             // 
-            // consultarVoluntariosToolStripMenuItem
+            // consultarActividadesToolStripMenuItem
             // 
-            this.consultarVoluntariosToolStripMenuItem.Name = "consultarVoluntariosToolStripMenuItem";
-            this.consultarVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
-            this.consultarVoluntariosToolStripMenuItem.Text = "Consultar Voluntarios";
-            this.consultarVoluntariosToolStripMenuItem.Click += new System.EventHandler(this.consultarVoluntariosToolStripMenuItem_Click);
+            this.consultarActividadesToolStripMenuItem.Name = "consultarActividadesToolStripMenuItem";
+            this.consultarActividadesToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.consultarActividadesToolStripMenuItem.Text = "Consultar Actividades";
             // 
-            // altaOrganizacionesToolStripMenuItem
+            // crearMatchToolStripMenuItem
             // 
-            this.altaOrganizacionesToolStripMenuItem.Name = "altaOrganizacionesToolStripMenuItem";
-            this.altaOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.altaOrganizacionesToolStripMenuItem.Text = "Alta Organizaciones";
-            this.altaOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.altaOrganizacionesToolStripMenuItem_Click);
+            this.crearMatchToolStripMenuItem.Name = "crearMatchToolStripMenuItem";
+            this.crearMatchToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.crearMatchToolStripMenuItem.Text = "Crear Match";
             // 
-            // consultarOrganizacionesToolStripMenuItem
+            // estadísticasGeneralesToolStripMenuItem
             // 
-            this.consultarOrganizacionesToolStripMenuItem.Name = "consultarOrganizacionesToolStripMenuItem";
-            this.consultarOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.consultarOrganizacionesToolStripMenuItem.Text = "Consultar Organizaciones";
-            this.consultarOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.consultarOrganizacionesToolStripMenuItem_Click);
+            this.estadísticasGeneralesToolStripMenuItem.Name = "estadísticasGeneralesToolStripMenuItem";
+            this.estadísticasGeneralesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.estadísticasGeneralesToolStripMenuItem.Text = "Estadísticas Generales";
             // 
             // Menu
             // 
@@ -183,5 +217,9 @@
         private System.Windows.Forms.ToolStripMenuItem consultarVoluntariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaOrganizacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarOrganizacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearActividadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarActividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadísticasGeneralesToolStripMenuItem;
     }
 }

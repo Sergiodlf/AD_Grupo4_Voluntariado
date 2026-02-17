@@ -64,5 +64,11 @@ namespace CapaPresentacion
             Form organizacionesForm = new Organizaciones();
             organizacionesForm.ShowDialog();
         }
+
+        private void crearActividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form altaActividadForm = new Alta_Actividad();
+            altaActividadForm.ShowDialog();
+        }
     }
 }

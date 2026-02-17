@@ -182,7 +182,7 @@
             this.btnCrearVol.FlatAppearance.BorderSize = 0;
             this.btnCrearVol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearVol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCrearVol.Location = new System.Drawing.Point(637, 455);
+            this.btnCrearVol.Location = new System.Drawing.Point(622, 457);
             this.btnCrearVol.Name = "btnCrearVol";
             this.btnCrearVol.Size = new System.Drawing.Size(141, 36);
             this.btnCrearVol.TabIndex = 60;

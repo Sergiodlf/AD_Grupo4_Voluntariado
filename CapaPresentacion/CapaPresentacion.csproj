@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta Actividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta Actividad.Designer.cs">
+      <DependentUpon>Alta Actividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alta Organizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="Voluntarios.Designer.cs">
       <DependentUpon>Voluntarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alta Actividad.resx">
+      <DependentUpon>Alta Actividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alta Organizacion.resx">
       <DependentUpon>Alta Organizacion.cs</DependentUpon>
     </EmbeddedResource>
