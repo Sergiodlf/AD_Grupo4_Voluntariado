@@ -70,5 +70,11 @@ namespace CapaPresentacion
             Form altaActividadForm = new Alta_Actividad();
             altaActividadForm.ShowDialog();
         }
+
+        private void crearMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form nuevoMatchForm = new Match();
+            nuevoMatchForm.ShowDialog();
+        }
     }
 }

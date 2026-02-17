@@ -178,6 +178,7 @@
             this.crearMatchToolStripMenuItem.Name = "crearMatchToolStripMenuItem";
             this.crearMatchToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.crearMatchToolStripMenuItem.Text = "Crear Match";
+            this.crearMatchToolStripMenuItem.Click += new System.EventHandler(this.crearMatchToolStripMenuItem_Click);
             // 
             // estadísticasGeneralesToolStripMenuItem
             // 
