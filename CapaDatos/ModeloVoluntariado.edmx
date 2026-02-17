@@ -676,7 +676,7 @@
           <Property Name="CORREO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="ZONA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="6" />
-          <Property Name="EXPERIENCIA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERIENCIA" Type="Boolean" />
           <Property Name="COCHE" Type="Boolean" Nullable="false" />
           <Property Name="DISPONIBILIDAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="IDIOMAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />

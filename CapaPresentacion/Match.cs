@@ -91,7 +91,7 @@ namespace CapaPresentacion
             lblCorreo.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.CORREO ?? "N/A";
             lblFechaNacVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.FECHA_NACIMIENTO.ToShortDateString() ?? "N/A";
             lblZonaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.ZONA ?? "N/A";
-            lblExperienciaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.EXPERIENCIA ?? "N/A";
+            lblExperienciaVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.EXPERIENCIA == true ? "Sí" : "No";
             lblDisponibilidad.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.DISPONIBILIDAD ?? "N/A";
             lblCocheVoluntario.Text = (cboVoluntario.SelectedItem as VOLUNTARIO)?.COCHE == true ? "Sí" : "No";
             lblCiclo.Text = $"{(cboVoluntario.SelectedItem as VOLUNTARIO)?.CURSO_CICLOS} {(cboVoluntario.SelectedItem as VOLUNTARIO)?.NOMBRE_CICLOS}".Trim();
