@@ -38,12 +38,12 @@
             this.altaOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.crearActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasGeneralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,30 +136,6 @@
             this.actividadesToolStripMenuItem.Text = "Actividades";
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(164, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(807, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenid@ al panel de análisis del voluntariado4V";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(278, 305);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(585, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Empiece seleccionando una opción del menú de funcionalidades";
-            // 
             // crearActividadToolStripMenuItem
             // 
             this.crearActividadToolStripMenuItem.Name = "crearActividadToolStripMenuItem";
@@ -185,6 +161,31 @@
             this.estadísticasGeneralesToolStripMenuItem.Name = "estadísticasGeneralesToolStripMenuItem";
             this.estadísticasGeneralesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.estadísticasGeneralesToolStripMenuItem.Text = "Estadísticas Generales";
+            this.estadísticasGeneralesToolStripMenuItem.Click += new System.EventHandler(this.estadísticasGeneralesToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(164, 238);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(807, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenid@ al panel de análisis del voluntariado4V";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(278, 305);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(585, 22);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Empiece seleccionando una opción del menú de funcionalidades";
             // 
             // Menu
             // 

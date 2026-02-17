@@ -76,5 +76,11 @@ namespace CapaPresentacion
             Form nuevoMatchForm = new Match();
             nuevoMatchForm.ShowDialog();
         }
+
+        private void estadísticasGeneralesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form estadisticasGeneralesForm = new Analisis_de_Datos();
+            estadisticasGeneralesForm.ShowDialog();
+        }
     }
 }
