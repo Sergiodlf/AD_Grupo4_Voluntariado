@@ -204,11 +204,11 @@
             this.lblOrganizaciones.AutoSize = true;
             this.lblOrganizaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrganizaciones.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblOrganizaciones.Location = new System.Drawing.Point(581, 79);
+            this.lblOrganizaciones.Location = new System.Drawing.Point(599, 93);
             this.lblOrganizaciones.Name = "lblOrganizaciones";
-            this.lblOrganizaciones.Size = new System.Drawing.Size(222, 22);
+            this.lblOrganizaciones.Size = new System.Drawing.Size(164, 22);
             this.lblOrganizaciones.TabIndex = 58;
-            this.lblOrganizaciones.Text = "Datos Nuevo Voluntario";
+            this.lblOrganizaciones.Text = "Nuevo Voluntario";
             // 
             // label4
             // 

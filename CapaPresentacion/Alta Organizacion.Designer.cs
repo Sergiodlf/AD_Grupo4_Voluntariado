@@ -153,9 +153,9 @@
             this.lblOrganizaciones.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblOrganizaciones.Location = new System.Drawing.Point(537, 87);
             this.lblOrganizaciones.Name = "lblOrganizaciones";
-            this.lblOrganizaciones.Size = new System.Drawing.Size(248, 22);
+            this.lblOrganizaciones.Size = new System.Drawing.Size(190, 22);
             this.lblOrganizaciones.TabIndex = 38;
-            this.lblOrganizaciones.Text = "Datos Nueva Organización";
+            this.lblOrganizaciones.Text = "Nueva Organización";
             this.lblOrganizaciones.Click += new System.EventHandler(this.lblOrganizaciones_Click);
             // 
             // label1

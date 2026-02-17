@@ -128,9 +128,9 @@
             this.lblOrganizaciones.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblOrganizaciones.Location = new System.Drawing.Point(310, 96);
             this.lblOrganizaciones.Name = "lblOrganizaciones";
-            this.lblOrganizaciones.Size = new System.Drawing.Size(213, 22);
+            this.lblOrganizaciones.Size = new System.Drawing.Size(155, 22);
             this.lblOrganizaciones.TabIndex = 58;
-            this.lblOrganizaciones.Text = "Datos Nueva Actividad";
+            this.lblOrganizaciones.Text = "Nueva Actividad";
             // 
             // label4
             // 
