@@ -36,6 +36,10 @@
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.altaVoluntariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVoluntariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarOrganizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +74,9 @@
             // 
             // filtrarPorVoluntariosToolStripMenuItem
             // 
+            this.filtrarPorVoluntariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.altaVoluntariosToolStripMenuItem1,
+            this.consultarVoluntariosToolStripMenuItem});
             this.filtrarPorVoluntariosToolStripMenuItem.Name = "filtrarPorVoluntariosToolStripMenuItem";
             this.filtrarPorVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.filtrarPorVoluntariosToolStripMenuItem.Text = "Voluntarios";
@@ -77,6 +84,9 @@
             // 
             // organizacionesToolStripMenuItem
             // 
+            this.organizacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.altaOrganizacionesToolStripMenuItem,
+            this.consultarOrganizacionesToolStripMenuItem});
             this.organizacionesToolStripMenuItem.Name = "organizacionesToolStripMenuItem";
             this.organizacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.organizacionesToolStripMenuItem.Text = "Organizaciones";
@@ -97,7 +107,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(164, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(845, 39);
+            this.label1.Size = new System.Drawing.Size(807, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenid@ al panel de análisis del voluntariado4V";
             // 
@@ -112,6 +122,34 @@
             this.label2.Size = new System.Drawing.Size(585, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Empiece seleccionando una opción del menú de funcionalidades";
+            // 
+            // altaVoluntariosToolStripMenuItem1
+            // 
+            this.altaVoluntariosToolStripMenuItem1.Name = "altaVoluntariosToolStripMenuItem1";
+            this.altaVoluntariosToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
+            this.altaVoluntariosToolStripMenuItem1.Text = "Alta Voluntarios";
+            this.altaVoluntariosToolStripMenuItem1.Click += new System.EventHandler(this.altaVoluntariosToolStripMenuItem1_Click);
+            // 
+            // consultarVoluntariosToolStripMenuItem
+            // 
+            this.consultarVoluntariosToolStripMenuItem.Name = "consultarVoluntariosToolStripMenuItem";
+            this.consultarVoluntariosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.consultarVoluntariosToolStripMenuItem.Text = "Consultar Voluntarios";
+            this.consultarVoluntariosToolStripMenuItem.Click += new System.EventHandler(this.consultarVoluntariosToolStripMenuItem_Click);
+            // 
+            // altaOrganizacionesToolStripMenuItem
+            // 
+            this.altaOrganizacionesToolStripMenuItem.Name = "altaOrganizacionesToolStripMenuItem";
+            this.altaOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.altaOrganizacionesToolStripMenuItem.Text = "Alta Organizaciones";
+            this.altaOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.altaOrganizacionesToolStripMenuItem_Click);
+            // 
+            // consultarOrganizacionesToolStripMenuItem
+            // 
+            this.consultarOrganizacionesToolStripMenuItem.Name = "consultarOrganizacionesToolStripMenuItem";
+            this.consultarOrganizacionesToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.consultarOrganizacionesToolStripMenuItem.Text = "Consultar Organizaciones";
+            this.consultarOrganizacionesToolStripMenuItem.Click += new System.EventHandler(this.consultarOrganizacionesToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -141,5 +179,9 @@
         private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem altaVoluntariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarVoluntariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem altaOrganizacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarOrganizacionesToolStripMenuItem;
     }
 }

@@ -40,5 +40,29 @@ namespace CapaPresentacion
             Form voluntariadosForm = new Voluntariados();
             voluntariadosForm.ShowDialog();
         }
+
+        private void consultarVoluntariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form voluntariosForm = new Voluntarios();
+            voluntariosForm.ShowDialog();
+        }
+
+        private void altaVoluntariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form altaVoluntariosForm = new Alta_Voluntario();
+            altaVoluntariosForm.ShowDialog();
+        }
+
+        private void altaOrganizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form altaOrganizacionesForm = new Alta_Organizacion();
+            altaOrganizacionesForm.ShowDialog();
+        }
+
+        private void consultarOrganizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form organizacionesForm = new Organizaciones();
+            organizacionesForm.ShowDialog();
+        }
     }
 }

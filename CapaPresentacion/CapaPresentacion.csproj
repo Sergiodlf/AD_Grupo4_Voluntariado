@@ -62,6 +62,12 @@
     <Compile Include="Alta Organizacion.Designer.cs">
       <DependentUpon>Alta Organizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alta Voluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta Voluntario.Designer.cs">
+      <DependentUpon>Alta Voluntario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ODS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Alta Organizacion.resx">
       <DependentUpon>Alta Organizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta Voluntario.resx">
+      <DependentUpon>Alta Voluntario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ODS.resx">
       <DependentUpon>ODS.cs</DependentUpon>

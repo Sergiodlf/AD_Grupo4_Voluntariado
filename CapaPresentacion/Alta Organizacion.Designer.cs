@@ -266,7 +266,15 @@
             // 
             // cboSector
             // 
+            this.cboSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSector.FormattingEnabled = true;
+            this.cboSector.Items.AddRange(new object[] {
+            "Educación",
+            "Social",
+            "Medioambiental",
+            "Tecnológico",
+            "Empresarial",
+            "Transporte"});
             this.cboSector.Location = new System.Drawing.Point(164, 53);
             this.cboSector.Name = "cboSector";
             this.cboSector.Size = new System.Drawing.Size(135, 24);
@@ -282,12 +290,16 @@
             // 
             // btnCrearOrg
             // 
+            this.btnCrearOrg.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCrearOrg.FlatAppearance.BorderSize = 0;
+            this.btnCrearOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearOrg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCrearOrg.Location = new System.Drawing.Point(623, 468);
             this.btnCrearOrg.Name = "btnCrearOrg";
             this.btnCrearOrg.Size = new System.Drawing.Size(141, 36);
             this.btnCrearOrg.TabIndex = 54;
             this.btnCrearOrg.Text = "Crear Organización";
-            this.btnCrearOrg.UseVisualStyleBackColor = true;
+            this.btnCrearOrg.UseVisualStyleBackColor = false;
             // 
             // grbAcercaDeOrg
             // 

@@ -49,6 +49,10 @@ namespace CapaDatos
             return contexto.ODS.OrderBy(ods => ods.id).ToList();
         }
 
+        public List<CICLO>Ciclos()
+        {
+            return contexto.CICLOS.OrderBy(ciclo => ciclo.NOMBRE).ToList();
+        }
         public List<string> NombreOdsPorId(List<int> idsOds)
         {
             return contexto.ODS.Where(o => idsOds.Contains(o.id)).Select(o => o.nombre).ToList();
