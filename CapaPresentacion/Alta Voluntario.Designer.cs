@@ -29,58 +29,56 @@
         private void InitializeComponent()
         {
             this.grbAcercaDeVol = new System.Windows.Forms.GroupBox();
-            this.rbExperienciaNo = new System.Windows.Forms.RadioButton();
-            this.rbExperienciaSi = new System.Windows.Forms.RadioButton();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cboCoche = new System.Windows.Forms.ComboBox();
+            this.cboExperiencia = new System.Windows.Forms.ComboBox();
+            this.grbDisponibilidad = new System.Windows.Forms.GroupBox();
+            this.ckDiasSemana = new System.Windows.Forms.CheckedListBox();
+            this.ckMañanasTardes = new System.Windows.Forms.CheckedListBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cboCiclo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCurso = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ckIdiomas = new System.Windows.Forms.CheckedListBox();
             this.btnCrearVol = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lblOrganizaciones = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grbDatosVol = new System.Windows.Forms.GroupBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtApellido2 = new System.Windows.Forms.TextBox();
+            this.txtApellido1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.cboZona = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.lblApellido2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblApellido1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblDNI = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblNombreVol = new System.Windows.Forms.Label();
-            this.grbExperiencia = new System.Windows.Forms.GroupBox();
-            this.grbCoche = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.grbDisponibilidad = new System.Windows.Forms.GroupBox();
-            this.ckMañanasTardes = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.grbAcercaDeVol.SuspendLayout();
-            this.grbDatosVol.SuspendLayout();
-            this.grbExperiencia.SuspendLayout();
-            this.grbCoche.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.grbDisponibilidad.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.grbDatosVol.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbAcercaDeVol
             // 
             this.grbAcercaDeVol.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grbAcercaDeVol.Controls.Add(this.cboCoche);
+            this.grbAcercaDeVol.Controls.Add(this.cboExperiencia);
             this.grbAcercaDeVol.Controls.Add(this.grbDisponibilidad);
-            this.grbAcercaDeVol.Controls.Add(this.grbCoche);
+            this.grbAcercaDeVol.Controls.Add(this.label7);
             this.grbAcercaDeVol.Controls.Add(this.cboCiclo);
+            this.grbAcercaDeVol.Controls.Add(this.label2);
             this.grbAcercaDeVol.Controls.Add(this.label11);
-            this.grbAcercaDeVol.Controls.Add(this.comboBox1);
+            this.grbAcercaDeVol.Controls.Add(this.cboCurso);
             this.grbAcercaDeVol.Controls.Add(this.label9);
-            this.grbAcercaDeVol.Controls.Add(this.grbExperiencia);
             this.grbAcercaDeVol.Controls.Add(this.groupBox1);
             this.grbAcercaDeVol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grbAcercaDeVol.Location = new System.Drawing.Point(708, 151);
@@ -90,49 +88,79 @@
             this.grbAcercaDeVol.TabStop = false;
             this.grbAcercaDeVol.Text = "Acerca del Voluntario";
             // 
-            // rbExperienciaNo
+            // cboCoche
             // 
-            this.rbExperienciaNo.AutoSize = true;
-            this.rbExperienciaNo.Location = new System.Drawing.Point(54, 25);
-            this.rbExperienciaNo.Name = "rbExperienciaNo";
-            this.rbExperienciaNo.Size = new System.Drawing.Size(46, 20);
-            this.rbExperienciaNo.TabIndex = 62;
-            this.rbExperienciaNo.TabStop = true;
-            this.rbExperienciaNo.Text = "No";
-            this.rbExperienciaNo.UseVisualStyleBackColor = true;
+            this.cboCoche.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCoche.FormattingEnabled = true;
+            this.cboCoche.Items.AddRange(new object[] {
+            "No",
+            "Si"});
+            this.cboCoche.Location = new System.Drawing.Point(106, 77);
+            this.cboCoche.Name = "cboCoche";
+            this.cboCoche.Size = new System.Drawing.Size(154, 24);
+            this.cboCoche.TabIndex = 73;
             // 
-            // rbExperienciaSi
+            // cboExperiencia
             // 
-            this.rbExperienciaSi.AutoSize = true;
-            this.rbExperienciaSi.Location = new System.Drawing.Point(11, 25);
-            this.rbExperienciaSi.Name = "rbExperienciaSi";
-            this.rbExperienciaSi.Size = new System.Drawing.Size(40, 20);
-            this.rbExperienciaSi.TabIndex = 61;
-            this.rbExperienciaSi.TabStop = true;
-            this.rbExperienciaSi.Text = "Si";
-            this.rbExperienciaSi.UseVisualStyleBackColor = true;
+            this.cboExperiencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboExperiencia.FormattingEnabled = true;
+            this.cboExperiencia.Items.AddRange(new object[] {
+            "Sin experiencia",
+            "Menos de 1 año",
+            "1-3 años",
+            "Más de 3 años"});
+            this.cboExperiencia.Location = new System.Drawing.Point(106, 41);
+            this.cboExperiencia.Name = "cboExperiencia";
+            this.cboExperiencia.Size = new System.Drawing.Size(154, 24);
+            this.cboExperiencia.TabIndex = 72;
             // 
-            // checkedListBox1
+            // grbDisponibilidad
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Inglés",
-            "Euskera",
-            "Castellano",
-            "Francés",
-            "Alemán",
-            "Italiano",
-            "Portugués",
-            "Árabe",
-            "Chino",
-            "Rumano",
-            "Ruso",
-            "Lengua de Signos Española (LSE)",
-            "Ucraniano"});
-            this.checkedListBox1.Location = new System.Drawing.Point(11, 22);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(126, 89);
-            this.checkedListBox1.TabIndex = 60;
+            this.grbDisponibilidad.Controls.Add(this.ckDiasSemana);
+            this.grbDisponibilidad.Controls.Add(this.ckMañanasTardes);
+            this.grbDisponibilidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.grbDisponibilidad.Location = new System.Drawing.Point(181, 117);
+            this.grbDisponibilidad.Name = "grbDisponibilidad";
+            this.grbDisponibilidad.Size = new System.Drawing.Size(273, 126);
+            this.grbDisponibilidad.TabIndex = 65;
+            this.grbDisponibilidad.TabStop = false;
+            this.grbDisponibilidad.Text = "Disponibilidad:";
+            // 
+            // ckDiasSemana
+            // 
+            this.ckDiasSemana.FormattingEnabled = true;
+            this.ckDiasSemana.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
+            this.ckDiasSemana.Location = new System.Drawing.Point(139, 14);
+            this.ckDiasSemana.Name = "ckDiasSemana";
+            this.ckDiasSemana.Size = new System.Drawing.Size(128, 106);
+            this.ckDiasSemana.TabIndex = 61;
+            // 
+            // ckMañanasTardes
+            // 
+            this.ckMañanasTardes.FormattingEnabled = true;
+            this.ckMañanasTardes.Items.AddRange(new object[] {
+            "Mañanas",
+            "Tardes"});
+            this.ckMañanasTardes.Location = new System.Drawing.Point(19, 38);
+            this.ckMañanasTardes.Name = "ckMañanasTardes";
+            this.ckMañanasTardes.Size = new System.Drawing.Size(100, 55);
+            this.ckMañanasTardes.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(51, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 16);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "Coche:";
             // 
             // cboCiclo
             // 
@@ -146,6 +174,15 @@
             this.cboCiclo.Size = new System.Drawing.Size(126, 24);
             this.cboCiclo.TabIndex = 59;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Experiencia:";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -155,17 +192,17 @@
             this.label11.TabIndex = 58;
             this.label11.Text = "Ciclo:";
             // 
-            // comboBox1
+            // cboCurso
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBox1.Location = new System.Drawing.Point(328, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 24);
-            this.comboBox1.TabIndex = 57;
+            this.cboCurso.Location = new System.Drawing.Point(328, 36);
+            this.cboCurso.Name = "cboCurso";
+            this.cboCurso.Size = new System.Drawing.Size(126, 24);
+            this.cboCurso.TabIndex = 57;
             // 
             // label9
             // 
@@ -175,6 +212,39 @@
             this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 56;
             this.label9.Text = "Curso:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ckIdiomas);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Location = new System.Drawing.Point(16, 117);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(146, 126);
+            this.groupBox1.TabIndex = 64;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Idiomas:";
+            // 
+            // ckIdiomas
+            // 
+            this.ckIdiomas.FormattingEnabled = true;
+            this.ckIdiomas.Items.AddRange(new object[] {
+            "Inglés",
+            "Euskera",
+            "Castellano",
+            "Francés",
+            "Alemán",
+            "Italiano",
+            "Portugués",
+            "Árabe",
+            "Chino",
+            "Rumano",
+            "Ruso",
+            "Lengua de Signos Española (LSE)",
+            "Ucraniano"});
+            this.ckIdiomas.Location = new System.Drawing.Point(11, 22);
+            this.ckIdiomas.Name = "ckIdiomas";
+            this.ckIdiomas.Size = new System.Drawing.Size(126, 89);
+            this.ckIdiomas.TabIndex = 60;
             // 
             // btnCrearVol
             // 
@@ -188,6 +258,7 @@
             this.btnCrearVol.TabIndex = 60;
             this.btnCrearVol.Text = "Crear Voluntario";
             this.btnCrearVol.UseVisualStyleBackColor = false;
+            this.btnCrearVol.Click += new System.EventHandler(this.btnCrearVol_Click);
             // 
             // label8
             // 
@@ -223,20 +294,20 @@
             // grbDatosVol
             // 
             this.grbDatosVol.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grbDatosVol.Controls.Add(this.txtCorreo);
+            this.grbDatosVol.Controls.Add(this.txtApellido2);
+            this.grbDatosVol.Controls.Add(this.txtApellido1);
+            this.grbDatosVol.Controls.Add(this.txtNombre);
+            this.grbDatosVol.Controls.Add(this.txtDNI);
             this.grbDatosVol.Controls.Add(this.dtpFechaNac);
             this.grbDatosVol.Controls.Add(this.cboZona);
             this.grbDatosVol.Controls.Add(this.label14);
-            this.grbDatosVol.Controls.Add(this.lblApellido2);
             this.grbDatosVol.Controls.Add(this.label12);
             this.grbDatosVol.Controls.Add(this.label1);
             this.grbDatosVol.Controls.Add(this.label10);
-            this.grbDatosVol.Controls.Add(this.lblCorreo);
-            this.grbDatosVol.Controls.Add(this.lblApellido1);
             this.grbDatosVol.Controls.Add(this.label3);
-            this.grbDatosVol.Controls.Add(this.lblDNI);
             this.grbDatosVol.Controls.Add(this.label5);
             this.grbDatosVol.Controls.Add(this.label6);
-            this.grbDatosVol.Controls.Add(this.lblNombreVol);
             this.grbDatosVol.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.grbDatosVol.Location = new System.Drawing.Point(84, 151);
             this.grbDatosVol.Name = "grbDatosVol";
@@ -245,11 +316,46 @@
             this.grbDatosVol.TabStop = false;
             this.grbDatosVol.Text = "Datos del Voluntario";
             // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(394, 124);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(172, 22);
+            this.txtCorreo.TabIndex = 57;
+            // 
+            // txtApellido2
+            // 
+            this.txtApellido2.Location = new System.Drawing.Point(100, 185);
+            this.txtApellido2.Name = "txtApellido2";
+            this.txtApellido2.Size = new System.Drawing.Size(141, 22);
+            this.txtApellido2.TabIndex = 56;
+            // 
+            // txtApellido1
+            // 
+            this.txtApellido1.Location = new System.Drawing.Point(100, 146);
+            this.txtApellido1.Name = "txtApellido1";
+            this.txtApellido1.Size = new System.Drawing.Size(141, 22);
+            this.txtApellido1.TabIndex = 55;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(100, 105);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(141, 22);
+            this.txtNombre.TabIndex = 54;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Location = new System.Drawing.Point(100, 60);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(141, 22);
+            this.txtDNI.TabIndex = 53;
+            // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(401, 79);
+            this.dtpFechaNac.Location = new System.Drawing.Point(394, 79);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(137, 22);
+            this.dtpFechaNac.Size = new System.Drawing.Size(172, 22);
             this.dtpFechaNac.TabIndex = 47;
             // 
             // cboZona
@@ -286,9 +392,9 @@
             "Sarriguren",
             "Villava",
             "Zizur Menor"});
-            this.cboZona.Location = new System.Drawing.Point(405, 164);
+            this.cboZona.Location = new System.Drawing.Point(394, 164);
             this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(133, 24);
+            this.cboZona.Size = new System.Drawing.Size(172, 24);
             this.cboZona.TabIndex = 46;
             // 
             // label14
@@ -300,16 +406,6 @@
             this.label14.Size = new System.Drawing.Size(122, 16);
             this.label14.TabIndex = 41;
             this.label14.Text = "Fecha Nacimiento: ";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // lblApellido2
-            // 
-            this.lblApellido2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblApellido2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblApellido2.Location = new System.Drawing.Point(108, 178);
-            this.lblApellido2.Name = "lblApellido2";
-            this.lblApellido2.Size = new System.Drawing.Size(135, 23);
-            this.lblApellido2.TabIndex = 40;
             // 
             // label12
             // 
@@ -341,24 +437,6 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Zona:";
             // 
-            // lblCorreo
-            // 
-            this.lblCorreo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCorreo.Location = new System.Drawing.Point(404, 117);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(135, 23);
-            this.lblCorreo.TabIndex = 44;
-            // 
-            // lblApellido1
-            // 
-            this.lblApellido1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblApellido1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblApellido1.Location = new System.Drawing.Point(108, 139);
-            this.lblApellido1.Name = "lblApellido1";
-            this.lblApellido1.Size = new System.Drawing.Size(135, 23);
-            this.lblApellido1.TabIndex = 34;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -368,15 +446,6 @@
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "DNI: ";
-            // 
-            // lblDNI
-            // 
-            this.lblDNI.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDNI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDNI.Location = new System.Drawing.Point(108, 59);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(135, 23);
-            this.lblDNI.TabIndex = 30;
             // 
             // label5
             // 
@@ -398,112 +467,6 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Apellido 1:";
             // 
-            // lblNombreVol
-            // 
-            this.lblNombreVol.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblNombreVol.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombreVol.Location = new System.Drawing.Point(108, 98);
-            this.lblNombreVol.Name = "lblNombreVol";
-            this.lblNombreVol.Size = new System.Drawing.Size(135, 23);
-            this.lblNombreVol.TabIndex = 32;
-            // 
-            // grbExperiencia
-            // 
-            this.grbExperiencia.Controls.Add(this.rbExperienciaNo);
-            this.grbExperiencia.Controls.Add(this.rbExperienciaSi);
-            this.grbExperiencia.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.grbExperiencia.Location = new System.Drawing.Point(16, 37);
-            this.grbExperiencia.Name = "grbExperiencia";
-            this.grbExperiencia.Size = new System.Drawing.Size(111, 60);
-            this.grbExperiencia.TabIndex = 63;
-            this.grbExperiencia.TabStop = false;
-            this.grbExperiencia.Text = "Experiencia:";
-            this.grbExperiencia.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // grbCoche
-            // 
-            this.grbCoche.Controls.Add(this.radioButton1);
-            this.grbCoche.Controls.Add(this.radioButton2);
-            this.grbCoche.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.grbCoche.Location = new System.Drawing.Point(143, 37);
-            this.grbCoche.Name = "grbCoche";
-            this.grbCoche.Size = new System.Drawing.Size(111, 60);
-            this.grbCoche.TabIndex = 64;
-            this.grbCoche.TabStop = false;
-            this.grbCoche.Text = "Coche:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(57, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(46, 20);
-            this.radioButton1.TabIndex = 62;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "No";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(11, 25);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(40, 20);
-            this.radioButton2.TabIndex = 61;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Si";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkedListBox1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(16, 117);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(146, 126);
-            this.groupBox1.TabIndex = 64;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Idiomas:";
-            // 
-            // grbDisponibilidad
-            // 
-            this.grbDisponibilidad.Controls.Add(this.checkedListBox2);
-            this.grbDisponibilidad.Controls.Add(this.ckMañanasTardes);
-            this.grbDisponibilidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.grbDisponibilidad.Location = new System.Drawing.Point(181, 117);
-            this.grbDisponibilidad.Name = "grbDisponibilidad";
-            this.grbDisponibilidad.Size = new System.Drawing.Size(273, 126);
-            this.grbDisponibilidad.TabIndex = 65;
-            this.grbDisponibilidad.TabStop = false;
-            this.grbDisponibilidad.Text = "Disponibilidad:";
-            // 
-            // ckMañanasTardes
-            // 
-            this.ckMañanasTardes.FormattingEnabled = true;
-            this.ckMañanasTardes.Items.AddRange(new object[] {
-            "Mañanas",
-            "Tardes"});
-            this.ckMañanasTardes.Location = new System.Drawing.Point(19, 38);
-            this.ckMañanasTardes.Name = "ckMañanasTardes";
-            this.ckMañanasTardes.Size = new System.Drawing.Size(100, 55);
-            this.ckMañanasTardes.TabIndex = 60;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "Viernes",
-            "Sábado",
-            "Domingo"});
-            this.checkedListBox2.Location = new System.Drawing.Point(139, 14);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(128, 106);
-            this.checkedListBox2.TabIndex = 61;
-            // 
             // Alta_Voluntario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -520,14 +483,10 @@
             this.Text = "Alta_Voluntario";
             this.grbAcercaDeVol.ResumeLayout(false);
             this.grbAcercaDeVol.PerformLayout();
+            this.grbDisponibilidad.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.grbDatosVol.ResumeLayout(false);
             this.grbDatosVol.PerformLayout();
-            this.grbExperiencia.ResumeLayout(false);
-            this.grbExperiencia.PerformLayout();
-            this.grbCoche.ResumeLayout(false);
-            this.grbCoche.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.grbDisponibilidad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,33 +501,31 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grbDatosVol;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblApellido2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.Label lblApellido1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblNombreVol;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.ComboBox cboZona;
-        private System.Windows.Forms.RadioButton rbExperienciaNo;
-        private System.Windows.Forms.RadioButton rbExperienciaSi;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox ckIdiomas;
         private System.Windows.Forms.ComboBox cboCiclo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox grbExperiencia;
-        private System.Windows.Forms.GroupBox grbCoche;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox grbDisponibilidad;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox ckDiasSemana;
         private System.Windows.Forms.CheckedListBox ckMañanasTardes;
+        private System.Windows.Forms.ComboBox cboCoche;
+        private System.Windows.Forms.ComboBox cboExperiencia;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtApellido2;
+        private System.Windows.Forms.TextBox txtApellido1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDNI;
     }
 }

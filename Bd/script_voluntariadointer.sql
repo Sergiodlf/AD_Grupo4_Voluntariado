@@ -166,6 +166,11 @@ GO
 
 -- 1. CICLOS
 INSERT INTO [CICLOS] ([CURSO], [NOMBRE]) VALUES 
+(1, N'Administración'), 
+(1, N'ASIR'), 
+(1, N'DAM'), 
+(1, N'DAW'), 
+(1, N'Marketing'),
 (2, N'Administración'), 
 (2, N'ASIR'), 
 (2, N'DAM'), 

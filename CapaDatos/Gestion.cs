@@ -137,5 +137,15 @@ namespace CapaDatos
                 return false;
             }
         }
+
+        public bool CrearVoluntario(string dni, string nombre, string apellido1, string apellido2, string correo, string zona, DateTime fechaNac, string experiencia, bool coche, short? curso, string nombreCiclo)
+        {
+            VOLUNTARIO vol = new VOLUNTARIO(dni, nombre, apellido1, apellido2, correo, zona, fechaNac, experiencia, coche, curso, nombreCiclo);
+            int nAfectados = 0;
+            contexto.VOLUNTARIOS.Add(vol);
+            try { nAfectados = contexto.SaveChanges(); }
+            catch (Exception ex) { return false; }
+            return true;
+        }
     }
 }

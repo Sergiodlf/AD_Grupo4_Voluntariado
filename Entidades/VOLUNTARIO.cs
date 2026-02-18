@@ -48,5 +48,24 @@ namespace Entidades
         public virtual ICollection<HABILIDADE> HABILIDADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INTERES> INTERESES { get; set; }
+
+        public VOLUNTARIO(string dNI, string nOMBRE, string aPELLIDO1, string aPELLIDO2, string cORREO, string zONA, DateTime fECHA_NACIMIENTO, string eXPERIENCIA, bool cOCHE, short? cURSO_CICLOS, string nOMBRE_CICLOS)
+        {
+            DNI = dNI;
+            NOMBRE = nOMBRE;
+            APELLIDO1 = aPELLIDO1;
+            APELLIDO2 = aPELLIDO2;
+            CORREO = cORREO;
+            ZONA = zONA;
+            FECHA_NACIMIENTO = fECHA_NACIMIENTO;
+            EXPERIENCIA = eXPERIENCIA;
+            COCHE = cOCHE;
+            ESTADO_VOLUNTARIO = "PENDIENTE";
+            CURSO_CICLOS = cURSO_CICLOS;
+            NOMBRE_CICLOS = nOMBRE_CICLOS;
+            DISPONIBILIDAD = null;
+            IDIOMAS = null;
+            FCM_TOKEN = null;
+        }
     }
 }
