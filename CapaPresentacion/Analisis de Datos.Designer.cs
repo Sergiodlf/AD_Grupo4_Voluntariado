@@ -71,7 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 138);
             this.panel1.TabIndex = 60;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblNumOrganizaciones
             // 
@@ -217,7 +216,6 @@
             this.label5.Size = new System.Drawing.Size(193, 22);
             this.label5.TabIndex = 61;
             this.label5.Text = "Actividades Abiertas";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Analisis_de_Datos
             // 
@@ -232,7 +230,6 @@
             this.Controls.Add(this.lblOrganizaciones);
             this.Name = "Analisis_de_Datos";
             this.Text = "Analisis_de_Datos";
-            this.Load += new System.EventHandler(this.Analisis_de_Datos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

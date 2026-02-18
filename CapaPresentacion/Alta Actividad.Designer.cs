@@ -210,7 +210,6 @@
             this.label10.Size = new System.Drawing.Size(51, 16);
             this.label10.TabIndex = 45;
             this.label10.Text = "Plazas:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // dtpFechaFin
             // 

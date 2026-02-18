@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B2A273B-B7E4-4197-B453-0776F641F61A}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\capadatos\\gestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B2A273B-B7E4-4197-B453-0776F641F61A}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\gestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\voluntariados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\voluntariados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\voluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\voluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\alta voluntario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\alta voluntario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\alta actividad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\alta actividad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\alta actividad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\alta actividad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\voluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\voluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\capapresentacion\\voluntariados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\voluntariados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\voluntariados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\capapresentacion\\voluntariados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\voluntariados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A439C7-A300-4F0A-B0EC-70C02FF4E474}|Entidades\\Entidades.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\entidades\\actividade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A439C7-A300-4F0A-B0EC-70C02FF4E474}|Entidades\\Entidades.csproj|solutionrelative:entidades\\actividade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\organizaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\organizaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\sergio\\desktop\\ad_grupo4_voluntariado\\capapresentacion\\organizaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\organizaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\capapresentacion\\ods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{915DE2AA-D2FE-4C20-ADAC-AF358400BDBE}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\ods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,128 +46,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Voluntarios.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntarios.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Voluntarios.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntarios.cs",
-              "RelativeToolTip": "CapaPresentacion\\Voluntarios.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBUAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Voluntariados.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.Designer.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Voluntariados.Designer.cs",
+              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.Designer.cs",
+              "RelativeToolTip": "CapaPresentacion\\Voluntariados.Designer.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAvwFMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:50:20.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Voluntarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntarios.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Voluntarios.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Voluntarios.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:50:18.637Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Program.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Program.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Program.cs",
-              "RelativeToolTip": "CapaPresentacion\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:49:03.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Alta Actividad.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Actividad.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Alta Actividad.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Actividad.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Alta Actividad.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:27:25.053Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Alta Actividad.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Actividad.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Alta Actividad.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Actividad.cs",
-              "RelativeToolTip": "CapaPresentacion\\Alta Actividad.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:24:34.498Z",
+              "WhenOpened": "2026-02-18T12:12:42.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Alta Voluntario.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Voluntario.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Alta Voluntario.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Alta Voluntario.cs",
-              "RelativeToolTip": "CapaPresentacion\\Alta Voluntario.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAcwFEAAAAGAAAAAAAAAA==",
+              "Title": "Voluntariados.cs",
+              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Voluntariados.cs",
+              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.cs",
+              "RelativeToolTip": "CapaPresentacion\\Voluntariados.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwF4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T09:55:17.177Z",
+              "WhenOpened": "2026-02-16T18:10:21.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Gestion.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaDatos\\Gestion.cs",
-              "RelativeDocumentMoniker": "CapaDatos\\Gestion.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaDatos\\Gestion.cs",
-              "RelativeToolTip": "CapaDatos\\Gestion.cs",
-              "ViewState": "AgIAAK8AAAAAAAAAAAAiwMAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T09:34:38.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Voluntariados.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Voluntariados.cs",
               "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Voluntariados.cs [Dise\u00F1o]",
               "RelativeToolTip": "CapaPresentacion\\Voluntariados.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T18:10:18.209Z",
+              "WhenOpened": "2026-02-18T12:12:30.061Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ACTIVIDADE.cs",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\Entidades\\ACTIVIDADE.cs",
-              "RelativeDocumentMoniker": "Entidades\\ACTIVIDADE.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\Entidades\\ACTIVIDADE.cs",
-              "RelativeToolTip": "Entidades\\ACTIVIDADE.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Organizaciones.cs",
+              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Organizaciones.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Organizaciones.cs",
+              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Organizaciones.cs",
+              "RelativeToolTip": "CapaPresentacion\\Organizaciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:32:51.959Z",
+              "WhenOpened": "2026-02-18T12:12:25.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Menu.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Menu.cs",
-              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Menu.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "Organizaciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Organizaciones.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Organizaciones.cs",
+              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\Organizaciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Organizaciones.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:45:21.205Z",
+              "WhenOpened": "2026-02-18T12:12:22.999Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ODS.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\ODS.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\ODS.cs",
+              "ToolTip": "C:\\Users\\Sergio\\Desktop\\AD_Grupo4_Voluntariado\\CapaPresentacion\\ODS.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\ODS.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T15:37:16.339Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

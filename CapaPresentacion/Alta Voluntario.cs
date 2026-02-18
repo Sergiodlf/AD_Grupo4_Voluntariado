@@ -78,7 +78,5 @@ namespace CapaPresentacion
             else
                 MessageBox.Show("Ha habido algún error al intentar crear el nuevo voluntario");
         }
-
-      
     }
 }

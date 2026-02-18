@@ -143,7 +143,6 @@
             this.label23.Size = new System.Drawing.Size(97, 16);
             this.label23.TabIndex = 79;
             this.label23.Text = "Disponibilidad:";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label30
             // 
@@ -224,7 +223,6 @@
             this.lblCocheVoluntario.Name = "lblCocheVoluntario";
             this.lblCocheVoluntario.Size = new System.Drawing.Size(135, 23);
             this.lblCocheVoluntario.TabIndex = 70;
-            this.lblCocheVoluntario.Click += new System.EventHandler(this.label25_Click);
             // 
             // label26
             // 
@@ -245,7 +243,6 @@
             this.label5.Size = new System.Drawing.Size(122, 16);
             this.label5.TabIndex = 61;
             this.label5.Text = "Fecha Nacimiento: ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -326,7 +323,6 @@
             this.label22.Size = new System.Drawing.Size(67, 16);
             this.label22.TabIndex = 57;
             this.label22.Text = "Apellidos:";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // lblNombreVol
             // 
@@ -363,7 +359,6 @@
             this.label7.Size = new System.Drawing.Size(158, 16);
             this.label7.TabIndex = 48;
             this.label7.Text = "Selecciona un Voluntario:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -608,7 +603,6 @@
             this.label3.Size = new System.Drawing.Size(162, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "Selecciona una Actividad:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblDescripcion
             // 

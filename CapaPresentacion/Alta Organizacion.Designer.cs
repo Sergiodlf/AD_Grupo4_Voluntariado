@@ -117,7 +117,6 @@
             this.label3.Size = new System.Drawing.Size(33, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "CIF: ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblOrganizaciones
             // 
@@ -129,7 +128,6 @@
             this.lblOrganizaciones.Size = new System.Drawing.Size(190, 22);
             this.lblOrganizaciones.TabIndex = 38;
             this.lblOrganizaciones.Text = "Nueva Organización";
-            this.lblOrganizaciones.Click += new System.EventHandler(this.lblOrganizaciones_Click);
             // 
             // label1
             // 
@@ -179,7 +177,6 @@
             this.label12.Size = new System.Drawing.Size(70, 16);
             this.label12.TabIndex = 43;
             this.label12.Text = "Localidad:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label14
             // 
@@ -199,7 +196,6 @@
             this.label13.Size = new System.Drawing.Size(82, 16);
             this.label13.TabIndex = 50;
             this.label13.Text = "Descripción:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // cboSector
             // 
@@ -245,7 +241,6 @@
             this.grbAcercaDeOrg.TabIndex = 55;
             this.grbAcercaDeOrg.TabStop = false;
             this.grbAcercaDeOrg.Text = "Acerca de la Organización";
-            this.grbAcercaDeOrg.Enter += new System.EventHandler(this.grbAcercaDeOrg_Enter);
             // 
             // grbDatosOrg
             // 

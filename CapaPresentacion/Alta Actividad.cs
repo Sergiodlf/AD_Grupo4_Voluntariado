@@ -28,16 +28,6 @@ namespace CapaPresentacion
             cboSector.SelectedIndex = 0;
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCrearOrg_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length == 0)

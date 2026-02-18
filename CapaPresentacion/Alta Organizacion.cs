@@ -24,36 +24,6 @@ namespace CapaPresentacion
             cboSector.SelectedIndex = 0;
         }
 
-        private void lblOrganizaciones_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void grbAcercaDeOrg_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCrearOrg_Click(object sender, EventArgs e)
         {
             if (txtCIF.Text.Length != 9)

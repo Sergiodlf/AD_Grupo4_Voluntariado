@@ -28,27 +28,7 @@ namespace CapaPresentacion
             cboVoluntario.DisplayMember = "NOMBRE";
             cboVoluntario.ValueMember = "DNI";
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpFechaNac_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-           
+        
         private void btnCrearMatch_Click(object sender, EventArgs e)
         {
             // 1. Obtener los objetos seleccionados de los ComboBox
@@ -94,23 +74,14 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show(mensajeResultado, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    LimpiarControles();
+                    cboActividad.SelectedIndex = 0;
+                    cboVoluntario.SelectedIndex = 0;
                 }
                 else
                 {
                     MessageBox.Show(mensajeResultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cboActividad_SelectedIndexChanged(object sender, EventArgs e)
@@ -125,12 +96,6 @@ namespace CapaPresentacion
             lblFechaFin.Text = actividadSeleccionada.FECHA_FIN.ToShortDateString();
             lblSector.Text = actividadSeleccionada.SECTOR;
             lblDescripcion.Text = actividadSeleccionada.DESCRIPCION;
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cboVoluntario_SelectedIndexChanged(object sender, EventArgs e)
@@ -152,15 +117,6 @@ namespace CapaPresentacion
                 lstIdiomas.Items.Clear();
                 if (!string.IsNullOrEmpty(vol.IDIOMAS)) lstIdiomas.Items.Add(vol.IDIOMAS);
             }
-
         }
-
-        private void LimpiarControles()
-        {
-            // Reseteamos los ComboBox a la posición inicial
-            cboActividad.SelectedIndex = 0;
-            cboVoluntario.SelectedIndex = 0;
-        }
-
     }
 }

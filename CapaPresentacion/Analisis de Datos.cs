@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,34 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Collections.Specialized.BitVector32;
 
 namespace CapaPresentacion
 {
     public partial class Analisis_de_Datos : Form
     {
+        public Gestion gestion;
         public Analisis_de_Datos()
         {
             InitializeComponent();
-            lblNumActividadesAbiertas.Text =  new Gestion().Actividades().Count(a => a.ESTADO == "ABIERTA").ToString();
-            lblNumActividadesTerminadas.Text =  new Gestion().Actividades().Count(a => a.ESTADO == "TERMINADA").ToString();
-            lblNumMatches.Text = new Gestion().Matches().Count().ToString();
-            lblNumOrganizaciones.Text =  new Gestion().Organizaciones().Count().ToString();
-            lblNumVoluntarios.Text =  new Gestion().Voluntarios().Count().ToString();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Analisis_de_Datos_Load(object sender, EventArgs e)
-        {
-
+            gestion = new Gestion();
+            lblNumActividadesAbiertas.Text = gestion.Actividades().Count(a => a.ESTADO == "ABIERTA").ToString();
+            lblNumActividadesTerminadas.Text = gestion.Actividades().Count(a => a.ESTADO == "TERMINADA").ToString();
+            lblNumMatches.Text = gestion.Matches().Count().ToString();
+            lblNumOrganizaciones.Text =  gestion.Organizaciones().Count().ToString();
+            lblNumVoluntarios.Text = gestion.Voluntarios().Count().ToString();
         }
     }
 }
