@@ -9,8 +9,6 @@ namespace CapaPresentacion
 {
     internal static class Program
     {
-
-        public static Gestion gestion = new Gestion();
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

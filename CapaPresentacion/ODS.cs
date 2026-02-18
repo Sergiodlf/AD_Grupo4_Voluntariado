@@ -22,7 +22,7 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            gestion = Program.gestion;
+            gestion = new Gestion();
             lsbODS.DataSource = gestion.Ods().ToList();
             lsbODS.DisplayMember = "nombre";
             lsbODS.ValueMember = "id";

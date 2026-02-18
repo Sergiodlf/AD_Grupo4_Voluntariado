@@ -19,7 +19,7 @@ namespace CapaPresentacion
         public Voluntarios()
         {
             InitializeComponent();
-            gestion = Program.gestion;
+            gestion = new Gestion();
             lblVoluntarios.Text = "Todos los voluntarios";
             voluntarios = gestion.Voluntarios();
             dgvVoluntarios.DataSource = voluntarios.Select(v => new

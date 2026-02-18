@@ -19,7 +19,7 @@ namespace CapaPresentacion
         public Organizaciones()
         {
             InitializeComponent();
-            gestion = Program.gestion;
+            gestion = new Gestion();
             lblOrganizaciones.Text = "Todas las organizaciones: ";
             organizaciones = gestion.Organizaciones();
             dgvOrganizacion.DataSource = organizaciones.Select(o => new

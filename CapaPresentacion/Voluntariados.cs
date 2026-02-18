@@ -19,7 +19,7 @@ namespace CapaPresentacion
         public Voluntariados()
         {
             InitializeComponent();
-            gestion = Program.gestion;
+            gestion = new Gestion();
             actividades = gestion.Actividades();
 
             lblActividades.Text = "Todas las actividades";

@@ -148,6 +148,7 @@
             this.consultarActividadesToolStripMenuItem.Name = "consultarActividadesToolStripMenuItem";
             this.consultarActividadesToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.consultarActividadesToolStripMenuItem.Text = "Consultar Actividades";
+            this.consultarActividadesToolStripMenuItem.Click += new System.EventHandler(this.consultarActividadesToolStripMenuItem_Click);
             // 
             // crearMatchToolStripMenuItem
             // 

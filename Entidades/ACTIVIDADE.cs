@@ -22,6 +22,20 @@ namespace Entidades
             this.NECESIDADES = new HashSet<NECESIDADE>();
             this.ODS = new HashSet<OD>();
         }
+        public ACTIVIDADE(string nombre, string direccion, DateTime fechaInicio, DateTime fechaFin, short MaxParticipantes, string cif, string sector, string descripcion)
+        {
+            this.NOMBRE = nombre;
+            this.DIRECCION = direccion;
+            this.FECHA_INICIO = fechaInicio;
+            this.FECHA_FIN = fechaFin;
+            this.MAX_PARTICIPANTES = MaxParticipantes;
+            this.CIF_EMPRESA = cif;
+            this.SECTOR = sector;
+            this.DESCRIPCION = descripcion;
+            this.ESTADO = "ABIERTA";
+            this.ESTADO_APROBACION = "ACEPTADO";
+            this.ESTADO_NEW = null;
+        }
     
         public short CODACTIVIDAD { get; set; }
         public string NOMBRE { get; set; }

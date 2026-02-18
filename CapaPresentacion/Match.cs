@@ -18,7 +18,7 @@ namespace CapaPresentacion
         public Match()
         {
             InitializeComponent();
-            gestion = Program.gestion;
+            gestion = new Gestion();
 
             cboActividad.DataSource = gestion.Actividades();
             cboActividad.DisplayMember = "NOMBRE";

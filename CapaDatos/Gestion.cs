@@ -152,7 +152,7 @@ namespace CapaDatos
                 else
                     return false;
             }
-            catch (Exception ex) { return false; }
+            catch (Exception) { return false; }
         }
 
         public bool CrearOrganizacion(string cif, string nombre, string email, string sector, string direccion, string localidad, string cp, string descripcion, string telefono)
@@ -169,7 +169,24 @@ namespace CapaDatos
                 else
                     return false;
             }
-            catch (Exception ex) { return false; }
+            catch (Exception) { return false; }
+        }
+
+        public bool CrearActividad(string nombre, string direccion, DateTime fechaInicio, DateTime fechaFin, short MaxParticipantes, string cif, string sector, string descripcion)
+        {
+            ACTIVIDADE act = new ACTIVIDADE(nombre, direccion, fechaInicio, fechaFin, MaxParticipantes, cif, sector, descripcion);
+
+            int nAfectados = 0;
+            contexto.ACTIVIDADES.Add(act);
+            try
+            {
+                nAfectados = contexto.SaveChanges();
+                if (nAfectados > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception) { return false; }
         }
     }
 }

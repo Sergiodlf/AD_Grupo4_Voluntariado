@@ -20,7 +20,7 @@ namespace CapaPresentacion
         {
 
             InitializeComponent();
-            gestion = Program.gestion;
+            gestion = new Gestion();
             voluntarios = gestion.Voluntarios();
 
             cboCiclo.DataSource = gestion.Ciclos();
@@ -78,5 +78,7 @@ namespace CapaPresentacion
             else
                 MessageBox.Show("Ha habido algún error al intentar crear el nuevo voluntario");
         }
+
+      
     }
 }

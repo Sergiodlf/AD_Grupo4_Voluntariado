@@ -15,6 +15,7 @@ namespace CapaPresentacion
         public Menu()
         {
             InitializeComponent();
+
         }
 
         private void filtrarPorODSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +82,12 @@ namespace CapaPresentacion
         {
             Form estadisticasGeneralesForm = new Analisis_de_Datos();
             estadisticasGeneralesForm.ShowDialog();
+        }
+
+        private void consultarActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form consultarActividadesForm = new Voluntariados();
+            consultarActividadesForm.ShowDialog();
         }
     }
 }
