@@ -30,20 +30,20 @@
         {
             this.lblOrganizaciones = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNumOrganizaciones = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNumVoluntarios = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblNumMatches = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblNumActividadesTerminadas = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblNumActividadesTerminadas = new System.Windows.Forms.Label();
             this.lblNumActividadesAbiertas = new System.Windows.Forms.Label();
-            this.lblNumMatches = new System.Windows.Forms.Label();
-            this.lblNumVoluntarios = new System.Windows.Forms.Label();
-            this.lblNumOrganizaciones = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,6 +73,16 @@
             this.panel1.TabIndex = 60;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lblNumOrganizaciones
+            // 
+            this.lblNumOrganizaciones.AutoSize = true;
+            this.lblNumOrganizaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumOrganizaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumOrganizaciones.Location = new System.Drawing.Point(117, 76);
+            this.lblNumOrganizaciones.Name = "lblNumOrganizaciones";
+            this.lblNumOrganizaciones.Size = new System.Drawing.Size(0, 22);
+            this.lblNumOrganizaciones.TabIndex = 63;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -93,6 +103,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 138);
             this.panel2.TabIndex = 62;
+            // 
+            // lblNumVoluntarios
+            // 
+            this.lblNumVoluntarios.AutoSize = true;
+            this.lblNumVoluntarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumVoluntarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumVoluntarios.Location = new System.Drawing.Point(118, 76);
+            this.lblNumVoluntarios.Name = "lblNumVoluntarios";
+            this.lblNumVoluntarios.Size = new System.Drawing.Size(0, 22);
+            this.lblNumVoluntarios.TabIndex = 63;
             // 
             // label2
             // 
@@ -115,6 +135,16 @@
             this.panel3.Size = new System.Drawing.Size(247, 138);
             this.panel3.TabIndex = 63;
             // 
+            // lblNumMatches
+            // 
+            this.lblNumMatches.AutoSize = true;
+            this.lblNumMatches.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumMatches.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumMatches.Location = new System.Drawing.Point(121, 76);
+            this.lblNumMatches.Name = "lblNumMatches";
+            this.lblNumMatches.Size = new System.Drawing.Size(0, 22);
+            this.lblNumMatches.TabIndex = 63;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -135,6 +165,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(266, 138);
             this.panel4.TabIndex = 65;
+            // 
+            // lblNumActividadesTerminadas
+            // 
+            this.lblNumActividadesTerminadas.AutoSize = true;
+            this.lblNumActividadesTerminadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumActividadesTerminadas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumActividadesTerminadas.Location = new System.Drawing.Point(112, 72);
+            this.lblNumActividadesTerminadas.Name = "lblNumActividadesTerminadas";
+            this.lblNumActividadesTerminadas.Size = new System.Drawing.Size(0, 22);
+            this.lblNumActividadesTerminadas.TabIndex = 62;
             // 
             // label4
             // 
@@ -157,6 +197,16 @@
             this.panel5.Size = new System.Drawing.Size(281, 138);
             this.panel5.TabIndex = 64;
             // 
+            // lblNumActividadesAbiertas
+            // 
+            this.lblNumActividadesAbiertas.AutoSize = true;
+            this.lblNumActividadesAbiertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumActividadesAbiertas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumActividadesAbiertas.Location = new System.Drawing.Point(122, 72);
+            this.lblNumActividadesAbiertas.Name = "lblNumActividadesAbiertas";
+            this.lblNumActividadesAbiertas.Size = new System.Drawing.Size(0, 22);
+            this.lblNumActividadesAbiertas.TabIndex = 62;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -168,56 +218,6 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Actividades Abiertas";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // lblNumActividadesTerminadas
-            // 
-            this.lblNumActividadesTerminadas.AutoSize = true;
-            this.lblNumActividadesTerminadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumActividadesTerminadas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumActividadesTerminadas.Location = new System.Drawing.Point(112, 72);
-            this.lblNumActividadesTerminadas.Name = "lblNumActividadesTerminadas";
-            this.lblNumActividadesTerminadas.Size = new System.Drawing.Size(0, 22);
-            this.lblNumActividadesTerminadas.TabIndex = 62;
-            // 
-            // lblNumActividadesAbiertas
-            // 
-            this.lblNumActividadesAbiertas.AutoSize = true;
-            this.lblNumActividadesAbiertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumActividadesAbiertas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumActividadesAbiertas.Location = new System.Drawing.Point(122, 72);
-            this.lblNumActividadesAbiertas.Name = "lblNumActividadesAbiertas";
-            this.lblNumActividadesAbiertas.Size = new System.Drawing.Size(0, 22);
-            this.lblNumActividadesAbiertas.TabIndex = 62;
-            // 
-            // lblNumMatches
-            // 
-            this.lblNumMatches.AutoSize = true;
-            this.lblNumMatches.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumMatches.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumMatches.Location = new System.Drawing.Point(121, 76);
-            this.lblNumMatches.Name = "lblNumMatches";
-            this.lblNumMatches.Size = new System.Drawing.Size(0, 22);
-            this.lblNumMatches.TabIndex = 63;
-            // 
-            // lblNumVoluntarios
-            // 
-            this.lblNumVoluntarios.AutoSize = true;
-            this.lblNumVoluntarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumVoluntarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumVoluntarios.Location = new System.Drawing.Point(118, 76);
-            this.lblNumVoluntarios.Name = "lblNumVoluntarios";
-            this.lblNumVoluntarios.Size = new System.Drawing.Size(0, 22);
-            this.lblNumVoluntarios.TabIndex = 63;
-            // 
-            // lblNumOrganizaciones
-            // 
-            this.lblNumOrganizaciones.AutoSize = true;
-            this.lblNumOrganizaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumOrganizaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumOrganizaciones.Location = new System.Drawing.Point(117, 76);
-            this.lblNumOrganizaciones.Name = "lblNumOrganizaciones";
-            this.lblNumOrganizaciones.Size = new System.Drawing.Size(0, 22);
-            this.lblNumOrganizaciones.TabIndex = 63;
             // 
             // Analisis_de_Datos
             // 
@@ -232,6 +232,7 @@
             this.Controls.Add(this.lblOrganizaciones);
             this.Name = "Analisis_de_Datos";
             this.Text = "Analisis_de_Datos";
+            this.Load += new System.EventHandler(this.Analisis_de_Datos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

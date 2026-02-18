@@ -153,40 +153,13 @@ namespace CapaPresentacion
                 if (!string.IsNullOrEmpty(vol.IDIOMAS)) lstIdiomas.Items.Add(vol.IDIOMAS);
             }
 
-
         }
 
         private void LimpiarControles()
         {
-            // Reseteamos los ComboBox a la posición inicial (sin selección)
-            cboActividad.SelectedIndex = -1;
-            cboVoluntario.SelectedIndex = -1;
-
-            // Reseteamos los Labels de la Actividad
-            lblNombreOrg.Text = "";
-            lblNombreActividad.Text = "";
-            lblDireccionActividad.Text = "";
-            lblMaxParticipantes.Text = "";
-            lblFechaInicio.Text = "";
-            lblFechaFin.Text = "";
-            lblSector.Text = "";
-            txtDescripcion.Clear();
-
-            // Reseteamos los Labels del Voluntario
-            lblDNI.Text = "";
-            lblNombreVol.Text = "";
-            lblApellido1.Text = "";
-            lblCorreo.Text = "";
-            lblFechaNacVoluntario.Text = "";
-            lblZonaVoluntario.Text = "";
-            lblExperienciaVoluntario.Text = "";
-            lblDisponibilidad.Text = "";
-            lblCocheVoluntario.Text = "";
-            lblCiclo.Text = "";
-
-            // Limpiamos los ListBox
-            lstIdiomas.Items.Clear();
-
+            // Reseteamos los ComboBox a la posición inicial
+            cboActividad.SelectedIndex = 0;
+            cboVoluntario.SelectedIndex = 0;
         }
 
     }

@@ -17,7 +17,7 @@ namespace CapaPresentacion
             InitializeComponent();
             lblNumActividadesAbiertas.Text =  Program.gestion.Actividades().Count(a => a.ESTADO == "ABIERTA").ToString();
             lblNumActividadesTerminadas.Text =  Program.gestion.Actividades().Count(a => a.ESTADO == "TERMINADA").ToString();
-            //lblNumMatches.Text = Program.gestion.Matches().Count().ToString();
+            lblNumMatches.Text = Program.gestion.Matches().Count().ToString();
             lblNumOrganizaciones.Text =  Program.gestion.Organizaciones().Count().ToString();
             lblNumVoluntarios.Text =  Program.gestion.Voluntarios().Count().ToString();
         }
@@ -28,6 +28,11 @@ namespace CapaPresentacion
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Analisis_de_Datos_Load(object sender, EventArgs e)
         {
 
         }

@@ -53,6 +53,12 @@ namespace CapaDatos
         {
             return contexto.CICLOS.OrderBy(ciclo => ciclo.NOMBRE).ToList();
         }
+
+        public List<INSCRIPCIONE> Matches()
+        {
+            return contexto.INSCRIPCIONES.ToList();
+        }
+
         public List<string> NombreOdsPorId(List<int> idsOds)
         {
             return contexto.ODS.Where(o => idsOds.Contains(o.id)).Select(o => o.nombre).ToList();
@@ -118,11 +124,7 @@ namespace CapaDatos
         {
             try
             {
-                var nuevaInscripcion = new INSCRIPCIONE
-                {
-                    DNI_VOLUNTARIO = dniVoluntario,
-                    CODACTIVIDAD = codActividad
-                };
+                var nuevaInscripcion = new INSCRIPCIONE(dniVoluntario.ToUpper(), codActividad);
 
                 contexto.INSCRIPCIONES.Add(nuevaInscripcion);
 
@@ -140,12 +142,17 @@ namespace CapaDatos
 
         public bool CrearVoluntario(string dni, string nombre, string apellido1, string apellido2, string correo, string zona, DateTime fechaNac, string experiencia, bool coche, short? curso, string nombreCiclo)
         {
-            VOLUNTARIO vol = new VOLUNTARIO(dni, nombre, apellido1, apellido2, correo, zona, fechaNac, experiencia, coche, curso, nombreCiclo);
+            VOLUNTARIO vol = new VOLUNTARIO(dni.ToUpper(), nombre, apellido1, apellido2, correo, zona, fechaNac, experiencia, coche, curso, nombreCiclo);
             int nAfectados = 0;
             contexto.VOLUNTARIOS.Add(vol);
-            try { nAfectados = contexto.SaveChanges(); }
+            try { 
+                nAfectados = contexto.SaveChanges();
+                if (nAfectados > 0)
+                    return true;
+                else
+                    return false;
+            }
             catch (Exception ex) { return false; }
-            return true;
         }
     }
 }

@@ -21,5 +21,12 @@ namespace Entidades
     
         public virtual ACTIVIDADE ACTIVIDADE { get; set; }
         public virtual VOLUNTARIO VOLUNTARIO { get; set; }
+        public INSCRIPCIONE(string dni, short? codAct)
+        {
+            this.ESTADO = "PENDIENTE";
+            this.DNI_VOLUNTARIO = dni;
+            this.CODACTIVIDAD = codAct;
+        }
+        public INSCRIPCIONE() { }
     }
 }
