@@ -31,29 +31,29 @@
             this.lblVoluntarios = new System.Windows.Forms.Label();
             this.lblOrganizacion = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblEmailOrg = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblNombreOrg = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCIF = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblOrganizaciones = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblContacto = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblCP = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cboSector = new System.Windows.Forms.ComboBox();
-            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.btnCrearOrg = new System.Windows.Forms.Button();
             this.grbAcercaDeOrg = new System.Windows.Forms.GroupBox();
             this.grbDatosOrg = new System.Windows.Forms.GroupBox();
+            this.txtCIF = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelf = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.grbAcercaDeOrg.SuspendLayout();
             this.grbDatosOrg.SuspendLayout();
             this.SuspendLayout();
@@ -88,15 +88,6 @@
             this.label4.Size = new System.Drawing.Size(0, 22);
             this.label4.TabIndex = 35;
             // 
-            // lblEmailOrg
-            // 
-            this.lblEmailOrg.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblEmailOrg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEmailOrg.Location = new System.Drawing.Point(115, 141);
-            this.lblEmailOrg.Name = "lblEmailOrg";
-            this.lblEmailOrg.Size = new System.Drawing.Size(135, 23);
-            this.lblEmailOrg.TabIndex = 34;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -107,15 +98,6 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Email:";
             // 
-            // lblNombreOrg
-            // 
-            this.lblNombreOrg.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblNombreOrg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombreOrg.Location = new System.Drawing.Point(115, 100);
-            this.lblNombreOrg.Name = "lblNombreOrg";
-            this.lblNombreOrg.Size = new System.Drawing.Size(135, 23);
-            this.lblNombreOrg.TabIndex = 32;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -125,15 +107,6 @@
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 31;
             this.label5.Text = "Nombre:";
-            // 
-            // lblCIF
-            // 
-            this.lblCIF.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCIF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCIF.Location = new System.Drawing.Point(115, 61);
-            this.lblCIF.Name = "lblCIF";
-            this.lblCIF.Size = new System.Drawing.Size(135, 23);
-            this.lblCIF.TabIndex = 30;
             // 
             // label3
             // 
@@ -168,15 +141,6 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Teléfono:";
             // 
-            // lblContacto
-            // 
-            this.lblContacto.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblContacto.Location = new System.Drawing.Point(115, 180);
-            this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(135, 23);
-            this.lblContacto.TabIndex = 40;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -196,15 +160,6 @@
             this.label8.Size = new System.Drawing.Size(0, 22);
             this.label8.TabIndex = 47;
             // 
-            // lblDireccion
-            // 
-            this.lblDireccion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDireccion.Location = new System.Drawing.Point(394, 159);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(135, 23);
-            this.lblDireccion.TabIndex = 46;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -214,15 +169,6 @@
             this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 45;
             this.label10.Text = "Dirección:";
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(394, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 23);
-            this.label11.TabIndex = 44;
             // 
             // label12
             // 
@@ -234,15 +180,6 @@
             this.label12.TabIndex = 43;
             this.label12.Text = "Localidad:";
             this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // lblCP
-            // 
-            this.lblCP.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCP.Location = new System.Drawing.Point(394, 79);
-            this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(135, 23);
-            this.lblCP.TabIndex = 42;
             // 
             // label14
             // 
@@ -280,14 +217,6 @@
             this.cboSector.Size = new System.Drawing.Size(135, 24);
             this.cboSector.TabIndex = 52;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(46, 128);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(323, 92);
-            this.txtDescripcion.TabIndex = 53;
-            this.txtDescripcion.Text = "";
-            // 
             // btnCrearOrg
             // 
             this.btnCrearOrg.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -300,6 +229,7 @@
             this.btnCrearOrg.TabIndex = 54;
             this.btnCrearOrg.Text = "Crear Organización";
             this.btnCrearOrg.UseVisualStyleBackColor = false;
+            this.btnCrearOrg.Click += new System.EventHandler(this.btnCrearOrg_Click);
             // 
             // grbAcercaDeOrg
             // 
@@ -320,20 +250,20 @@
             // grbDatosOrg
             // 
             this.grbDatosOrg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grbDatosOrg.Controls.Add(this.lblDireccion);
+            this.grbDatosOrg.Controls.Add(this.txtDireccion);
+            this.grbDatosOrg.Controls.Add(this.txtLocalidad);
+            this.grbDatosOrg.Controls.Add(this.txtCP);
+            this.grbDatosOrg.Controls.Add(this.txtTelf);
+            this.grbDatosOrg.Controls.Add(this.txtEmail);
+            this.grbDatosOrg.Controls.Add(this.txtNombre);
+            this.grbDatosOrg.Controls.Add(this.txtCIF);
             this.grbDatosOrg.Controls.Add(this.label14);
-            this.grbDatosOrg.Controls.Add(this.lblCP);
-            this.grbDatosOrg.Controls.Add(this.lblContacto);
             this.grbDatosOrg.Controls.Add(this.label12);
             this.grbDatosOrg.Controls.Add(this.label1);
             this.grbDatosOrg.Controls.Add(this.label10);
-            this.grbDatosOrg.Controls.Add(this.label11);
-            this.grbDatosOrg.Controls.Add(this.lblEmailOrg);
             this.grbDatosOrg.Controls.Add(this.label3);
-            this.grbDatosOrg.Controls.Add(this.lblCIF);
             this.grbDatosOrg.Controls.Add(this.label5);
             this.grbDatosOrg.Controls.Add(this.label6);
-            this.grbDatosOrg.Controls.Add(this.lblNombreOrg);
             this.grbDatosOrg.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.grbDatosOrg.Location = new System.Drawing.Point(97, 160);
             this.grbDatosOrg.Name = "grbDatosOrg";
@@ -341,6 +271,63 @@
             this.grbDatosOrg.TabIndex = 56;
             this.grbDatosOrg.TabStop = false;
             this.grbDatosOrg.Text = "Datos de la Organización";
+            // 
+            // txtCIF
+            // 
+            this.txtCIF.Location = new System.Drawing.Point(105, 61);
+            this.txtCIF.Name = "txtCIF";
+            this.txtCIF.Size = new System.Drawing.Size(170, 22);
+            this.txtCIF.TabIndex = 57;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(105, 107);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(170, 22);
+            this.txtNombre.TabIndex = 58;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(104, 148);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(171, 22);
+            this.txtEmail.TabIndex = 59;
+            // 
+            // txtTelf
+            // 
+            this.txtTelf.Location = new System.Drawing.Point(104, 184);
+            this.txtTelf.Name = "txtTelf";
+            this.txtTelf.Size = new System.Drawing.Size(171, 22);
+            this.txtTelf.TabIndex = 60;
+            // 
+            // txtCP
+            // 
+            this.txtCP.Location = new System.Drawing.Point(384, 77);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(171, 22);
+            this.txtCP.TabIndex = 61;
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(384, 122);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(171, 22);
+            this.txtLocalidad.TabIndex = 62;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(384, 163);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(171, 22);
+            this.txtDireccion.TabIndex = 63;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(46, 125);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(319, 68);
+            this.txtDescripcion.TabIndex = 64;
             // 
             // Alta_Organizacion
             // 
@@ -371,28 +358,28 @@
         private System.Windows.Forms.Label lblVoluntarios;
         private System.Windows.Forms.Label lblOrganizacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblEmailOrg;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblNombreOrg;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCIF;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblOrganizaciones;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblCP;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cboSector;
-        private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Button btnCrearOrg;
         private System.Windows.Forms.GroupBox grbAcercaDeOrg;
         private System.Windows.Forms.GroupBox grbDatosOrg;
+        private System.Windows.Forms.TextBox txtCIF;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.TextBox txtCP;
+        private System.Windows.Forms.TextBox txtTelf;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

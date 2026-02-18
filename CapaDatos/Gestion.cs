@@ -154,5 +154,22 @@ namespace CapaDatos
             }
             catch (Exception ex) { return false; }
         }
+
+        public bool CrearOrganizacion(string cif, string nombre, string email, string sector, string direccion, string localidad, string cp, string descripcion, string telefono)
+        {
+            ORGANIZACIONE org = new ORGANIZACIONE(cif.ToUpper(), nombre, email, sector, direccion, localidad, cp, descripcion, telefono);
+
+            int nAfectados = 0;
+            contexto.ORGANIZACIONES.Add(org);
+            try
+            {
+                nAfectados = contexto.SaveChanges();
+                if (nAfectados > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex) { return false; }
+        }
     }
 }

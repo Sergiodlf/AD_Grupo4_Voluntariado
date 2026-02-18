@@ -37,5 +37,19 @@ namespace Entidades
         public virtual ICollection<ACTIVIDADE> ACTIVIDADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<notificacion> notificacions { get; set; }
+
+        public ORGANIZACIONE(string cif, string nombre, string email, string sector, string direccion, string localidad, string cp, string descripcion, string telefono)
+        {
+            this.CIF = cif;
+            this.NOMBRE = nombre;
+            this.EMAIL = email;
+            this.SECTOR = sector;
+            this.DIRECCION = direccion;
+            this.LOCALIDAD = localidad;
+            this.CP = cp;
+            this.DESCRIPCION = descripcion;
+            this.CONTACTO = telefono;
+            this.ESTADO = "ACEPTADO";
+        }
     }
 }

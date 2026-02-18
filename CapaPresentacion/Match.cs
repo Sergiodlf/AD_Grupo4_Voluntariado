@@ -124,7 +124,7 @@ namespace CapaPresentacion
             lblFechaInicio.Text = actividadSeleccionada.FECHA_INICIO.ToShortDateString();
             lblFechaFin.Text = actividadSeleccionada.FECHA_FIN.ToShortDateString();
             lblSector.Text = actividadSeleccionada.SECTOR;
-            txtDescripcion.Text = actividadSeleccionada.DESCRIPCION;
+            lblDescripcion.Text = actividadSeleccionada.DESCRIPCION;
 
         }
 

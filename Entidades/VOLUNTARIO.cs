@@ -60,7 +60,7 @@ namespace Entidades
             FECHA_NACIMIENTO = fECHA_NACIMIENTO;
             EXPERIENCIA = eXPERIENCIA;
             COCHE = cOCHE;
-            ESTADO_VOLUNTARIO = "PENDIENTE";
+            ESTADO_VOLUNTARIO = "ACEPTADO";
             CURSO_CICLOS = cURSO_CICLOS;
             NOMBRE_CICLOS = nOMBRE_CICLOS;
             DISPONIBILIDAD = null;

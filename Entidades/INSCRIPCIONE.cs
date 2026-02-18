@@ -23,7 +23,7 @@ namespace Entidades
         public virtual VOLUNTARIO VOLUNTARIO { get; set; }
         public INSCRIPCIONE(string dni, short? codAct)
         {
-            this.ESTADO = "PENDIENTE";
+            this.ESTADO = "ACEPTADO";
             this.DNI_VOLUNTARIO = dni;
             this.CODACTIVIDAD = codAct;
         }

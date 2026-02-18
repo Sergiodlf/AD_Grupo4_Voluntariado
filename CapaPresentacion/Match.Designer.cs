@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbAcercaDeOrg = new System.Windows.Forms.GroupBox();
+            this.lstIdiomas = new System.Windows.Forms.ListBox();
             this.lblDisponibilidad = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -68,14 +69,13 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.lblNombreActividad = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.lblSector = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrearMatch = new System.Windows.Forms.Button();
             this.cboActividad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lstIdiomas = new System.Windows.Forms.ListBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.grbAcercaDeOrg.SuspendLayout();
             this.grbDatosOrg.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +114,15 @@
             this.grbAcercaDeOrg.TabIndex = 66;
             this.grbAcercaDeOrg.TabStop = false;
             this.grbAcercaDeOrg.Text = "Datos del Voluntario";
+            // 
+            // lstIdiomas
+            // 
+            this.lstIdiomas.FormattingEnabled = true;
+            this.lstIdiomas.ItemHeight = 16;
+            this.lstIdiomas.Location = new System.Drawing.Point(395, 301);
+            this.lstIdiomas.Name = "lstIdiomas";
+            this.lstIdiomas.Size = new System.Drawing.Size(135, 68);
+            this.lstIdiomas.TabIndex = 81;
             // 
             // lblDisponibilidad
             // 
@@ -390,6 +399,7 @@
             // grbDatosOrg
             // 
             this.grbDatosOrg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grbDatosOrg.Controls.Add(this.lblDescripcion);
             this.grbDatosOrg.Controls.Add(this.lblFechaFin);
             this.grbDatosOrg.Controls.Add(this.lblFechaInicio);
             this.grbDatosOrg.Controls.Add(this.lblNombreOrg);
@@ -402,7 +412,6 @@
             this.grbDatosOrg.Controls.Add(this.label32);
             this.grbDatosOrg.Controls.Add(this.label33);
             this.grbDatosOrg.Controls.Add(this.lblNombreActividad);
-            this.grbDatosOrg.Controls.Add(this.txtDescripcion);
             this.grbDatosOrg.Controls.Add(this.label34);
             this.grbDatosOrg.Controls.Add(this.lblSector);
             this.grbDatosOrg.Controls.Add(this.label1);
@@ -537,15 +546,6 @@
             this.lblNombreActividad.Size = new System.Drawing.Size(135, 23);
             this.lblNombreActividad.TabIndex = 85;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtDescripcion.Location = new System.Drawing.Point(114, 301);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(395, 56);
-            this.txtDescripcion.TabIndex = 98;
-            this.txtDescripcion.Text = "";
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -610,14 +610,13 @@
             this.label3.Text = "Selecciona una Actividad:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // lstIdiomas
+            // lblDescripcion
             // 
-            this.lstIdiomas.FormattingEnabled = true;
-            this.lstIdiomas.ItemHeight = 16;
-            this.lstIdiomas.Location = new System.Drawing.Point(395, 301);
-            this.lstIdiomas.Name = "lstIdiomas";
-            this.lstIdiomas.Size = new System.Drawing.Size(135, 68);
-            this.lstIdiomas.TabIndex = 81;
+            this.lblDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDescripcion.Location = new System.Drawing.Point(114, 301);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(348, 68);
+            this.lblDescripcion.TabIndex = 102;
             // 
             // Match
             // 
@@ -684,11 +683,11 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label lblNombreActividad;
-        private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblNombreOrg;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.ListBox lstIdiomas;
+        private System.Windows.Forms.Label lblDescripcion;
     }
 }
