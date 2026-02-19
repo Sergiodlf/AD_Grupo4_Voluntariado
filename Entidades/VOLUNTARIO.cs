@@ -67,5 +67,10 @@ namespace Entidades
             IDIOMAS = null;
             FCM_TOKEN = null;
         }
+
+        public string NombreCompleto
+        {
+            get { return $"{NOMBRE} {APELLIDO1} {APELLIDO2}"; }
+        }
     }
 }

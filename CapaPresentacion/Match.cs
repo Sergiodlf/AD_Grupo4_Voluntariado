@@ -25,7 +25,7 @@ namespace CapaPresentacion
             cboActividad.ValueMember = "CODACTIVIDAD";
 
             cboVoluntario.DataSource = gestion.Voluntarios();
-            cboVoluntario.DisplayMember = "NOMBRE";
+            cboVoluntario.DisplayMember = "NombreCompleto";
             cboVoluntario.ValueMember = "DNI";
         }
         
